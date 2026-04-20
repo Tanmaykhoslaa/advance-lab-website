@@ -27,8 +27,14 @@ export const Contact = () => {
         message: f.message || `I would like to request a quote for: ${product}.\n\nPlease share pricing, availability, and specifications.`,
       }));
       setTimeout(() => {
-        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+        const form = document.getElementById("inquiry-form");
+        if (form) {
+          form.scrollIntoView({ behavior: "smooth", block: "start" });
+          // small offset for sticky navbar
+          setTimeout(() => window.scrollBy({ top: -80, behavior: "smooth" }), 350);
+          (form.querySelector<HTMLInputElement>("#name"))?.focus({ preventScroll: true });
+        }
+      }, 150);
     }
   }, []);
 
