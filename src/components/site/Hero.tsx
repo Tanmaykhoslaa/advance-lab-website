@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <section id="home" className="relative overflow-hidden gradient-soft">
       <div className="container grid lg:grid-cols-2 gap-12 items-center py-16 lg:py-24">
-        <div className="space-y-7">
+        <div className="space-y-7 animate-slide-up">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold text-primary">
             <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
             Trusted since years • ISO Quality Standards

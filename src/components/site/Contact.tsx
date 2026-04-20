@@ -27,8 +27,14 @@ export const Contact = () => {
         message: f.message || `I would like to request a quote for: ${product}.\n\nPlease share pricing, availability, and specifications.`,
       }));
       setTimeout(() => {
-        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+        const form = document.getElementById("inquiry-form");
+        if (form) {
+          form.scrollIntoView({ behavior: "smooth", block: "start" });
+          // small offset for sticky navbar
+          setTimeout(() => window.scrollBy({ top: -80, behavior: "smooth" }), 350);
+          (form.querySelector<HTMLInputElement>("#name"))?.focus({ preventScroll: true });
+        }
+      }, 150);
     }
   }, []);
 
@@ -96,7 +102,7 @@ export const Contact = () => {
           </div>
         </div>
 
-        <form onSubmit={submit} className="bg-card border border-border rounded-2xl p-7 shadow-card space-y-4">
+        <form id="inquiry-form" onSubmit={submit} className="scroll-mt-24 bg-card border border-border rounded-2xl p-7 shadow-card space-y-4 animate-fade-in">
           <h3 className="text-xl font-bold">Send an Inquiry</h3>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="space-y-2">

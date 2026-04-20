@@ -86,9 +86,9 @@ const ProductDetail = () => {
           <div className="lg:col-span-2 space-y-10">
             <div>
               <h2 className="text-2xl font-bold mb-5">Key Features</h2>
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="grid sm:grid-cols-2 gap-3 stagger">
                 {product.features.map((f) => (
-                  <div key={f} className="flex items-start gap-3 p-4 rounded-xl border border-border bg-card">
+                  <div key={f} className="flex items-start gap-3 p-4 rounded-xl border border-border bg-card lift-on-hover">
                     <CheckCircle2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                     <span className="text-sm">{f}</span>
                   </div>

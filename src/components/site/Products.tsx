@@ -15,19 +15,19 @@ export const Products = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 stagger">
           {products.map((p) => {
             const Icon = p.icon;
             return (
               <Link
                 key={p.slug}
                 to={`/products/${p.slug}`}
-                className="group gradient-card border border-border rounded-2xl p-6 shadow-soft hover:shadow-card hover:-translate-y-1 transition-smooth"
+                className="group gradient-card border border-border rounded-2xl p-5 sm:p-6 shadow-soft lift-on-hover"
               >
-                <div className="h-12 w-12 rounded-xl gradient-hero flex items-center justify-center mb-4 group-hover:shadow-glow transition-smooth">
+                <div className="h-12 w-12 rounded-xl gradient-hero flex items-center justify-center mb-4 group-hover:shadow-glow group-hover:scale-110 group-active:scale-95 transition-smooth">
                   <Icon className="h-6 w-6 text-primary-foreground" />
                 </div>
-                <h3 className="font-semibold text-foreground leading-tight mb-1">{p.name}</h3>
+                <h3 className="font-semibold text-foreground leading-tight mb-1 group-hover:text-primary transition-smooth">{p.name}</h3>
                 <p className="text-xs text-muted-foreground">{p.desc}</p>
               </Link>
             );
