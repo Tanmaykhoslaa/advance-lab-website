@@ -1,3 +1,4 @@
-# Welcome to your Lovable project
+To run the project use 
+npm install
+npm run dev
 
-TODO: Document your project here

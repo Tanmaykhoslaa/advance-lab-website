@@ -1,56 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================================
+   DESIGN SYSTEM — Business-Classic Professional Theme
+   Navy · Charcoal · Champagne Gold
+   ============================================================ */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 30% 12%;
+    /* Base surfaces */
+    --background:     220 20% 97%;
+    --foreground:     220 25% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 30% 12%;
+    --card:           0 0% 100%;
+    --card-foreground: 220 25% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 30% 12%;
+    --popover:        0 0% 100%;
+    --popover-foreground: 220 25% 12%;
 
-    /* Brand: medical teal/blue */
-    --primary: 195 85% 32%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 188 90% 45%;
+    /* Primary — Deep Navy */
+    --primary:        222 55% 22%;
+    --primary-foreground: 43 60% 88%;
 
-    --secondary: 200 40% 96%;
-    --secondary-foreground: 210 30% 18%;
+    /* Secondary — Light Steel */
+    --secondary:      215 25% 93%;
+    --secondary-foreground: 222 45% 18%;
 
-    --muted: 200 30% 96%;
-    --muted-foreground: 210 15% 42%;
+    --muted:          215 20% 94%;
+    --muted-foreground: 220 15% 42%;
 
-    --accent: 188 90% 45%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent — Champagne Gold */
+    --accent:         43 72% 49%;
+    --accent-foreground: 220 40% 10%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 205 25% 90%;
-    --input: 205 25% 90%;
-    --ring: 195 85% 32%;
+    --border:  215 20% 88%;
+    --input:   215 20% 88%;
+    --ring:    222 55% 22%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(195 85% 32%) 0%, hsl(188 90% 45%) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(200 60% 98%) 0%, hsl(0 0% 100%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(200 50% 98%) 100%);
-    --shadow-soft: 0 4px 20px -8px hsl(195 60% 30% / 0.15);
-    --shadow-card: 0 8px 30px -12px hsl(195 60% 30% / 0.18);
-    --shadow-glow: 0 10px 40px -10px hsl(188 90% 45% / 0.45);
+    /* ─── Tokens ─── */
+    /* Gradients */
+    --gradient-hero:    linear-gradient(135deg, hsl(222 55% 18%) 0%, hsl(222 50% 28%) 100%);
+    --gradient-gold:    linear-gradient(135deg, hsl(43 80% 52%) 0%, hsl(36 85% 45%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(220 20% 97%) 0%, hsl(215 20% 94%) 100%);
+    --gradient-card:    linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(215 25% 97%) 100%);
+    --gradient-dark:    linear-gradient(135deg, hsl(222 45% 14%) 0%, hsl(222 40% 20%) 100%);
+
+    /* Shadows */
+    --shadow-soft:  0 2px 16px -4px hsl(222 40% 20% / 0.10);
+    --shadow-card:  0 6px 28px -8px hsl(222 40% 20% / 0.15);
+    --shadow-gold:  0 8px 32px -8px hsl(43 80% 45% / 0.35);
+    --shadow-navy:  0 12px 40px -10px hsl(222 55% 18% / 0.40);
+
+    /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
+    /* Sidebar (kept for compat) */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -58,112 +71,157 @@ All colors MUST be HSL.
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 222 55% 22%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    --background: 222 30% 7%;
+    --foreground: 220 15% 92%;
+    --card: 222 28% 10%;
+    --card-foreground: 220 15% 92%;
+    --popover: 222 28% 10%;
+    --popover-foreground: 220 15% 92%;
+    --primary: 43 72% 54%;
+    --primary-foreground: 222 45% 12%;
+    --secondary: 222 25% 16%;
+    --secondary-foreground: 220 15% 88%;
+    --muted: 222 25% 14%;
+    --muted-foreground: 220 12% 55%;
+    --accent: 43 72% 54%;
+    --accent-foreground: 222 45% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 222 22% 18%;
+    --input: 222 22% 18%;
+    --ring: 43 72% 54%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'DM Sans', 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4 {
-    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
     @apply tracking-tight;
   }
 
-  html {
-    scroll-behavior: smooth;
+  h4, h5, h6 {
+    font-family: 'DM Sans', 'Inter', sans-serif;
+    @apply font-semibold tracking-tight;
   }
+
+  html { scroll-behavior: smooth; }
 }
 
+/* ─── Utility classes ─────────────────────────────────────── */
 @layer utilities {
-  .gradient-hero { background: var(--gradient-hero); }
-  .gradient-soft { background: var(--gradient-soft); }
-  .gradient-card { background: var(--gradient-card); }
+  .gradient-hero    { background: var(--gradient-hero); }
+  .gradient-gold    { background: var(--gradient-gold); }
+  .gradient-surface { background: var(--gradient-surface); }
+  .gradient-card    { background: var(--gradient-card); }
+  .gradient-dark    { background: var(--gradient-dark); }
+
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-card { box-shadow: var(--shadow-card); }
-  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .shadow-navy { box-shadow: var(--shadow-navy); }
+
   .transition-smooth { transition: var(--transition-smooth); }
-  .text-gradient {
+  .transition-spring { transition: var(--transition-spring); }
+
+  /* Gradient text */
+  .text-gold-gradient {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-navy-gradient {
     background: var(--gradient-hero);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .tap-scale {
-    @apply transition-transform duration-200 active:scale-95;
+  /* Keep legacy alias */
+  .text-gradient { @apply text-gold-gradient; }
+
+  /* Decorative divider */
+  .divider-gold {
+    width: 3.5rem;
+    height: 3px;
+    background: var(--gradient-gold);
+    border-radius: 99px;
   }
+
+  /* Lift on hover */
   .lift-on-hover {
-    @apply transition-smooth hover:-translate-y-1 hover:shadow-card active:scale-[0.98];
+    @apply transition-spring hover:-translate-y-1 hover:shadow-card active:scale-[0.98];
+  }
+
+  /* Section label */
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-[hsl(43_72%_44%)] mb-3;
   }
 }
 
+/* ─── Animations ──────────────────────────────────────────── */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50%       { transform: translateY(-8px); }
 }
-.animate-float { animation: float 4s ease-in-out infinite; }
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.6; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
 
-/* Stagger helper */
+.animate-fade-in    { animation: fade-in 0.6s ease-out both; }
+.animate-float      { animation: float 5s ease-in-out infinite; }
+.animate-shimmer    { animation: shimmer 2.5s linear infinite; }
+.animate-pulse-ring { animation: pulse-ring 1.8s ease-out infinite; }
+
+/* Stagger utility */
 .stagger > * { opacity: 0; animation: fade-in 0.6s ease-out forwards; }
-.stagger > *:nth-child(1) { animation-delay: 0.05s; }
-.stagger > *:nth-child(2) { animation-delay: 0.10s; }
-.stagger > *:nth-child(3) { animation-delay: 0.15s; }
-.stagger > *:nth-child(4) { animation-delay: 0.20s; }
-.stagger > *:nth-child(5) { animation-delay: 0.25s; }
-.stagger > *:nth-child(6) { animation-delay: 0.30s; }
-.stagger > *:nth-child(7) { animation-delay: 0.35s; }
-.stagger > *:nth-child(8) { animation-delay: 0.40s; }
-.stagger > *:nth-child(9) { animation-delay: 0.45s; }
+.stagger > *:nth-child(1)  { animation-delay: 0.05s; }
+.stagger > *:nth-child(2)  { animation-delay: 0.10s; }
+.stagger > *:nth-child(3)  { animation-delay: 0.15s; }
+.stagger > *:nth-child(4)  { animation-delay: 0.20s; }
+.stagger > *:nth-child(5)  { animation-delay: 0.25s; }
+.stagger > *:nth-child(6)  { animation-delay: 0.30s; }
+.stagger > *:nth-child(7)  { animation-delay: 0.35s; }
+.stagger > *:nth-child(8)  { animation-delay: 0.40s; }
+.stagger > *:nth-child(9)  { animation-delay: 0.45s; }
 .stagger > *:nth-child(10) { animation-delay: 0.50s; }
 .stagger > *:nth-child(n+11) { animation-delay: 0.55s; }
 
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ─── Custom scrollbar ────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: hsl(215 20% 94%); }
+::-webkit-scrollbar-thumb  { background: hsl(222 30% 40%); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(43 72% 49%); }
+
+/* ─── Selection ───────────────────────────────────────────── */
+::selection {
+  background: hsl(43 72% 49% / 0.25);
+  color: hsl(222 55% 18%);
+}
+
+/* ─── Focus rings ─────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid hsl(43 72% 49%);
+  outline-offset: 2px;
 }
