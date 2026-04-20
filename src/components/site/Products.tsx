@@ -1,25 +1,5 @@
-import {
-  Microscope, Beaker, Thermometer, FlaskRound, Droplets, TestTube,
-  Activity, Gauge, Atom, Waves, Sprout, Pill, FlaskConical, Layers, CircleDot,
-} from "lucide-react";
-
-const products = [
-  { name: "Spectrophotometers", desc: "UV-VIS & Visible range", icon: Atom },
-  { name: "pH & Conductivity Meters", desc: "Precise digital readings", icon: Gauge },
-  { name: "PCR Thermal Cycler", desc: "Reliable amplification", icon: TestTube },
-  { name: "Flame Photometer", desc: "Na, K, Ca, Li analysis", icon: FlaskConical },
-  { name: "Karl Fischer Titrator", desc: "Moisture analysis", icon: Droplets },
-  { name: "Colorimeter", desc: "Accurate colorimetry", icon: CircleDot },
-  { name: "Turbidity Meter", desc: "NTU measurement", icon: Waves },
-  { name: "DO Meter", desc: "Dissolved oxygen", icon: Activity },
-  { name: "Colony Counter", desc: "Microbial counting", icon: Layers },
-  { name: "Centrifuge", desc: "High-speed separation", icon: FlaskRound },
-  { name: "Microscope", desc: "Bio & metallurgical", icon: Microscope },
-  { name: "Water & Soil Kit", desc: "Field analysis kit", icon: Sprout },
-  { name: "Disintegration & Friability", desc: "Pharma test apparatus", icon: Pill },
-  { name: "Dry Bath Incubator", desc: "Precision heating", icon: Thermometer },
-  { name: "Viscometer", desc: "Fluid viscosity", icon: Beaker },
-];
+import { Link } from "react-router-dom";
+import { products } from "@/data/products";
 
 export const Products = () => {
   return (
@@ -36,18 +16,22 @@ export const Products = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-          {products.map((p) => (
-            <article
-              key={p.name}
-              className="group gradient-card border border-border rounded-2xl p-6 shadow-soft hover:shadow-card hover:-translate-y-1 transition-smooth cursor-pointer"
-            >
-              <div className="h-12 w-12 rounded-xl gradient-hero flex items-center justify-center mb-4 group-hover:shadow-glow transition-smooth">
-                <p.icon className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <h3 className="font-semibold text-foreground leading-tight mb-1">{p.name}</h3>
-              <p className="text-xs text-muted-foreground">{p.desc}</p>
-            </article>
-          ))}
+          {products.map((p) => {
+            const Icon = p.icon;
+            return (
+              <Link
+                key={p.slug}
+                to={`/products/${p.slug}`}
+                className="group gradient-card border border-border rounded-2xl p-6 shadow-soft hover:shadow-card hover:-translate-y-1 transition-smooth"
+              >
+                <div className="h-12 w-12 rounded-xl gradient-hero flex items-center justify-center mb-4 group-hover:shadow-glow transition-smooth">
+                  <Icon className="h-6 w-6 text-primary-foreground" />
+                </div>
+                <h3 className="font-semibold text-foreground leading-tight mb-1">{p.name}</h3>
+                <p className="text-xs text-muted-foreground">{p.desc}</p>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { z } from "zod";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,6 +17,20 @@ const schema = z.object({
 export const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get("product");
+    if (product) {
+      setForm((f) => ({
+        ...f,
+        message: f.message || `I would like to request a quote for: ${product}.\n\nPlease share pricing, availability, and specifications.`,
+      }));
+      setTimeout(() => {
+        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, []);
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
