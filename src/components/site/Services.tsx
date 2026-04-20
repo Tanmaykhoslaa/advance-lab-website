@@ -20,14 +20,14 @@ export const Services = () => {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
           {services.map((s) => (
             <div
               key={s.title}
-              className="relative overflow-hidden border border-border rounded-2xl p-7 bg-card shadow-soft hover:shadow-card transition-smooth"
+              className="group relative overflow-hidden border border-border rounded-2xl p-7 bg-card shadow-soft lift-on-hover"
             >
-              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                <s.icon className="h-6 w-6 text-primary" />
+              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:gradient-hero group-hover:scale-110 transition-smooth">
+                <s.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-smooth" />
               </div>
               <h3 className="font-bold text-lg mb-2">{s.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
