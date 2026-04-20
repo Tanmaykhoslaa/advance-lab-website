@@ -35,7 +35,7 @@ const ProductDetail = () => {
   const related = products.filter((p) => p.slug !== product.slug).slice(0, 4);
 
   const requestQuote = () => {
-    navigate(`/?product=${encodeURIComponent(product.name)}#contact`);
+    navigate(`/?product=${encodeURIComponent(product.name)}`);
   };
 
   return (
