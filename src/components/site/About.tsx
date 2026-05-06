@@ -1,81 +1,174 @@
-import { CheckCircle2 } from "lucide-react";
+import { Factory, ShieldCheck, Globe2, User2, MapPin, Briefcase } from "lucide-react";
+import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 
-const points = [
-  "Manufacturer, importer & exporter of premium lab instruments",
-  "In-house QC and R&D for consistent quality",
-  "Pan-India dealer network with rapid delivery",
-  "Dedicated technical support & after-sales service",
+const profileData = [
+  { icon: User2, label: "Name of CEOs", value: "Mr. Abhishek Suri & Mrs. Aashima Suri" },
+  { icon: Briefcase, label: "Nature of Business", value: "Manufacturer, Exporter & Supplier of Scientific & Laboratory Instruments" },
+  { icon: MapPin, label: "Market Covered", value: "India, Nepal, Sri Lanka, Sudan, Bangladesh, Zordan, England, Nigeria, Brazil & USA" },
 ];
 
-const stats = [
-  { n: "500+",  l: "Instruments Delivered" },
-  { n: "100+",  l: "Happy Labs" },
-  { n: "15+",   l: "Product Categories" },
-  { n: "24/7",  l: "Service Support" },
-];
+const TiltCard = ({ children, className }: { children: React.ReactNode, className?: string }) => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["7deg", "-7deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-7deg", "7deg"]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+      className={`relative ${className || ""}`}
+    >
+      <div 
+        style={{ transform: "translateZ(40px)" }} 
+        className="h-full w-full bg-white rounded-[2rem] p-8 sm:p-10 border border-[hsl(215_20%_90%)] shadow-soft group hover:shadow-2xl hover:border-[hsl(43_72%_49%/0.6)] transition-all duration-500 overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/50 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        {children}
+      </div>
+    </motion.div>
+  );
+};
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
-      {/* Subtle background accent */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[hsl(215_20%_96%)] blur-[80px] pointer-events-none" />
+    <section id="about" className="py-24 bg-[hsl(215_20%_96%)] relative overflow-hidden perspective-[1000px]">
+      {/* 3D Floating background elements */}
+      <motion.div 
+        animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }} 
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-10 right-10 w-[400px] h-[400px] rounded-full bg-[hsl(43_72%_49%/0.05)] blur-[80px] pointer-events-none" 
+      />
+      <motion.div 
+        animate={{ y: [0, 30, 0], rotate: [0, -5, 0] }} 
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-10 left-10 w-[300px] h-[300px] rounded-full bg-[hsl(222_55%_14%/0.04)] blur-[60px] pointer-events-none" 
+      />
+      
+      <div className="container relative z-10">
+        {/* Main Introduction */}
+        <div className="max-w-4xl mx-auto text-center mb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <p className="section-eyebrow justify-center mb-6">About Our Legacy</p>
+            <h2 className="text-4xl sm:text-6xl font-black text-[hsl(222_55%_18%)] mb-8 tracking-tight">
+              Advance Lab <span className="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(43_72%_49%)] to-[hsl(43_80%_60%)]">Equipments</span>
+            </h2>
+            <p className="text-[hsl(220_15%_45%)] text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
+              Situated at Panchkula, Haryana, our company reaches new heights under the visionary leadership of 
+              <span className="font-bold text-[hsl(222_55%_14%)]"> Mr. Abhishek Suri & Mrs. Aashima Suri</span>. 
+              We set benchmarks in the quality-conscious market through continuous innovation and excellence.
+            </p>
+          </motion.div>
+        </div>
 
-      <div className="container relative grid lg:grid-cols-2 gap-16 items-center">
-        {/* Left copy */}
-        <div>
-          <p className="section-eyebrow">
-            <span className="divider-gold mr-2" style={{ display: "inline-block" }} />
-            About Us
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[hsl(222_55%_18%)] mb-5 leading-snug">
-            Precision Instruments.{" "}
-            <span className="text-gold-gradient">Trusted Service.</span>
-          </h2>
-          <p className="text-[hsl(220_15%_40%)] leading-relaxed mb-8 text-base">
-            Based in Chandigarh / Panchkula / Barwala, Advance Lab Equipments is a
-            leading manufacturer and supplier of scientific, analytical, laboratory and
-            pharmaceutical instruments. We combine global sourcing with local engineering
-            to deliver high-quality equipment at the best prices — backed by a service
-            team you can rely on.
-          </p>
-          <ul className="space-y-3.5">
-            {points.map((p) => (
-              <li key={p} className="flex items-start gap-3">
-                <CheckCircle2 className="h-5 w-5 text-[hsl(43_72%_44%)] shrink-0 mt-0.5" />
-                <span className="text-[hsl(220_18%_32%)] text-sm">{p}</span>
-              </li>
+        {/* Core Pillars - 3D Tilt Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mb-32" style={{ perspective: "1200px" }}>
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+            <TiltCard>
+              <div className="h-16 w-16 rounded-2xl bg-[hsl(222_55%_14%)] flex items-center justify-center mb-8 shadow-xl group-hover:bg-[hsl(43_72%_49%)] group-hover:rotate-6 transition-all duration-500" style={{ transform: "translateZ(30px)" }}>
+                <Factory className="h-8 w-8 text-[hsl(43_72%_60%)] group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-4" style={{ transform: "translateZ(20px)" }}>Infrastructure</h3>
+              <p className="text-base text-[hsl(220_15%_48%)] leading-relaxed" style={{ transform: "translateZ(10px)" }}>
+                Our manufacturing unit features advanced laboratory facilities and a dedicated R&D wing, enabling groundbreaking instrument production while maintaining consistent quality.
+              </p>
+            </TiltCard>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+            <TiltCard>
+              <div className="h-16 w-16 rounded-2xl bg-[hsl(222_55%_14%)] flex items-center justify-center mb-8 shadow-xl group-hover:bg-[hsl(43_72%_49%)] group-hover:-rotate-6 transition-all duration-500" style={{ transform: "translateZ(30px)" }}>
+                <ShieldCheck className="h-8 w-8 text-[hsl(43_72%_60%)] group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-4" style={{ transform: "translateZ(20px)" }}>Quality Control</h3>
+              <p className="text-base text-[hsl(220_15%_48%)] leading-relaxed" style={{ transform: "translateZ(10px)" }}>
+                From raw material selection to finished goods, every aspect is guided by strict QC policies. Instruments undergo rigorous testing for assembly and performance.
+              </p>
+            </TiltCard>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
+            <TiltCard>
+              <div className="h-16 w-16 rounded-2xl bg-[hsl(222_55%_14%)] flex items-center justify-center mb-8 shadow-xl group-hover:bg-[hsl(43_72%_49%)] group-hover:rotate-6 transition-all duration-500" style={{ transform: "translateZ(30px)" }}>
+                <Globe2 className="h-8 w-8 text-[hsl(43_72%_60%)] group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-4" style={{ transform: "translateZ(20px)" }}>Global Network</h3>
+              <p className="text-base text-[hsl(220_15%_48%)] leading-relaxed" style={{ transform: "translateZ(10px)" }}>
+                We thrive on a well-organized network spanning nations including Nepal, Sri Lanka, Bangladesh, USA, and beyond, recognized as a premier Exporter.
+              </p>
+            </TiltCard>
+          </motion.div>
+        </div>
+
+        {/* Company Profile Table - 3D Hover & Float */}
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="max-w-4xl mx-auto bg-white rounded-[2rem] border border-[hsl(215_20%_90%)] shadow-2xl overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] transition-shadow duration-500"
+        >
+          <div className="bg-gradient-to-r from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)] px-10 py-8 relative overflow-hidden">
+            <motion.div 
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="absolute -top-32 -right-32 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none" 
+            />
+            <h3 className="text-2xl font-bold text-white flex items-center gap-4 relative z-10">
+              <div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/10 shadow-inner">
+                <Briefcase className="h-6 w-6 text-[hsl(43_72%_49%)]" /> 
+              </div>
+              Company Profile
+            </h3>
+          </div>
+          <div className="divide-y divide-[hsl(215_20%_94%)] relative z-10 bg-white">
+            {profileData.map((item, i) => (
+              <motion.div 
+                whileHover={{ x: 8, backgroundColor: "hsl(215 20% 98%)" }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                key={item.label} 
+                className="grid sm:grid-cols-3 items-center px-10 py-8 cursor-default"
+              >
+                <div className="flex items-center gap-4 text-[hsl(222_55%_18%)] font-bold text-lg mb-2 sm:mb-0">
+                  <div className="h-10 w-10 rounded-full bg-[hsl(43_72%_49%/0.1)] flex items-center justify-center shrink-0 border border-[hsl(43_72%_49%/0.2)]">
+                    <item.icon className="h-4 w-4 text-[hsl(43_72%_49%)]" />
+                  </div>
+                  {item.label}
+                </div>
+                <div className="sm:col-span-2 text-[hsl(220_15%_45%)] text-base font-medium leading-relaxed">
+                  {item.value}
+                </div>
+              </motion.div>
             ))}
-          </ul>
-        </div>
-
-        {/* Right stats grid */}
-        <div className="grid grid-cols-2 gap-5">
-          {stats.map((s, i) => (
-            <div
-              key={s.l}
-              className={`rounded-xl p-7 border flex flex-col justify-center ${
-                i === 0
-                  ? "bg-[hsl(222_55%_18%)] border-[hsl(222_55%_18%)] col-span-1"
-                  : "bg-white border-[hsl(215_20%_88%)] shadow-soft"
-              }`}
-            >
-              <div
-                className={`text-3xl sm:text-4xl font-bold mb-1 ${
-                  i === 0 ? "text-[hsl(43_72%_60%)]" : "text-[hsl(222_55%_22%)]"
-                }`}
-              >
-                {s.n}
-              </div>
-              <div
-                className={`text-sm ${
-                  i === 0 ? "text-[hsl(220_15%_72%)]" : "text-[hsl(220_15%_48%)]"
-                }`}
-              >
-                {s.l}
-              </div>
-            </div>
-          ))}
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

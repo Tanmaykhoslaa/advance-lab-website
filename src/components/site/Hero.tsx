@@ -29,16 +29,14 @@ export const Hero = () => {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[hsl(43_72%_55%)]" />
             </span>
             <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[hsl(43_72%_65%)]">
-              ISO Certified · Trusted Since 2008
+              ISO Certified · Trusted Since 2004
             </span>
           </div>
 
           {/* Headline */}
           <div className="space-y-3">
             <h1 className="text-[2.6rem] sm:text-5xl lg:text-[3.5rem] font-bold leading-[1.08] text-white">
-              Advance Lab
-              <br />
-              <span className="text-gold-gradient">Equipments</span>
+              Advance Lab Equipments
             </h1>
             <p className="text-lg sm:text-xl font-light text-[hsl(220_15%_70%)] max-w-lg leading-relaxed">
               India's trusted manufacturer, importer &amp; exporter of scientific
@@ -66,8 +64,8 @@ export const Hero = () => {
           <div className="flex items-center gap-8 pt-2 border-t border-white/10">
             {[
               { icon: ShieldCheck, label: "Quality Assured" },
-              { icon: Award,       label: "Best Pricing" },
-              { icon: Headphones,  label: "24/7 Support" },
+              { icon: Award, label: "Best Pricing" },
+              { icon: Headphones, label: "24/7 Support" },
             ].map((s) => (
               <div key={s.label} className="flex items-center gap-2">
                 <s.icon className="h-5 w-5 text-[hsl(43_72%_55%)]" />
@@ -97,7 +95,7 @@ export const Hero = () => {
               <Award className="h-5 w-5 text-[hsl(222_55%_14%)]" />
             </div>
             <div>
-              <div className="text-xl font-bold text-[hsl(222_55%_18%)]">500+</div>
+              <div className="text-xl font-bold text-[hsl(222_55%_18%)]">1 Lakh+</div>
               <div className="text-xs text-[hsl(220_15%_50%)]">Instruments Delivered</div>
             </div>
           </div>
