@@ -34,9 +34,9 @@ export const Products = () => {
                 {/* Image Section */}
                 <div className="relative h-[320px] w-full overflow-hidden bg-gradient-to-b from-white to-[#f3f6fb] px-2 py-1 flex items-center justify-center border-b border-[hsl(215_20%_92%)]">
                   {p.mainImage ? (
-                    <img 
-                      src={p.mainImage} 
-                      alt={p.name} 
+                    <img
+                      src={p.mainImage}
+                      alt={p.name}
                       className="w-full h-full object-contain scale-[1.12] transition-transform duration-700 group-hover:scale-[1.18]"
                     />
                   ) : (
@@ -44,17 +44,17 @@ export const Products = () => {
                       <Icon className="h-16 w-16 text-[hsl(43_72%_60%)] opacity-20" />
                     </div>
                   )}
-                  
+
                   {/* Glassmorphism Badge */}
                   <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest shadow-xl">
                     <Tag className="h-3 w-3" /> {p.category}
                   </div>
-                  
+
                   {/* Floating Icon */}
                   <div className="absolute -bottom-6 right-8 h-14 w-14 rounded-2xl bg-[hsl(222_55%_14%)] flex items-center justify-center text-[hsl(43_72%_49%)] shadow-2xl group-hover:bg-[hsl(43_72%_49%)] group-hover:text-[hsl(222_55%_14%)] transition-all duration-500 group-hover:rotate-12">
                     <Icon className="h-7 w-7" />
                   </div>
-                  
+
                   <div className="absolute inset-0 bg-gradient-to-t from-[hsl(222_55%_14%/0.4)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
@@ -73,7 +73,7 @@ export const Products = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 {/* Hover Glow */}
                 <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-[hsl(43_72%_49%)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>

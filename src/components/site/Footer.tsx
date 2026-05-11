@@ -1,10 +1,10 @@
 import { FlaskConical, Phone, Mail, MapPin } from "lucide-react";
 
 const quickLinks = [
-  { href: "#products", label: "Products" },
-  { href: "#services", label: "Services" },
-  { href: "#about",    label: "About Us" },
-  { href: "#contact",  label: "Contact" },
+  { href: "/#products", label: "Products" },
+  { href: "/#services", label: "Services" },
+  { href: "/#about",    label: "About Us" },
+  { href: "/#contact",  label: "Contact" },
 ];
 
 export const Footer = () => {

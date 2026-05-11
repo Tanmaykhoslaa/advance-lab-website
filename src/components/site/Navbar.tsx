@@ -3,11 +3,11 @@ import { Menu, X, FlaskConical, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const links = [
-  { href: "#home",     label: "Home" },
-  { href: "#products", label: "Products" },
-  { href: "#services", label: "Services" },
-  { href: "#about",    label: "About Us" },
-  { href: "#contact",  label: "Contact" },
+  { href: "/#home",     label: "Home" },
+  { href: "/#products", label: "Products" },
+  { href: "/#services", label: "Services" },
+  { href: "/#about",    label: "About Us" },
+  { href: "/#contact",  label: "Contact" },
 ];
 
 export const Navbar = () => {
@@ -40,7 +40,7 @@ export const Navbar = () => {
 
       <nav className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3 group">
+        <a href="/" className="flex items-center gap-3 group">
           <span className="flex h-9 w-9 items-center justify-center rounded-md bg-[hsl(43_72%_49%)] shadow-gold group-hover:bg-[hsl(43_80%_54%)] transition-all duration-300">
             <FlaskConical className="h-5 w-5 text-[hsl(222_55%_14%)]" />
           </span>
@@ -68,7 +68,7 @@ export const Navbar = () => {
         {/* CTA */}
         <div className="hidden md:block">
           <a
-            href="#contact"
+            href="/#contact"
             className="inline-flex items-center gap-2 px-5 py-2.5 text-[13px] font-semibold rounded-md bg-[hsl(43_72%_49%)] text-[hsl(222_55%_14%)] hover:bg-[hsl(43_80%_55%)] shadow-gold hover:shadow-[0_8px_24px_-6px_hsl(43_80%_45%/0.55)] transition-all duration-300"
           >
             Get a Quote
@@ -102,7 +102,7 @@ export const Navbar = () => {
             ))}
             <li className="pt-2">
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
                 className="flex w-full items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-md bg-[hsl(43_72%_49%)] text-[hsl(222_55%_14%)] hover:bg-[hsl(43_80%_55%)] transition-all"
               >

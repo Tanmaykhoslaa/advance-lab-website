@@ -35,7 +35,7 @@ export const ServiceBanner = () => {
                 <PhoneCall className="h-4 w-4" /> Call Now
               </a>
               <a
-                href="#contact"
+                href="/#contact"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-white/20 text-white text-sm font-medium hover:bg-white/8 hover:border-white/35 transition-all duration-300"
               >
                 Send Inquiry <ArrowRight className="h-4 w-4" />

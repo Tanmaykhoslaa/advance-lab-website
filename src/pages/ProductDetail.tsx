@@ -1,5 +1,5 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Download, FileText, MessageSquare, CheckCircle2, Phone, Tag, Layers, ChevronRight, ChevronLeft } from "lucide-react";
+import { ArrowLeft, Download, FileText, MessageSquare, CheckCircle2, Phone, Tag, Layers, ChevronRight, ChevronLeft, Pipette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
@@ -225,16 +225,38 @@ const ProductDetail = () => {
         ) : (
           <div className="container grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-12">
-              <div className="bg-white rounded-2xl border border-[hsl(215_20%_90%)] shadow-sm p-8">
-                <h2 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-8 flex items-center gap-3"><CheckCircle2 className="h-6 w-6 text-[hsl(43_72%_49%)]" /> Key Features</h2>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {displayFeatures.map((f) => (
-                    <div key={f} className="flex items-start gap-3 p-4 rounded-xl border border-[hsl(215_20%_94%)] bg-[hsl(215_20%_98%)]">
-                      <CheckCircle2 className="h-4 w-4 text-[hsl(43_72%_49%)] shrink-0 mt-0.5" />
-                      <span className="text-sm text-[hsl(222_25%_30%)]">{f}</span>
-                    </div>
-                  ))}
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Features */}
+                <div className="bg-white rounded-2xl border border-[hsl(215_20%_90%)] shadow-sm p-8">
+                  <h2 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-8 flex items-center gap-3">
+                    <CheckCircle2 className="h-6 w-6 text-[hsl(43_72%_49%)]" /> Key Features
+                  </h2>
+                  <div className="space-y-3">
+                    {displayFeatures.map((f) => (
+                      <div key={f} className="flex items-start gap-3 p-3 rounded-xl border border-[hsl(215_20%_94%)] bg-[hsl(215_20%_98%)] group hover:border-[hsl(43_72%_49%/0.3)] transition-colors">
+                        <CheckCircle2 className="h-4 w-4 text-[hsl(43_72%_49%)] shrink-0 mt-0.5" />
+                        <span className="text-sm text-[hsl(222_25%_30%)]">{f}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+
+                {/* Accessories */}
+                {(isModelSelected && selectedModel.accessories || product.accessories) && (
+                  <div className="bg-white rounded-2xl border border-[hsl(215_20%_90%)] shadow-sm p-8">
+                    <h2 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-8 flex items-center gap-3">
+                      <Pipette className="h-6 w-6 text-[hsl(43_72%_49%)]" /> Standard Accessories
+                    </h2>
+                    <div className="space-y-3">
+                      {(isModelSelected ? selectedModel.accessories : product.accessories)?.map((a) => (
+                        <div key={a} className="flex items-start gap-3 p-3 rounded-xl border border-[hsl(215_20%_94%)] bg-[hsl(215_20%_98%)] group hover:border-[hsl(43_72%_49%/0.3)] transition-colors">
+                          <CheckCircle2 className="h-4 w-4 text-[hsl(43_72%_49%)] shrink-0 mt-0.5" />
+                          <span className="text-sm text-[hsl(222_25%_30%)]">{a}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="bg-white rounded-2xl border border-[hsl(215_20%_90%)] shadow-sm overflow-hidden">

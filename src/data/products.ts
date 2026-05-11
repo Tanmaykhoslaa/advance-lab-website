@@ -25,6 +25,7 @@ export type ProductModel = {
   description: string;
   specs: Record<string, string>;
   features?: string[];
+  accessories?: string[];
   image?: string;
   video?: string;
   brochure?: string;
@@ -39,6 +40,7 @@ export type Product = {
   overview: string;
   applications: string[];
   features: string[];
+  accessories?: string[];
   specs: Record<string, string>;
   models?: ProductModel[];
   mainImage?: string;
@@ -53,7 +55,7 @@ export const products: Product[] = [
     desc: "Moisture determination",
     icon: Droplets,
     category: "Analytical",
-    mainImage: "/images/products/Karl-fischer-headphoto.jpeg",
+    mainImage: "/images/products/Microprocessor Karl Fischer.jpeg",
     overview: "Precision Karl Fischer titrators for accurate moisture determination in liquids, solids, and gases across various industrial sectors.",
     applications: ["Pharmaceuticals", "Petrochemicals", "Food & Dairy", "Chemical Analysis"],
     features: ["Auto-titration", "High precision", "Easy-to-clean glass cell", "Built-in calculation"],
@@ -86,7 +88,7 @@ export const products: Product[] = [
         name: "Microprocessor Karl Fischer Moisture Titrator", 
         modelNumber: "ALE-1040", 
         description: "Advanced volumetric titrator using latest microcontroller technology for enhanced accuracy. Features motorized dispensing and automatic calculation of moisture content in ppm, %, and mg H2O.",
-        image: "/images/products/Microprocessor-Karl-Fischer.jpeg",
+        image: "/images/products/Microprocessor Karl Fischer.jpeg",
         specs: { 
           "Measuring Range": "50ppm to 100% of moisture",
           "Method": "Karl Fischer Volumetric Titration",
@@ -116,7 +118,7 @@ export const products: Product[] = [
         name: "Microprocessor Karl Fischer Titrator (Compact)", 
         modelNumber: "ALE-907", 
         description: "Compact microprocessor-controlled titrator for moisture determination in solid and liquid samples. Features a highly sensitive motorized dispensing system and motorized back-flush after analysis.",
-        image: "/images/products/Microprocessor-Karl-Fischer.jpeg",
+        image: "/images/products/Microprocessor Karl Fischer.jpeg",
         specs: { 
           "Measuring Method": "Karl Fischer titration method",
           "Display": "2*16 character LCD",
@@ -147,11 +149,7 @@ export const products: Product[] = [
     icon: FlaskConical,
     category: "Analytical",
     mainImage: "/images/products/Microprocessor-Flame-photometer.jpeg",
-    videos: [
-      "/videos/digital-flame-photometer.mp4", 
-      "/videos/digital-clinical-flame-photometer.mp4", 
-      "/videos/microprocessor-flame-photometer.mp4"
-    ],
+
     overview: "Microprocessor-based flame photometer for accurate determination of Sodium, Potassium, Calcium and Lithium in solution.",
     applications: ["Clinical labs", "Soil & plant analysis", "Cement & glass industry", "Pharma"],
     features: ["Built-in air compressor", "Digital display", "Auto-ignition option", "Stable LPG flame"],
@@ -163,7 +161,7 @@ export const products: Product[] = [
         modelNumber: "ALE-430", 
         description: "High-performance flame photometer for determination of Sodium, Potassium, Lithium and Calcium in blood and soil samples.",
         image: "/images/products/Digital-flame-photometer.jpeg",
-        video: "/videos/digital-flame-photometer.mp4",
+
         specs: { 
           "Range": "Na: 0–100 ppm, K: 0–100 ppm, Ca: 15–100 ppm (Opt), Li: 10–100 ppm (Opt)", 
           "Sensitivity": "Na: 5 ppm, K: 5 ppm, Ca: 10 ppm (Opt), Li: 10 ppm (Opt)",
@@ -185,7 +183,7 @@ export const products: Product[] = [
         modelNumber: "ALE-432", 
         description: "Dual-display clinical flame photometer designed for simultaneous measurement of two elements.",
         image: "/images/products/Digital-clinical-flame-photometer.jpeg",
-        video: "/videos/digital-clinical-flame-photometer.mp4",
+
         specs: { 
           "Serum Range": "Na: 0–200 (1:100 dil), K: 0–10 (1:100 dil), Li: 0–2 (1:5 dil)",
           "Urine Range": "Na: 0–250 (1:100 dil), K: 0–100 (1:100 dil), Ca: 0–10 (1:2 dil)",
@@ -204,7 +202,7 @@ export const products: Product[] = [
         modelNumber: "ALE-435", 
         description: "Top-tier microprocessor-based system with graphical display and 5-point calibration.",
         image: "/images/products/Microprocessor-Flame-photometer.jpeg",
-        video: "/videos/microprocessor-flame-photometer.mp4",
+
         specs: { 
           "Range": "Na, K, Li, Ca: 0–100 ppm (Upto 250 meq/l), Ba: 50–1000 ppm",
           "Sensitivity": "Na/K: 0.5 ppm, Li: 0.5 ppm (Opt), Ca: 15 ppm (Opt), Ba: 50 ppm (Opt)",
@@ -259,10 +257,20 @@ export const products: Product[] = [
         description: "High precision digital viscometer offering accurate and reliable operation with a wide measurement range.",
         image: "/images/products/digital-viscometer-AL-1205.jpeg",
         brochure: "/brochures/ALE-PRODUCT CATALOGUE_20260506_191048_0000.pdf",
+        features: [
+          "Stepping Motor means Accurate, reliable operation",
+          "Direct readout of all measurement parameters",
+          "Auto Range Showing",
+          "Time Function for measurement",
+          "Sound alarm at under 20% Torque",
+          "Linear calibration",
+          "Wide range power supply: 100V-240V"
+        ],
         specs: { 
+          "MODEL NO.": "ALE-1205",
           "RPM": "0.3, 0.6, 1.5, 3, 6, 12, 30, 60",
           "Measuring Range(mPa.s)": "20-2,000,000 m.pas",
-          "No of Standard Spindles": "#1,#2,#3,#4 is standard configuration ,(#0 is for option)",
+          "No of Standard Spindles": "#1, #2, #3, #4 is standard configuration, (#0 is for option)",
           "Measurement Accuracy": "±1.0% of range",
           "Repeatability": "±0.5%",
           "Display": "LCD",
@@ -272,16 +280,7 @@ export const products: Product[] = [
           "Environment": "Temperature 5-35 C Relative Humidity Not Larger Than 80%",
           "Dimension": "LxWxH (mm) 370 x 325 x 280",
           "Weight": "6.8 Kg"
-        },
-        features: [
-          "Stepping Motor means Accurate, reliable operation",
-          "Direct readout of all measurement parameters",
-          "Auto Range Showing",
-          "Time Function for measurement",
-          "Sound alarm at under 20% Torque",
-          "Linear calibration",
-          "Wide range power supply:100V-240V"
-        ]
+        }
       },
       {
         id: "ale-1210", 
@@ -290,10 +289,22 @@ export const products: Product[] = [
         description: "Advanced digital viscometer featuring direct viscosity reading and temperature display for enhanced accuracy.",
         image: "/images/products/digital-viscometer-ALE-1210.jpeg",
         brochure: "/brochures/ALE-PRODUCT CATALOGUE_20260506_191134_0000.pdf",
+        features: [
+          "Stepping Motor means Accurate, reliable operation",
+          "Direct readout of all measurement parameters",
+          "Auto Range Showing",
+          "Time Function for measurement",
+          "Direct Viscosity reading and Temperature Display",
+          "Choice of 3 Pin Power Cord",
+          "Sound alarm at under 20% Torque",
+          "Linear calibration",
+          "Wide range power supply: 100V-240V"
+        ],
         specs: { 
+          "MODEL NO.": "ALE-1210",
           "RPM": "0.3, 0.6, 1.5, 3, 6, 12, 30, 60",
           "Measuring Range(mPa.s)": "10-2,000,000 m.pas",
-          "No of Standard Spindles": "#1,#2,#3,#4 is standard configuration ,(#0 is for option)",
+          "No of Standard Spindles": "#1, #2, #3, #4 is standard configuration, (#0 is for option)",
           "Measurement Accuracy": "±1.0% of range",
           "Repeatability": "±0.5%",
           "Display": "LCD",
@@ -303,18 +314,7 @@ export const products: Product[] = [
           "Environment": "Temperature 5-35 C Relative Humidity Not Larger Than 80%",
           "Dimension": "LxWxH (mm) 370 x 325 x 280",
           "Weight": "6.8 Kg"
-        },
-        features: [
-          "Stepping Motor means Accurate, reliable operation",
-          "Direct readout of all measurement parameters",
-          "Auto Range Showing",
-          "Time Function for measurement",
-          "Direct Viscosity reading and Temperature Display",
-          "Choice of 3 Pin Power Cord",
-          "Sound alarm at under 20% Torque",
-          "Linear calibration",
-          "Wide range power supply:100V-240V"
-        ]
+        }
       },
       {
         id: "ale-1215", 
@@ -323,20 +323,6 @@ export const products: Product[] = [
         description: "Precision touch screen viscometer with a digital LCD display for direct viscosity and temperature readings.",
         image: "/images/products/digital-viscometer-ALE-1215.jpeg",
         brochure: "/brochures/ALE-PRODUCT CATALOGUE_20260506_191210_0000.pdf",
-        specs: { 
-          "RPM": "0.3, 0.6, 1.5, 3, 6, 12, 30, 60",
-          "Measuring Range(mPa.s)": "10-2,000,000 m.pas",
-          "No of Standard Spindles": "#1,#2,#3,#4 is standard configuration ,(#0 is for option)",
-          "Measurement Accuracy": "±1.0% of range",
-          "Repeatability": "±0.5%",
-          "Display": "LCD TOUCHSCREEN",
-          "Temperature RTD Monitoring Sensor Probe": "Yes",
-          "Output": "RS 232 Interface",
-          "Power Supply": "AC 220V/50Hz",
-          "Environment": "Temperature 5-35 C Relative Humidity Not Larger Than 80%",
-          "Dimension": "LxWxH (mm) 400 x 350 x 360",
-          "Weight": "10 Kg"
-        },
         features: [
           "Stepping Motor means Accurate, reliable operation",
           "Direct readout of all measurement parameters",
@@ -346,8 +332,23 @@ export const products: Product[] = [
           "Choice of 3 Pin Power Cord",
           "Sound alarm at under 20% Torque",
           "Linear calibration",
-          "Wide range power supply:100V-240V"
-        ]
+          "Wide range power supply: 100V-240V"
+        ],
+        specs: { 
+          "MODEL NO.": "ALE-1215",
+          "RPM": "0.3, 0.6, 1.5, 3, 6, 12, 30, 60",
+          "Measuring Range(mPa.s)": "10-2,000,000 m.pas",
+          "No of Standard Spindles": "#1, #2, #3, #4 is standard configuration, (#0 is for option)",
+          "Measurement Accuracy": "±1.0% of range",
+          "Repeatability": "±0.5%",
+          "Display": "LCD TOUCHSCREEN",
+          "Temperature RTD Monitoring Sensor Probe": "Yes",
+          "Output": "RS 232 Interface",
+          "Power Supply": "AC 220V/50Hz",
+          "Environment": "Temperature 5-35 C Relative Humidity Not Larger Than 80%",
+          "Dimension": "LxWxH (mm) 400 x 350 x 360",
+          "Weight": "10 Kg"
+        }
       },
       {
         id: "ale-1220", 
@@ -356,20 +357,6 @@ export const products: Product[] = [
         description: "Premium touch screen viscometer featuring advanced measurement capabilities and reliable results for various industries.",
         image: "/images/products/digital-viscometer-ALE-1220.jpeg",
         brochure: "/brochures/ALE-PRODUCT CATALOGUE_20260506_191245_0000.pdf",
-        specs: { 
-          "RPM": "0.3, 0.6, 1.5, 3, 6, 12, 30, 60",
-          "Measuring Range(mPa.s)": "10-2,000,000 m.pas",
-          "No of Standard Spindles": "#1,#2,#3,#4 is standard configuration ,(#0 is for option)",
-          "Measurement Accuracy": "±1.0% of range",
-          "Repeatability": "±0.5%",
-          "Display": "LCD TOUCHSCREEN",
-          "Temperature RTD Monitoring Sensor Probe": "Yes",
-          "Output": "RS 232 Interface",
-          "Power Supply": "AC 220V/50Hz",
-          "Environment": "Temperature 5-35 C Relative Humidity Not Larger Than 80%",
-          "Dimension": "LxWxH (mm) 400 x 350 x 360",
-          "Weight": "10 Kg"
-        },
         features: [
           "Stepping Motor means Accurate, reliable operation",
           "Direct readout of all measurement parameters",
@@ -379,60 +366,270 @@ export const products: Product[] = [
           "Choice of 3 Pin Power Cord",
           "Sound alarm at under 20% Torque",
           "Linear calibration",
-          "Wide range power supply:100V-240V"
-        ]
+          "Wide range power supply: 100V-240V"
+        ],
+        specs: { 
+          "MODEL NO.": "ALE-1220 ( TOUCH SCREEN)",
+          "RPM": "0.3, 0.6, 1.5, 3, 6, 12, 30, 60",
+          "Measuring Range(mPa.s)": "10-2,000,000 m.pas",
+          "No of Standard Spindles": "#1, #2, #3, #4 is standard configuration, (#0 is for option)",
+          "Measurement Accuracy": "±1.0% of range",
+          "Repeatability": "±0.5%",
+          "Display": "LCD TOUCHSCREEN",
+          "Temperature RTD Monitoring Sensor Probe": "Yes",
+          "Output": "RS 232 Interface",
+          "Power Supply": "AC 220V/50Hz",
+          "Environment": "Temperature 5-35 C Relative Humidity Not Larger Than 80%",
+          "Dimension": "LxWxH (mm) 400 x 350 x 360",
+          "Weight": "10 Kg"
+        }
       }
     ]
   },
   {
-    slug: "turbidity-meter",
-    name: "Turbidity Meter",
-    desc: "NTU measurement",
-    icon: Waves,
-    category: "Water Analysis",
-    mainImage: "https://images.unsplash.com/photo-1576086213369-97a306dca664?auto=format&fit=crop&q=80&w=800",
-    overview: "Microprocessor turbidity meters for precise water quality analysis in industrial and environmental applications.",
-    applications: ["Drinking water", "Waste water treatment", "Beverage industry"],
-    features: ["Nephelometric principle", "Auto-ranging", "Calibration standards included"],
-    specs: { "Range": "0–1000 NTU", "Resolution": "0.01 NTU" },
+    slug: "auto-ph-meter",
+    name: "Microprocessor Auto pH Meter",
+    desc: "pH & mV measurement",
+    icon: Activity,
+    category: "Analytical",
+    mainImage: "/images/products/Auto-ph meter.jpeg",
+    overview: "Microprocessor Auto pH Meters are ideal instruments for determination of pH and mV value of any aqueous solution. They use the latest microcontroller technology to provide the most accurate readings on the 3½ digit display. The instrument can be calibrated by using up to 3 point calibration on the click of a key. They have the facility of auto buffer recognition. The calibration is retained in the memory even after the instrument is switched off. The temperature compensation facility, both automatic and manual is available.",
+    applications: ["Agriculture and soil analysis laboratories", "Swimming pools", "Fertilizer plants", "Chemical industries", "Pharmaceutical industries", "Petroleum refineries", "Textile plants"],
+    features: [
+      "Measures pH & mV",
+      "Highly Stable & Accurate",
+      "Easy to operate & user friendly",
+      "Using Latest Microcontroller",
+      "Auto Temperature Compensation Facility",
+      "Auto Buffer Recognition",
+      "8 Soft Touch Membrane Keys",
+      "Up to 3 point Calibration"
+    ],
+    accessories: [
+      "pH Electrode",
+      "pH Stand",
+      "Temperature Prob.",
+      "Buffer Tablet (4 & 7)",
+      "Buffer Bottle (4 & 7)",
+      "12V DC Adapter",
+      "Operation Manual"
+    ],
+    specs: { 
+      "Display": "3½ Digit LED", 
+      "Range pH, mV": "0 to 14.00 pH, 0 to ±1999 mV",
+      "Resolution pH, mV": "0.01 pH, 1 mV",
+      "Accuracy pH, mV": "± 0.01 pH, ± 1 mV",
+      "Temperature Compensation": "Auto : 0 to 100 C",
+      "Calibration": "3 Point (4pH, 7pH, 9pH)",
+      "Slope Control": "80 to 120% Auto Range",
+      "Power": "230 V ± 10% AC, 50Hz",
+      "Dimensions": "195 × 225 × 65 mm (L × B × H)",
+      "Weight": "2kg"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE_20260511_001903_0000.pdf",
     models: [
-      { id: "basic", name: "Standard NTU Meter", modelNumber: "AL-TB-101", description: "Reliable for routine water testing.", specs: { "Range": "0–1000 NTU" }, features: ["Digital display"] },
-      { id: "advanced", name: "High-Precision Turbidity", modelNumber: "AL-TB-202", description: "Advanced optics for low NTU levels.", specs: { "Range": "0–1000 NTU", "Resolution": "0.01 NTU" }, features: ["Data logging"] },
-      { id: "premium", name: "Online Turbidity System", modelNumber: "AL-TB-303", description: "Continuous monitoring for industrial plants.", specs: { "Output": "4-20mA / RS485" }, features: ["Real-time monitoring"] }
+      { 
+        id: "ale-856", 
+        name: "Microprocessor Auto pH Meter", 
+        modelNumber: "ALE-856", 
+        description: "Advanced microprocessor-based pH meter with auto-calibration and temperature compensation.",
+        image: "/images/products/Auto-ph meter.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE_20260511_001903_0000.pdf",
+        features: [
+          "Measures pH & mV",
+          "Highly Stable & Accurate",
+          "Easy to operate & user friendly",
+          "Using Latest Microcontroller",
+          "Auto Temperature Compensation Facility",
+          "Auto Buffer Recognition",
+          "8 Soft Touch Membrane Keys",
+          "Up to 3 point Calibration"
+        ],
+        accessories: [
+          "pH Electrode",
+          "pH Stand",
+          "Temperature Prob.",
+          "Buffer Tablet (4 & 7)",
+          "Buffer Bottle (4 & 7)",
+          "12V DC Adapter",
+          "Operation Manual"
+        ],
+        specs: { 
+          "Display": "3½ Digit LED", 
+          "Range pH": "0 to 14.00 pH",
+          "Range mV": "0 to ±1999 mV",
+          "Resolution": "0.01 pH, 1 mV",
+          "Accuracy": "± 0.01 pH, ± 1 mV",
+          "Temp Comp": "Auto : 0 to 100 C",
+          "Calibration": "3 Point (4pH, 7pH, 9pH)",
+          "Slope Control": "80 to 120% Auto Range",
+          "Power": "230 V ± 10% AC, 50Hz",
+          "Dimensions": "195 × 225 × 65 mm (L × B × H)",
+          "Weight": "2kg"
+        }
+      }
     ]
   },
   {
-    slug: "conductivity-meter",
-    name: "Conductivity Meter",
-    desc: "EC & TDS measurement",
+    slug: "photo-fluorometer",
+    name: "Digital Photo Fluorometer",
+    desc: "Fluorescence analysis",
     icon: Zap,
     category: "Analytical",
-    mainImage: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6ad?auto=format&fit=crop&q=80&w=800",
-    overview: "Advanced meters for measuring electrical conductivity, TDS, and salinity in liquid samples.",
-    applications: ["Water purification", "Agriculture", "Chemical industry"],
-    features: ["Auto temperature compensation", "Adjustable cell constant", "Memory storage"],
-    specs: { "Range": "0–200 mS/cm", "Accuracy": "±1% F.S." },
+    mainImage: "/images/products/digital-photo-flurometer.jpeg",
+    overview: "Digital Photo Fluorometer is designed for precise analysis of fluorophors such as vitamins, quinine, steroids, fluorescein, metal complexes, etc. The Fluorescence is caused by the absorption of radiant energy and the re-emission of some of its energy in the form of light. In fluorescence, the excited molecule returns to the ground state immediately after excitation, when the fluorescent molecule is excited at the fixed wavelength (primary filter). The amount of light emitted is measured at the particular wavelength (secondary filter). Fluorometer method for the determination of fluorophors is more sensitive than the Colorimetric method.",
+    applications: ["Pharmaceuticals", "Vitamin analysis", "Quinine & Steroid analysis", "Chemical labs"],
+    features: [
+      "3 Digit LED display",
+      "Highly Stable & Accurate",
+      "Adjustable in 4 Ranges",
+      "Minimum Sample 4ml.",
+      "Highly sensitive wide range photodiode/cell",
+      "Determines the concentration of Fluorophors & Quinine"
+    ],
+    accessories: [
+      "Primary and Secondary filters: A set of 5",
+      "Test Tube: A set of 5",
+      "Instruction Manual",
+      "Dust Cover"
+    ],
+    specs: { 
+      "Fluoro Sensitivity": "Full scale deflection obtained with 1 ppm quinine sulphate in 0.1 N sulphuric acid (primary wavelength 360 nm)", 
+      "Display": "3 digit bright red seven segment LED display",
+      "Excitation Source": "12V, 50W Tungsten Halogen Lamp",
+      "Sensitivity Range": "Adjustable in 4 ranges",
+      "Primary Filters": "Corning 5840 and Corning 5113 mounted on holders",
+      "Secondary Filters": "Corning 4308, Corning 3486, Corning 3385 mounted on holders",
+      "Detector": "Highly sensitive wide range photodiode/cell",
+      "Sample Test Tube": "15 mm (D) x 80 mm (H)",
+      "Minimum Sample": "4 ml",
+      "Power": "230 V ± 10%, 50 Hz, AC",
+      "Dimension": "255 x 300 x 145 mm (Approx.)",
+      "Weight": "5 Kg. (Approx.)"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE_20260511_002014_0000.pdf",
     models: [
-      { id: "basic", name: "EC Basic Series", modelNumber: "AL-CM-101", description: "Essential EC/TDS measurements.", specs: { "Range": "0–20 mS/cm" }, features: ["Auto-range"] },
-      { id: "advanced", name: "EC Pro Laboratory", modelNumber: "AL-CM-202", description: "High precision benchtop model.", specs: { "Accuracy": "±0.5%" }, features: ["PC Interface"] },
-      { id: "premium", name: "EC Ultimate Touch", modelNumber: "AL-CM-303", description: "Full touchscreen multi-parameter analysis.", specs: { "Display": "5\" Touchscreen" }, features: ["Cloud sync"] }
+      { 
+        id: "ale-924", 
+        name: "Digital Photo Fluorometer", 
+        modelNumber: "ALE-924", 
+        description: "Precise fluorescence analysis instrument with 4-range sensitivity adjustment.",
+        image: "/images/products/digital-photo-flurometer.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE_20260511_002014_0000.pdf",
+        features: [
+          "3 Digit LED display",
+          "Highly Stable & Accurate",
+          "Adjustable in 4 Ranges",
+          "Minimum Sample 4ml.",
+          "Highly sensitive wide range photodiode/cell",
+          "Determines the concentration of Fluorophors & Quinine"
+        ],
+        accessories: [
+          "Primary and Secondary filters: A set of 5",
+          "Test Tube: A set of 5",
+          "Instruction Manual",
+          "Dust Cover"
+        ],
+        specs: { 
+          "Fluoro Sensitivity": "Full scale deflection obtained with 1 ppm quinine sulphate in 0.1 N sulphuric acid (primary wavelength 360 nm)", 
+          "Display": "3 digit bright red seven segment LED display",
+          "Excitation Source": "12V, 50W Tungsten Halogen Lamp",
+          "Sensitivity Range": "Adjustable in 4 ranges",
+          "Primary Filters": "Corning 5840 and Corning 5113 mounted on holders",
+          "Secondary Filters": "Corning 4308, Corning 3486, Corning 3385 mounted on holders",
+          "Detector": "Highly sensitive wide range photodiode/cell",
+          "Sample Test Tube": "15 mm (D) x 80 mm (H)",
+          "Minimum Sample": "4 ml",
+          "Power": "230 V ± 10%, 50 Hz, AC",
+          "Dimension": "255 x 300 x 145 mm (Approx.)",
+          "Weight": "5 Kg. (Approx.)"
+        }
+      }
     ]
   },
   {
-    slug: "colorimeter",
-    name: "Colorimeter",
-    desc: "Absorbance & %T",
+    slug: "spectrophotometer",
+    name: "Digital Spectrophotometer",
+    desc: "Wavelength analysis",
     icon: Layers,
     category: "Analytical",
-    mainImage: "https://images.unsplash.com/photo-1532187875605-1ef6c237a175?auto=format&fit=crop&q=80&w=800",
-    overview: "Digital colorimeters for standard chemical and clinical concentration measurements.",
-    applications: ["Blood analysis", "Chemical titration", "Quality control"],
-    features: ["8 filters", "Digital readout", "Long-life LED source"],
-    specs: { "Filters": "8 standard filters", "Readout": "3½ digit LED" },
+    mainImage: "/images/products/Digital-Spectrophotometer.jpeg",
+    overview: "Digital Spectrophotometer - The most economical, reliable, rugged and accurate instrument for spectrophotometric analysis of any concentration. Digital Spectrophotometer operates at a wavelength range of 340 nm to 960 nm. The output is available on a 3 ½ digit red seven segment LED display in terms of %Transmission (%T), Absorbance (Abs.), and Concentration (Conc.). This is useful instrument for Chemistry Labs, Pharmaceutical Industries, Colleges and University Labs etc.",
+    applications: ["Chemistry Labs", "Pharmaceutical Industries", "Colleges and University Labs"],
+    features: [
+      "Range 340 To 960 nm",
+      "Wavelength Resolution 1 nm",
+      "Highly Stable and Accurate",
+      "Direct Concentration Facility",
+      "Dual Digital Display For Wavelength & Data",
+      "10mm & 50mm Path Length (10mm, 50mm, 100mm Path Length Optional)"
+    ],
+    accessories: [
+      "Range 340 To 960 nm",
+      "Glass Square Cuvettes of 10mm path-length: A set of 2",
+      "Operation Manual",
+      "Dust Cover"
+    ],
+    specs: { 
+      "Model": "ALE 658",
+      "Range": "340 to 960 nm", 
+      "Resolution": "%T: 0.1, Abs: 0.001, Conc. 1",
+      "Output": "%T: 0 to 100, Abs: 0 to 1.999, Conc: 0 to 1999",
+      "Detector": "Silicon Photodiode",
+      "Light Source": "6V, 10W, Tungsten Halogen Lamp",
+      "Monochromator": "600 Lines / mm holographic grating",
+      "Sample Holder": "10mm Glass Cuvettes (50mm, 100mm Optional)",
+      "Spectrum Bandwidth": "5nm",
+      "Wave Length Resolution": "1nm",
+      "Wave Length Accuracy": "±2.5nm",
+      "Repeatability": "±2nm",
+      "Display": "3 1/2 Digit Bright Red LED Display",
+      "Power Supply": "230V +10% AC, 50 Hz",
+      "Dimension": "480x290x180mm (LxBxH)",
+      "Weight": "8.5 kg (approx.)"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE_20260511_002117_0000.pdf",
     models: [
-      { id: "basic", name: "Digital Colorimeter 8", modelNumber: "AL-CL-101", description: "Standard 8-filter digital model.", specs: { "Filters": "8" }, features: ["Compact size"] },
-      { id: "advanced", name: "Microprocessor Colorimeter", modelNumber: "AL-CL-202", description: "Self-calibrating advanced model.", specs: { "Memory": "100 samples" }, features: ["Auto zero"] },
-      { id: "premium", name: "Programmable Colorimeter", modelNumber: "AL-CL-303", description: "User-programmable concentration modes.", specs: { "Printer": "Built-in option" }, features: ["Direct concentration"] }
+      { 
+        id: "ale-658", 
+        name: "Digital Spectrophotometer", 
+        modelNumber: "ALE-658", 
+        description: "Rugged and accurate spectrophotometer for chemical and pharmaceutical analysis.",
+        image: "/images/products/Digital-Spectrophotometer.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE_20260511_002117_0000.pdf",
+        features: [
+          "Range 340 To 960 nm",
+          "Wavelength Resolution 1 nm",
+          "Highly Stable and Accurate",
+          "Direct Concentration Facility",
+          "Dual Digital Display For Wavelength & Data",
+          "10mm & 50mm Path Length (10mm, 50mm, 100mm Path Length Optional)"
+        ],
+        accessories: [
+          "Range 340 To 960 nm",
+          "Glass Square Cuvettes of 10mm path-length: A set of 2",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: { 
+          "Model": "ALE 658",
+          "Range": "340 to 960 nm",
+          "Resolution": "%T: 0.1, Abs: 0.001, Conc. 1",
+          "Output": "%T: 0 to 100, Abs: 0 to 1.999, Conc: 0 to 1999",
+          "Detector": "Silicon Photodiode",
+          "Light Source": "6V, 10W, Tungsten Halogen Lamp",
+          "Monochromator": "600 Lines / mm holographic grating",
+          "Sample Holder": "10mm Glass Cuvettes (50mm, 100mm Optional)",
+          "Spectrum Bandwidth": "5nm",
+          "Wave Length Resolution": "1nm",
+          "Wave Length Accuracy": "±2.5nm",
+          "Repeatability": "±2nm",
+          "Display": "3 1/2 Digit Bright Red LED Display",
+          "Power Supply": "230V +10% AC, 50 Hz",
+          "Dimension": "480x290x180mm (LxBxH)",
+          "Weight": "8.5 kg (approx.)"
+        }
+      }
     ]
   }
 ];

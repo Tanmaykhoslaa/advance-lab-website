@@ -47,13 +47,13 @@ export const Hero = () => {
           {/* CTAs */}
           <div className="flex flex-wrap gap-4">
             <a
-              href="#products"
+              href="/#products"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-[hsl(43_72%_49%)] text-[hsl(222_55%_14%)] text-sm font-semibold hover:bg-[hsl(43_80%_55%)] shadow-gold hover:shadow-[0_10px_32px_-8px_hsl(43_80%_45%/0.60)] transition-all duration-300"
             >
               View Products <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md border border-white/20 text-white text-sm font-medium hover:bg-white/8 hover:border-white/35 backdrop-blur-sm transition-all duration-300"
             >
               Contact Us
@@ -104,7 +104,7 @@ export const Hero = () => {
 
       {/* Scroll cue */}
       <div className="flex justify-center pb-8">
-        <a href="#about" className="flex flex-col items-center gap-2 text-[hsl(220_12%_55%)] hover:text-[hsl(43_72%_55%)] transition-colors group">
+        <a href="/#about" className="flex flex-col items-center gap-2 text-[hsl(220_12%_55%)] hover:text-[hsl(43_72%_55%)] transition-colors group">
           <span className="text-[11px] font-medium uppercase tracking-[0.12em]">Scroll</span>
           <ChevronDown className="h-4 w-4 animate-bounce" />
         </a>

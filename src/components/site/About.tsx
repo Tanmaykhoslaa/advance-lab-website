@@ -1,4 +1,4 @@
-import { Factory, ShieldCheck, Globe2, User2, MapPin, Briefcase } from "lucide-react";
+import { Factory, ShieldCheck, Globe2, User2, MapPin, Briefcase, FlaskConical, Wrench } from "lucide-react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 
 const profileData = [
@@ -125,6 +125,89 @@ export const About = () => {
               </p>
             </TiltCard>
           </motion.div>
+        </div>
+
+        {/* Detailed Commitments Section */}
+        <div className="max-w-6xl mx-auto mb-32 space-y-24">
+          
+          {/* R&D */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-12 w-12 rounded-xl bg-[hsl(222_55%_14%)] flex items-center justify-center shadow-lg">
+                  <FlaskConical className="h-6 w-6 text-[hsl(43_72%_60%)]" />
+                </div>
+                <h3 className="text-3xl font-bold text-[hsl(222_55%_18%)]">Research & Development</h3>
+              </div>
+              <div className="space-y-4 text-[hsl(220_15%_45%)] text-lg leading-relaxed">
+                <p>
+                  Advance Lab Equipments has one of the finest in-house Research & Development and Product Development facilities. Company’s Research & Development department is engaged continuously in development of new products and improvement in the existing ones.
+                </p>
+                <p>
+                  In order to be competitive, the R&D team continuously works for technological development of product range. Advance Lab Equipments has a most modern in house R&D Lab. We have been adding a few instruments every year to our range of products.
+                </p>
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative h-full min-h-[300px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)] p-8 flex items-center justify-center">
+               <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} />
+               <FlaskConical className="w-48 h-48 text-[hsl(43_72%_49%)] opacity-80 animate-float" />
+            </motion.div>
+          </div>
+
+          {/* After Sales */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative h-full min-h-[300px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-[hsl(43_72%_49%)] to-[#ffe680] p-8 flex items-center justify-center md:order-1 order-2">
+               <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, black 1px, transparent 0)", backgroundSize: "24px 24px" }} />
+               <Wrench className="w-48 h-48 text-[hsl(222_55%_14%)] opacity-80 animate-float" style={{ animationDelay: "1s" }} />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="md:order-2 order-1">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-12 w-12 rounded-xl bg-[hsl(43_72%_49%)] flex items-center justify-center shadow-lg">
+                  <Wrench className="h-6 w-6 text-[hsl(222_55%_14%)]" />
+                </div>
+                <h3 className="text-3xl font-bold text-[hsl(222_55%_18%)]">After Sales Services</h3>
+              </div>
+              <div className="space-y-4 text-[hsl(220_15%_45%)] text-lg leading-relaxed">
+                <p>
+                  We are very keen that the end users of our instruments should be fully satisfied with the quality and performance of our products. For this purpose, we ensure timely after sales services to all the end users of our products.
+                </p>
+                <p>
+                  Many of our dealers have sent their Service Engineers to our factory for training on After Sales Services. Besides this, our Service Engineers visit all our dealers at least once in a month within India to sort out the problems of their customers, if any.
+                </p>
+                <p>
+                  As a result, the users of our instruments are fully satisfied with the quality of the instruments and our "After Sales Services". They have been recommending to their known friends for use of our instruments. This has resulted in substantial increase in demand for our products.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Quality Control */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-12 w-12 rounded-xl bg-[hsl(222_55%_14%)] flex items-center justify-center shadow-lg">
+                  <ShieldCheck className="h-6 w-6 text-[hsl(43_72%_60%)]" />
+                </div>
+                <h3 className="text-3xl font-bold text-[hsl(222_55%_18%)]">Quality Control</h3>
+              </div>
+              <div className="space-y-4 text-[hsl(220_15%_45%)] text-lg leading-relaxed">
+                <p>
+                  Advance Lab Equipments has a well designed control system to monitor all the manufacturing stages. This ensures the desired and consistent quality of the products being manufactured. All the operating procedures are standardized, documented and validated.
+                </p>
+                <p>
+                  All analytical, laboratory, pharmaceutical, clinical and Field Instruments manufactured by Advance Lab Equipments are checked at various stages of manufacturing to ensure that their quality is maintained. In case of even a minor defect found, the same is returned to production floor for rectification.
+                </p>
+                <p className="font-semibold text-[hsl(222_55%_14%)] bg-[hsl(43_72%_49%/0.1)] p-4 rounded-xl border border-[hsl(43_72%_49%/0.2)]">
+                  Advance Lab Equipments is an ISO 9001-2015 certified company. Every single product of our company like UV-Visible Spectrophotometer, Flame Photometer, pH Meters, Colorimeters, Colony Counters, etc. are examined at each stage like assembly, testing, outlook, performance of the instrument, and its packing.
+                </p>
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative h-full min-h-[300px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)] p-8 flex items-center justify-center">
+               <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} />
+               <ShieldCheck className="w-48 h-48 text-[hsl(43_72%_49%)] opacity-80 animate-float" style={{ animationDelay: "2s" }} />
+            </motion.div>
+          </div>
+
         </div>
 
         {/* Company Profile Table - 3D Hover & Float */}
