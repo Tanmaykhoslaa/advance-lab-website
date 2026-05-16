@@ -631,6 +631,656 @@ export const products: Product[] = [
         }
       }
     ]
+  },
+  {
+    slug: "digital-leak-test-apparatus",
+    name: "Digital Leak Test Apparatus",
+    desc: "Packaging quality testing",
+    icon: Waves,
+    category: "Analytical",
+    mainImage: "/images/products/Digital-leak-test-apparatus.jpeg",
+    overview: "The instrument is used to test the quality of the packaging process and to check that the seals enclosing the product are perfectly intact. Our Leak tester is designed to find the smallest holes and imperfections in blister packs and other semi-rigid product packaging. The leak test apparatus is widely used in the pharmaceutical industry for checking strips, blisters and bottles containing tablets, capsules and syrups. It also find application in the food industry where it can be effectively used to check the air-tightness of sweet packets, ready-to-eat pre-packed foods, confectionery packaging, packs of noodles, sauces etc.",
+    applications: ["Pharmaceutical industry (strips, blisters, bottles)", "Food industry (sweet packets, ready-to-eat foods)", "Confectionery packaging", "Packaging quality control"],
+    features: [
+      "Programmable Time With Digital Display",
+      "Auto Stop After Completion Of Set Time With Alarm",
+      "Precise Control of Vacuum",
+      "Heavy Duty Oil-free Vacuum Pump",
+      "1mm Thick SS cabinet",
+      "Hold function to stop counting at any stage"
+    ],
+    specs: {
+      "Time Control & Range": "Digital, Programmable, 00.01 sec to 99min59sec",
+      "Test Vacuum Range": "Adjustable up-to 650 mmHg",
+      "Vacuum Display": "2.5\" SS Vacuum Gauge",
+      "Vacuum Control & Release": "By Single Front Panel Knob",
+      "Audio Alarm at completion": "Yes",
+      "Quality Standard": "FIVE STAGES OF QUALITY CHECKING BEFORE DISPATCH"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE.pdf",
+    models: [
+      {
+        id: "ale-973",
+        name: "Digital Leak Test Apparatus",
+        modelNumber: "ALE-973",
+        description: "GMP Model with In-built Test Unit for efficient leak testing.",
+        image: "/images/products/Digital-leak-test-apparatus.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE.pdf",
+        features: [
+          "Programmable Time With Digital Display",
+          "Auto Stop After Completion Of Set Time With Alarm",
+          "Precise Control of Vacuum",
+          "Heavy Duty Oil-free Vacuum Pump",
+          "1mm Thick SS cabinet",
+          "Hold function to stop counting at any stage"
+        ],
+        specs: {
+          "Type": "GMP Model, In-built Test Unit",
+          "Time Control & Range": "Digital, Programmable, 00.01 sec to 99min59sec",
+          "Test Vacuum Range": "Adjustable up-to 650 mmHg",
+          "Vacuum Display": "2.5\" SS Vacuum Gauge",
+          "Vacuum Control & Release": "By Single Front Panel Knob",
+          "Audio Alarm at completion": "Yes",
+          "Vacuum Pump": "Oil free, MV 27\"+- 5%, 1/16HP Motor",
+          "Test Unit Size": "200mm(973)"
+        }
+      },
+      {
+        id: "ale-974-975",
+        name: "Digital Leak Test Apparatus",
+        modelNumber: "ALE-974/975",
+        description: "GMP Model with separate Test Unit for versatile laboratory applications.",
+        image: "/images/products/Digital-leak-test-apparatus.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE.pdf",
+        features: [
+          "Programmable Time With Digital Display",
+          "Auto Stop After Completion Of Set Time With Alarm",
+          "Precise Control of Vacuum",
+          "Heavy Duty Oil-free Vacuum Pump",
+          "1mm Thick SS cabinet",
+          "Hold function to stop counting at any stage"
+        ],
+        specs: {
+          "Type": "GMP Model, separate Test Unit",
+          "Time Control & Range": "Digital, Programmable, 00.01 sec to 99min59sec",
+          "Test Vacuum Range": "Adjustable up-to 650 mmHg",
+          "Vacuum Display": "2.5\" SS Vacuum Gauge",
+          "Vacuum Control & Release": "By Single Front Panel Knob",
+          "Audio Alarm at completion": "Yes",
+          "Vacuum Pump": "Oil free, MV 27\"+- 5%, 1/4HP Motor",
+          "Test Unit Size": "250mm(974), 300mm(975)"
+        }
+      }
+    ]
+  },
+  {
+    slug: "digital-turbidity-meter",
+    name: "Digital Turbidity Meter",
+    desc: "Measurement of suspended solids",
+    icon: Waves,
+    category: "Analytical",
+    mainImage: "/images/products/Digital-turbidity-meter.jpeg",
+    overview: "We are one of the established and reputed Turbidity Meters manufacturer, supplier and exporter. Turbidity Meters are the most accurate and reliable instruments available for measurement of suspended solids in the samples. Turbidity Meters are extremely useful for measurement of suspended solids in sewage water, ground water, soil analysis laboratories, water quality control in boiler feed water, water purification plants, chemical & pharmaceutical industries etc.",
+    applications: ["Sewage and drinking water testing", "Soil analysis laboratories", "Boiler feed water quality control", "Chemical & Pharmaceutical industries"],
+    features: [
+      "Rugged, reliable & easy to operate",
+      "Highly stable & accurate",
+      "User friendly",
+      "Measurements upto 1000 NTU",
+      "30mm flat bottom test tube",
+      "3½ Digit LED display",
+      "Sewage and drinking water testing"
+    ],
+    accessories: [
+      "Test tube Set of 3",
+      "Operation Manual",
+      "Dust Cover"
+    ],
+    specs: {
+      "Model": "ALE-558",
+      "Range": "0 – 1000 NTU",
+      "Resolution": "1 NTU",
+      "Accuracy": "± 3% FS, ± 1Digit",
+      "Display": "3½ Digit 7-Segment LED",
+      "Light Source": "3V, 0.3Amp LED Lamp",
+      "Detector": "Photodiode",
+      "Sample System": "30mm Clear Glass Test Tubes",
+      "Power": "230 V ± 10% AC, 50 Hz",
+      "Dimensions": "195 x 230 x 95 mm (L x B x H) (Approx.)",
+      "Weight": "3kg"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-7.pdf",
+    models: [
+      {
+        id: "ale-558",
+        name: "Digital Turbidity Meter",
+        modelNumber: "ALE-558",
+        description: "Accurate and reliable instrument for measurement of suspended solids.",
+        image: "/images/products/Digital-turbidity-meter.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-7.pdf",
+        features: [
+          "Rugged, reliable & easy to operate",
+          "Highly stable & accurate",
+          "User friendly",
+          "Measurements upto 1000 NTU",
+          "30mm flat bottom test tube",
+          "3½ Digit LED display"
+        ],
+        accessories: [
+          "Test tube Set of 3",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Product": "Digital",
+          "Turbidity": "Meter",
+          "Range": "0 – 1000 NTU",
+          "Resolution": "1 NTU",
+          "Accuracy": "± 3% FS, ± 1Digit",
+          "Display": "3½ Digit 7-Segment LED",
+          "Light Source": "3V, 0.3Amp LED Lamp",
+          "Detector": "Photodiode",
+          "Sample System": "30mm Clear Glass Test Tubes",
+          "Power": "230 V ± 10% AC, 50 Hz",
+          "Dimensions": "195 x 230 x 95 mm (L x B x H) (Approx.)",
+          "Weight": "3kg"
+        }
+      }
+    ]
+  },
+  {
+    slug: "auto-potentiometer",
+    name: "Micro Processor Auto Potentiometer",
+    desc: "Potentiometric measurements",
+    icon: Activity,
+    category: "Analytical",
+    mainImage: "/images/products/Microproccesor-auto-potentiometer.jpeg",
+    overview: "Microprocessor Auto Potentiometer is a precision instrument for potentiometric measurements. Results are displayed in millivolts on a direct digital read out by 3½ digit LED display. It is supplied with a set of 2 electrodes viz. Reference & Glass, (Platinum & Silver electrodes are optional). It is extremely useful for potentiometric, ORP and acid base titrations. This is useful instrument for Chemistry Labs, Pharmaceutical Industries, Colleges and University Labs etc.",
+    applications: ["Chemistry Labs", "Pharmaceutical Industries", "Colleges and University Labs", "ORP and acid base titrations"],
+    features: [
+      "Easy to operate & user Friendly",
+      "Highly Stable & Accurate",
+      "3½ Digit LED Display",
+      "Rugged & Economical",
+      "8 Soft touch membranes keys",
+      "ORP electrode for titration"
+    ],
+    accessories: [
+      "ORP Electrode",
+      "Electrode Stand",
+      "Temperature Probe",
+      "12V DC Adapter",
+      "Operation manual",
+      "Dust Coverr"
+    ],
+    specs: {
+      "Model": "ALE-865",
+      "Auto Range": "0 – ± 1999mV",
+      "Resolution": "0.1 mV",
+      "Repeatability": "± 1 mV",
+      "Accuracy": "± 1 mV, ± 1 digit",
+      "Input Impedance": "> 10¹² ohms",
+      "Operating Temperature": "10°C – 45°C",
+      "Display": "3½ Digit 0.5” 7-Segment LED Display",
+      "Power": "230 V ± 10% AC, 50 Hz",
+      "Dimensions": "195 x 225 x 65 mm (L x B x H)",
+      "Weight": "2 Kg (Approx.)"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-6.pdf",
+    models: [
+      {
+        id: "ale-865",
+        name: "Micro Processor Auto Potentiometer",
+        modelNumber: "ALE-865",
+        description: "Precision instrument for potentiometric measurements with 3½ digit LED display.",
+        image: "/images/products/Microproccesor-auto-potentiometer.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-6.pdf",
+        features: [
+          "Easy to operate & user Friendly",
+          "Highly Stable & Accurate",
+          "3½ Digit LED Display",
+          "Rugged & Economical",
+          "8 Soft touch membranes keys",
+          "ORP electrode for titration"
+        ],
+        accessories: [
+          "ORP Electrode",
+          "Electrode Stand",
+          "Temperature Probe",
+          "12V DC Adapter",
+          "Operation manual",
+          "Dust Coverr"
+        ],
+        specs: {
+          "Auto Range": "0 – ± 1999mV",
+          "Resolution": "0.1 mV",
+          "Repeatability": "± 1 mV",
+          "Accuracy": "± 1 mV, ± 1 digit",
+          "Input Impedance": "> 10¹² ohms",
+          "Operating Temperature": "10°C – 45°C",
+          "Display": "3½ Digit 0.5” 7-Segment LED Display",
+          "Power": "230 V ± 10% AC, 50 Hz",
+          "Dimensions": "195 x 225 x 65 mm (L x B x H)",
+          "Weight": "2 Kg (Approx.)"
+        }
+      }
+    ]
+  },
+  {
+    slug: "auto-conductivity-meter",
+    name: "Auto Conductivity Temp Meter",
+    desc: "Conductivity & Temp measurement",
+    icon: Waves,
+    category: "Analytical",
+    mainImage: "/images/products/Auto-conductivity-temp-meter.jpeg",
+    overview: "The Auto Conductivity Meter offered by the company are high on quality, performance and are made of the finest quality raw materials, making them durable and long lasting. Auto Conductivity-Temp. Meter is a solid state instrument designed to provide the precise Conductivity / Temp. Measurements. We have uses the latest microprocessor technology and advanced engineering techniques so as to give enhanced accuracy and reproducibility. The system has user friendly prompts, which guide you throughout the measurement process.",
+    applications: ["Water quality testing", "Chemical industries", "Pharmaceutical labs", "Environmental monitoring"],
+    features: [
+      "Highly Stable & Accurate",
+      "Easy to operate & user friendly",
+      "Using Latest Microcontroller",
+      "Auto Temperature Compensation Facility",
+      "Auto Ranging Facility",
+      "Cell Constant Measurement & Adjustment facility",
+      "Alphanumeric LCD 16x2"
+    ],
+    accessories: [
+      "Conductivity Cell",
+      "Temperature Probe.",
+      "Operation Manual",
+      "Dust Cover",
+      "Conductivity Cell Stand",
+      "12V DC Adaptor"
+    ],
+    specs: {
+      "Model": "ALE-877",
+      "Display": "Alphanumeric LCD 16x2",
+      "Measurement": "Conductivity & Temperature",
+      "Range": "Five Ranges:- 0-200 µS/cm, 0-2 mS/cm, 0-20 mS/cm, 0-200 mS/cm",
+      "Range Selection": "Automatic in 5 Auto Range",
+      "Resolution": "0.1 µS/cm, 0.1°C",
+      "Accuracy": "±0.5% FS ±1Digit",
+      "Temperature Compensation": "Automatic : 0 to 50°C",
+      "Cell Constant": "Adjustable",
+      "Conductivity Cell": "Platinum DIP Type",
+      "Power": "12V DC Adapter, 230V ±10% AC, 50 Hz",
+      "Dimensions": "195x225x63 (L x B x H)",
+      "Weight": "2kg"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-5.pdf",
+    models: [
+      {
+        id: "ale-877",
+        name: "Auto Conductivity Temp Meter",
+        modelNumber: "ALE-877",
+        description: "Solid state instrument for precise Conductivity and Temperature measurements.",
+        image: "/images/products/Auto-conductivity-temp-meter.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-5.pdf",
+        features: [
+          "Highly Stable & Accurate",
+          "Easy to operate & user friendly",
+          "Using Latest Microcontroller",
+          "Auto Temperature Compensation Facility",
+          "Auto Ranging Facility",
+          "Cell Constant Measurement & Adjustment facility",
+          "Alphanumeric LCD 16x2"
+        ],
+        accessories: [
+          "Conductivity Cell",
+          "Temperature Probe.",
+          "Operation Manual",
+          "Dust Cover",
+          "Conductivity Cell Stand",
+          "12V DC Adaptor"
+        ],
+        specs: {
+          "Display": "Alphanumeric LCD 16x2",
+          "Measurement": "Conductivity & Temperature",
+          "Range": "Five Ranges:- 0-200 µS/cm, 0-2 mS/cm, 0-20 mS/cm, 0-200 mS/cm",
+          "Range Selection": "Automatic in 5 Auto Range",
+          "Resolution": "0.1 µS/cm, 0.1°C",
+          "Accuracy": "±0.5% FS ±1Digit",
+          "Temperature Compensation": "Automatic : 0 to 50°C",
+          "Cell Constant": "Adjustable",
+          "Conductivity Cell": "Platinum DIP Type",
+          "Power": "12V DC Adapter, 230V ±10% AC, 50 Hz",
+          "Dimensions": "195x225x63 (L x B x H)",
+          "Weight": "2kg"
+        }
+      }
+    ]
+  },
+  {
+    slug: "single-beam-spectrophotometer",
+    name: "Microprocessor Single-Beam Spectrophotometer",
+    desc: "Advanced wavelength analysis",
+    icon: Layers,
+    category: "Analytical",
+    mainImage: "/images/products/Microprocessor-single-beam-spectrophotometer.jpeg",
+    overview: "Spectrophotometer models are designed for reliable continuous operation. It is easy to use, thoroughly reliable and above all low cost. Features C-T Single Beam, Grating 1200 lines/mm optical system.",
+    applications: [
+      "Medical/pharmaceutical",
+      "Industry environmental Monitoring",
+      "Commodity Inspection",
+      "Food Inspection",
+      "Agricultural Chemistry",
+      "Teaching in Colleges & Universities",
+      "Metallurgy",
+      "Geology",
+      "Machine Manufacturing",
+      "Petrochemical Industries",
+      "Water and Waste water Labs",
+      "Food and Beverage Labs"
+    ],
+    features: [
+      "Monochromator with holographic flashing grating",
+      "High wavelength precision & good monochromaticity",
+      "Sample compartment equipped with 50 mm cell holder",
+      "Direct concentration read-out facility",
+      "4 LCD Display",
+      "Silicon Photodiode Detector"
+    ],
+    accessories: [
+      "Main Instrument : 1 Unit",
+      "Operational Manual : 1 No.",
+      "Power cable : 1 No.",
+      "Glass Cell 10 mm : 4 no."
+    ],
+    specs: {
+      "Model": "ALE-650",
+      "Optical System": "C-T Single Beam, Grating 1200 lines/mm",
+      "Wavelength Range": "320–1020 nm",
+      "Spectral Bandwidth": "2 nm",
+      "Wavelength Interval": "1 nm",
+      "Wavelength Accuracy": "±2 nm",
+      "Wavelength Repeatability": "≤1 nm",
+      "Photometric Accuracy": "±1%T",
+      "Photometric Repeatability": "0.5%T",
+      "Photometric Range": "0 – 1.999A, 0 – 199.9%T",
+      "Stray Light": "≤0.3%T @ 340 nm",
+      "Stability": "±0.004A/h @ 500 nm",
+      "Display": "4 LCD",
+      "Photometric Mode": "T, A, C",
+      "Detector": "Si Photodiode",
+      "Light Source": "Tungsten lamp",
+      "Power Requirement": "AC (220V/50Hz)",
+      "Dimensions": "450 × 520 × 320 mm",
+      "Weight": "10 kg"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-4.pdf",
+    models: [
+      {
+        id: "ale-650",
+        name: "Microprocessor Single-Beam Spectrophotometer",
+        modelNumber: "ALE-650",
+        description: "Reliable single-beam spectrophotometer for continuous laboratory operation.",
+        image: "/images/products/Microprocessor-single-beam-spectrophotometer.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-4.pdf",
+        features: [
+          "Monochromator with holographic flashing grating",
+          "High wavelength precision & low stray light",
+          "Sample compartment with 50 mm cell holder",
+          "Direct concentration read-out function"
+        ],
+        accessories: [
+          "Main Instrument : 1 Unit",
+          "Operational Manual : 1 No.",
+          "Power cable : 1 No.",
+          "Glass Cell 10 mm : 4 no."
+        ],
+        specs: {
+          "Optical System": "C-T Single Beam, Grating 1200 lines/mm",
+          "Wavelength Range": "320–1020 nm",
+          "Spectral Bandwidth": "2 nm",
+          "Wavelength Interval": "1 nm",
+          "Wavelength Accuracy": "±2 nm",
+          "Wavelength Repeatability": "≤1 nm",
+          "Photometric Accuracy": "±1%T",
+          "Photometric Repeatability": "0.5%T",
+          "Photometric Range": "0 – 1.999A, 0 – 199.9%T",
+          "Stray Light": "≤0.3%T @ 340 nm",
+          "Stability": "±0.004A/h @ 500 nm",
+          "Display": "4 LCD",
+          "Photometric Mode": "T, A, C",
+          "Detector": "Si Photodiode",
+          "Light Source": "Tungsten lamp",
+          "Power Requirement": "AC (220V/50Hz)",
+          "Dimensions": "450 × 520 × 320 mm",
+          "Weight": "10 kg"
+        }
+      }
+    ]
+  },
+  {
+    slug: "photo-colorimeter",
+    name: "Auto Zero Photo Colorimeter",
+    desc: "Superior quality colorimetric analysis",
+    icon: Pipette,
+    category: "Analytical",
+    mainImage: "/images/products/Auto-zero-photocolorimeter.jpeg",
+    overview: "The company provides the superior quality of Photo Colorimeter in the national as well as international market. Microprocessor and Digital Photo Colorimeters are the finest colorimeters that combine convenience in operation with high precision & accuracy in analysis. In addition to this, they are considered to be one of the major Photoelectric Colorimeter manufacturers and exporters in India. High standard glass filters covering complete visible range of 400 to 700 nm are mounted on a rotating disc. Highly sensitive photo sensor and use of latest IC technology makes the instruments highly rugged, accurate & economical in maintenance. A minimum sample volume of 1ml is required to carry out the analysis & latest microcontroller technology to give results in the form of Abs. It is extremely useful for blood chemistries in chemical / clinical labs, pharmaceutical industries, medicine plants, water treatment plants, agricultural universities etc.",
+    applications: ["Clinical and chemical laboratories", "Pharmaceutical industries", "Water treatment plants", "Agricultural universities"],
+    features: [
+      "Using Latest Microcontroller",
+      "1ml sample volume",
+      "Range from 400 to 700nm",
+      "Auto Zero Facility",
+      "Highly Stable & Accurate",
+      "Direct readout of absorbance",
+      "Easy to operate & user friendly",
+      "Long life photo diode detector",
+      "Battery Backup Facility available in Model 509"
+    ],
+    accessories: [
+      "Test Tube Set of 5",
+      "Dust Cover",
+      "Instruction Manual",
+      "Battery Backup Facility available in Model 509"
+    ],
+    specs: {
+      "High Std. Glass Filters": "8 Filters",
+      "Minimum Volume": "1 ml",
+      "Display": "3 Digit LED",
+      "Range": "400 – 700 nm",
+      "Output": "OD : 0 to 1.99",
+      "Resolution": "OD : 0.01",
+      "Auto Zero Facility": "Available",
+      "Accuracy": "± 0.5% FSI",
+      "Detector": "Photo Diode",
+      "Light Source": "3.5v, 100mA, White LED",
+      "Power": "230 V ± 10% AC, 50Hz",
+      "Dimensions": "195 X 230 X 95 (L x B x H)",
+      "Weight": "3 Kg. (Approx.)"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-3.pdf",
+    models: [
+      {
+        id: "ale-508",
+        name: "Auto Zero Photo Colorimeter",
+        modelNumber: "ALE-508",
+        description: "Standard model with 8 filters and auto zero facility.",
+        image: "/images/products/Auto-zero-photocolorimeter.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-3.pdf",
+        features: [
+          "Using Latest Microcontroller",
+          "1ml sample volume",
+          "Range from 400 to 700nm",
+          "Auto Zero Facility",
+          "Highly Stable & Accurate",
+          "Direct readout of absorbance"
+        ],
+        accessories: [
+          "Test Tube Set of 5",
+          "Dust Cover",
+          "Instruction Manual"
+        ],
+        specs: {
+          "High Std. Glass Filters": "8 Filters",
+          "Minimum Volume": "1 ml",
+          "Display": "3 Digit LED",
+          "Range": "400 – 700 nm",
+          "Output": "OD : 0 to 1.99",
+          "Resolution": "OD : 0.01",
+          "Auto Zero Facility": "Available",
+          "Accuracy": "± 0.5% FSI",
+          "Detector": "Photo Diode",
+          "Light Source": "3.5v, 100mA, White LED",
+          "Power": "230 V ± 10% AC, 50Hz",
+          "Dimensions": "195 X 230 X 95 (L x B x H)",
+          "Weight": "3 Kg. (Approx.)",
+          "Battery Backup Facility": "---"
+        }
+      },
+      {
+        id: "ale-509",
+        name: "Auto Zero Photo Colorimeter (Battery Backup)",
+        modelNumber: "ALE-509",
+        description: "Advanced model with built-in battery backup for uninterrupted analysis.",
+        image: "/images/products/Auto-zero-photocolorimeter.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-3.pdf",
+        features: [
+          "Using Latest Microcontroller",
+          "1ml sample volume",
+          "Range from 400 to 700nm",
+          "Auto Zero Facility",
+          "Highly Stable & Accurate",
+          "Direct readout of absorbance",
+          "Battery Backup Facility"
+        ],
+        accessories: [
+          "Test Tube Set of 5",
+          "Dust Cover",
+          "Instruction Manual",
+          "Built-in Battery"
+        ],
+        specs: {
+          "High Std. Glass Filters": "8 Filters",
+          "Minimum Volume": "1 ml",
+          "Display": "3 Digit LED",
+          "Range": "400 – 700 nm",
+          "Output": "OD : 0 to 1.99",
+          "Resolution": "OD : 0.01",
+          "Auto Zero Facility": "Available",
+          "Accuracy": "± 0.5% FSI",
+          "Detector": "Photo Diode",
+          "Light Source": "3.5v, 100mA, White LED",
+          "Power": "230 V ± 10% AC, 50Hz",
+          "Dimensions": "195 X 230 X 95 (L x B x H)",
+          "Weight": "3 Kg. (Approx.)",
+          "Battery Backup Facility": "With Battery Backup"
+        }
+      }
+    ]
+  },
+  {
+    slug: "melting-boiling-point-apparatus",
+    name: "Digital Melting / Boiling Point Apparatus",
+    desc: "Precision determination of melting & boiling points",
+    icon: Thermometer,
+    category: "Analytical",
+    mainImage: "/images/products/melting-boiling-point-apparatus.png",
+    overview: "This is a compact instrument designed for accurate determinations of melting points of solid samples and boiling point of liquid samples. The apparatus consists of in-built magnetic stirrer, an electronic controller with indicator for precisely adjusting the rate of heating of silicon oil-bath, an ON/OFF switch, a pilot lamp, with magnifier, a glare free background illuminator, a high/low range temperature selector switch and digital temperature indicator with PT100 RTD sensor.",
+    applications: ["Chemical analysis", "Quality control", "Pharmaceutical research", "Educational laboratories"],
+    features: [
+      "Covered cylindrical Silicon Oil Bath for safety of operator",
+      "Built-in Magnetic Stirrer with electronic speed controller",
+      "Electronic Controller for adjusting the heating rate",
+      "Digital Display of Temperature with PT-100 Sensor",
+      "Glare-free back-ground LED light with adjustable light intensity",
+      "Provision for holding the melting point display when sample melts",
+      "Built-in image magnifier for clear vision of sample"
+    ],
+    accessories: [
+      "Magnetic Rotor",
+      "Oil Jar",
+      "Heating Assembly",
+      "Silicon Oil",
+      "Set of 100 Capillaries",
+      "Temperature Probe"
+    ],
+    specs: {
+      "Temperature Range": "2° above RT – 300°C",
+      "Heating Rate Control": "Electronic",
+      "Stirrer Speed Control": "Electronic",
+      "Temperature Sensor": "PT-100",
+      "Back-ground Light": "Yes, variable intensity",
+      "Hold Facility": "Yes",
+      "Quality Standard": "FIVE STAGES OF QUALITY CHECKING BEFORE DISPATCH"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-2.pdf",
+    models: [
+      {
+        id: "ale-930",
+        name: "Digital Melting Point Apparatus",
+        modelNumber: "ALE-930",
+        description: "Accurate melting point determination with 1° readability and 3 digit LED display.",
+        image: "/images/products/melting-boiling-point-apparatus.png",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-2.pdf",
+        features: [
+          "Built-in Magnetic Stirrer",
+          "Electronic Heating Rate Control",
+          "Digital Display with PT-100 Sensor",
+          "Glare-free background light",
+          "Hold Facility"
+        ],
+        accessories: [
+          "Magnetic Rotor",
+          "Oil Jar",
+          "Heating Assembly",
+          "Silicon Oil",
+          "Set of 100 Capillaries",
+          "Temperature Probe"
+        ],
+        specs: {
+          "Temperature Range": "2° above RT – 300°C",
+          "Readability": "1°",
+          "Display Type": "3 Digit LED",
+          "Display Parameter": "Temperature",
+          "Inbuilt Stirrer": "Yes",
+          "Heating Rate Control": "Electronic",
+          "Stirrer Speed Control": "Electronic",
+          "Temperature Sensor": "PT-100",
+          "Back-ground Light": "Yes, variable intensity",
+          "Hold Facility": "Yes"
+        }
+      },
+      {
+        id: "ale-934",
+        name: "Digital Melting Point Apparatus (High Resolution)",
+        modelNumber: "ALE-934",
+        description: "High resolution melting point determination with 0.1° readability and 4 digit LED display.",
+        image: "/images/products/melting-boiling-point-apparatus.png",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-2.pdf",
+        features: [
+          "High Readability (0.1°)",
+          "4 Digit LED Display",
+          "Built-in Magnetic Stirrer",
+          "Electronic Heating Rate Control",
+          "Glare-free background light",
+          "Hold Facility"
+        ],
+        accessories: [
+          "Magnetic Rotor",
+          "Oil Jar",
+          "Heating Assembly",
+          "Silicon Oil",
+          "Set of 100 Capillaries",
+          "Temperature Probe"
+        ],
+        specs: {
+          "Temperature Range": "2° above RT – 300°C",
+          "Readability": "0.1°",
+          "Display Type": "4 Digit LED",
+          "Display Parameter": "Temperature",
+          "Inbuilt Stirrer": "Yes",
+          "Heating Rate Control": "Electronic",
+          "Stirrer Speed Control": "Electronic",
+          "Temperature Sensor": "PT-100",
+          "Back-ground Light": "Yes, variable intensity",
+          "Hold Facility": "Yes"
+        }
+      }
+    ]
   }
 ];
 
