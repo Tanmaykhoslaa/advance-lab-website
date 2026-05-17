@@ -8,9 +8,9 @@ import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 
 const schema = z.object({
-  name:    z.string().trim().min(1, "Name is required").max(100),
-  email:   z.string().trim().email("Invalid email").max(255),
-  phone:   z.string().trim().min(7, "Phone is required").max(20),
+  name: z.string().trim().min(1, "Name is required").max(100),
+  email: z.string().trim().email("Invalid email").max(255),
+  phone: z.string().trim().min(7, "Phone is required").max(20),
   message: z.string().trim().min(5, "Tell us a bit more").max(1000),
 });
 
@@ -132,15 +132,15 @@ export const Contact = () => {
   return (
     <section id="contact" className="py-32 relative overflow-hidden bg-[hsl(222_55%_14%)] text-white perspective-[2000px]">
       {/* Background glow effects with floating animation */}
-      <motion.div 
-        animate={{ y: [0, -30, 0], scale: [1, 1.1, 1] }} 
+      <motion.div
+        animate={{ y: [0, -30, 0], scale: [1, 1.1, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 left-0 w-[600px] h-[600px] bg-[hsl(43_72%_49%/0.06)] rounded-full blur-[120px] pointer-events-none mix-blend-screen" 
+        className="absolute top-0 left-0 w-[600px] h-[600px] bg-[hsl(43_72%_49%/0.06)] rounded-full blur-[120px] pointer-events-none mix-blend-screen"
       />
-      <motion.div 
-        animate={{ y: [0, 30, 0], scale: [1, 1.2, 1] }} 
+      <motion.div
+        animate={{ y: [0, 30, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[hsl(222_55%_30%/0.2)] rounded-full blur-[100px] pointer-events-none mix-blend-screen" 
+        className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[hsl(222_55%_30%/0.2)] rounded-full blur-[100px] pointer-events-none mix-blend-screen"
       />
 
       <div className="container relative z-10 grid lg:grid-cols-2 gap-20">
@@ -194,7 +194,7 @@ export const Contact = () => {
         </div>
 
         {/* Right — form */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -202,7 +202,7 @@ export const Contact = () => {
           className="relative"
         >
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(43_72%_49%/0.15)] to-transparent rounded-[2.5rem] blur-2xl pointer-events-none" />
-          
+
           <TiltWrapper>
             <form
               id="inquiry-form"

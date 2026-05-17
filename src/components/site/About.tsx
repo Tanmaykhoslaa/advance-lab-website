@@ -41,8 +41,8 @@ const TiltCard = ({ children, className }: { children: React.ReactNode, classNam
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
       className={`relative ${className || ""}`}
     >
-      <div 
-        style={{ transform: "translateZ(40px)" }} 
+      <div
+        style={{ transform: "translateZ(40px)" }}
         className="h-full w-full bg-white rounded-[2rem] p-8 sm:p-10 border border-[hsl(215_20%_90%)] shadow-soft group hover:shadow-2xl hover:border-[hsl(43_72%_49%/0.6)] transition-all duration-500 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/50 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -56,17 +56,17 @@ export const About = () => {
   return (
     <section id="about" className="py-24 bg-[hsl(215_20%_96%)] relative overflow-hidden perspective-[1000px]">
       {/* 3D Floating background elements */}
-      <motion.div 
-        animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }} 
+      <motion.div
+        animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-10 right-10 w-[400px] h-[400px] rounded-full bg-[hsl(43_72%_49%/0.05)] blur-[80px] pointer-events-none" 
+        className="absolute top-10 right-10 w-[400px] h-[400px] rounded-full bg-[hsl(43_72%_49%/0.05)] blur-[80px] pointer-events-none"
       />
-      <motion.div 
-        animate={{ y: [0, 30, 0], rotate: [0, -5, 0] }} 
+      <motion.div
+        animate={{ y: [0, 30, 0], rotate: [0, -5, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-10 left-10 w-[300px] h-[300px] rounded-full bg-[hsl(222_55%_14%/0.04)] blur-[60px] pointer-events-none" 
+        className="absolute bottom-10 left-10 w-[300px] h-[300px] rounded-full bg-[hsl(222_55%_14%/0.04)] blur-[60px] pointer-events-none"
       />
-      
+
       <div className="container relative z-10">
         {/* Main Introduction */}
         <div className="max-w-4xl mx-auto text-center mb-24">
@@ -81,8 +81,8 @@ export const About = () => {
               Advance Lab <span className="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(43_72%_49%)] to-[hsl(43_80%_60%)]">Equipments</span>
             </h2>
             <p className="text-[hsl(220_15%_45%)] text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
-              Situated at Panchkula, Haryana, our company reaches new heights under the visionary leadership of 
-              <span className="font-bold text-[hsl(222_55%_14%)]"> Mr. Abhishek Suri & Mrs. Aashima Suri</span>. 
+              Situated at Panchkula, Haryana, our company reaches new heights under the visionary leadership of
+              <span className="font-bold text-[hsl(222_55%_14%)]"> Mr. Abhishek Suri & Mrs. Aashima Suri</span>.
               We set benchmarks in the quality-conscious market through continuous innovation and excellence.
             </p>
           </motion.div>
@@ -129,7 +129,7 @@ export const About = () => {
 
         {/* Detailed Commitments Section */}
         <div className="max-w-6xl mx-auto mb-32 space-y-24">
-          
+
           {/* R&D */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
@@ -149,16 +149,16 @@ export const About = () => {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative h-full min-h-[300px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)] p-8 flex items-center justify-center">
-               <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} />
-               <FlaskConical className="w-48 h-48 text-[hsl(43_72%_49%)] opacity-80 animate-float" />
+              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} />
+              <FlaskConical className="w-48 h-48 text-[hsl(43_72%_49%)] opacity-80 animate-float" />
             </motion.div>
           </div>
 
           {/* After Sales */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative h-full min-h-[300px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-[hsl(43_72%_49%)] to-[#ffe680] p-8 flex items-center justify-center md:order-1 order-2">
-               <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, black 1px, transparent 0)", backgroundSize: "24px 24px" }} />
-               <Wrench className="w-48 h-48 text-[hsl(222_55%_14%)] opacity-80 animate-float" style={{ animationDelay: "1s" }} />
+              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, black 1px, transparent 0)", backgroundSize: "24px 24px" }} />
+              <Wrench className="w-48 h-48 text-[hsl(222_55%_14%)] opacity-80 animate-float" style={{ animationDelay: "1s" }} />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="md:order-2 order-1">
               <div className="flex items-center gap-4 mb-6">
@@ -203,15 +203,15 @@ export const About = () => {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative h-full min-h-[300px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)] p-8 flex items-center justify-center">
-               <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} />
-               <ShieldCheck className="w-48 h-48 text-[hsl(43_72%_49%)] opacity-80 animate-float" style={{ animationDelay: "2s" }} />
+              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} />
+              <ShieldCheck className="w-48 h-48 text-[hsl(43_72%_49%)] opacity-80 animate-float" style={{ animationDelay: "2s" }} />
             </motion.div>
           </div>
 
         </div>
 
         {/* Company Profile Table - 3D Hover & Float */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -219,24 +219,24 @@ export const About = () => {
           className="max-w-4xl mx-auto bg-white rounded-[2rem] border border-[hsl(215_20%_90%)] shadow-2xl overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] transition-shadow duration-500"
         >
           <div className="bg-gradient-to-r from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)] px-10 py-8 relative overflow-hidden">
-            <motion.div 
+            <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-32 -right-32 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none" 
+              className="absolute -top-32 -right-32 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none"
             />
             <h3 className="text-2xl font-bold text-white flex items-center gap-4 relative z-10">
               <div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/10 shadow-inner">
-                <Briefcase className="h-6 w-6 text-[hsl(43_72%_49%)]" /> 
+                <Briefcase className="h-6 w-6 text-[hsl(43_72%_49%)]" />
               </div>
               Company Profile
             </h3>
           </div>
           <div className="divide-y divide-[hsl(215_20%_94%)] relative z-10 bg-white">
             {profileData.map((item, i) => (
-              <motion.div 
+              <motion.div
                 whileHover={{ x: 8, backgroundColor: "hsl(215 20% 98%)" }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                key={item.label} 
+                key={item.label}
                 className="grid sm:grid-cols-3 items-center px-10 py-8 cursor-default"
               >
                 <div className="flex items-center gap-4 text-[hsl(222_55%_18%)] font-bold text-lg mb-2 sm:mb-0">
