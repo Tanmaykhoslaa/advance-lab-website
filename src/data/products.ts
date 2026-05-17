@@ -1281,8 +1281,235 @@ export const products: Product[] = [
         }
       }
     ]
+  },
+  {
+    slug: "digital-conductivity-meter",
+    name: "Digital Conductivity Meter",
+    desc: "Reliable and accurate measurement of Electrical Conductivity (EC)",
+    icon: Waves,
+    category: "Analytical",
+    overview: "Digital Conductivity Meters are reliable and accurate test instruments for measurement of Electrical Conductivity (EC) of aqueous solutions. They measure Conductivity and TDS in five ranges. The resolution is 0.1µS/cm and 0.1 ppm respectively, in the lowest range. The cell constant is flashed on a digital display and can be adjusted from the front panel. The instruments have the \"check\" facility to calibrate the instrument.\n\nConductivity Meters are ideal for monitoring salt contents in water and soluble salts in soils. They are extremely useful instruments for agriculture and soil analysis labs, swimming pools, fertilizer plants, petroleum refineries, textile plants etc.",
+    applications: [
+      "Agriculture and soil analysis labs",
+      "Swimming pools",
+      "Fertilizer plants",
+      "Petroleum refineries",
+      "Textile plants",
+      "Water quality monitoring"
+    ],
+    features: [
+      "Highly Stable & Accurate",
+      "Cell Constant Adjustment Facility",
+      "3½ Digit Display",
+      "Easy to operate & user friendly",
+      "ATC Facility available in Model 875"
+    ],
+    accessories: [
+      "Conductivity Cell",
+      "Cell Stand",
+      "Operation Manual",
+      "Dust Cover"
+    ],
+    specs: {
+      "Model": "ALE-874 / ALE-875",
+      "Display": "3½ digit LED",
+      "Range": "0-200 μS, 0-2.0, 20.0, 200 & 0-1000mS",
+      "Conductivity Cell": "Platinum DIP Type",
+      "Resolution": "0.1 μS",
+      "Accuracy": "± 1% FS ±1Digit",
+      "Power Supply": "230V ±10% AC, 50 Hz",
+      "Dimensions": "280x180x88 (LxBxH)",
+      "Weight": "3 kg"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-2 copy.pdf",
+    models: [
+      {
+        id: "ale-874",
+        name: "Digital Conductivity Meter (Manual Temp Comp)",
+        modelNumber: "ALE-874",
+        description: "Digital Conductivity Meter with manual temperature compensation (0-50°C). Ideal for stable laboratory setups.",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-2 copy.pdf",
+        features: [
+          "Highly Stable & Accurate",
+          "Cell Constant Adjustment Facility",
+          "3½ Digit Display",
+          "Easy to operate & user friendly"
+        ],
+        accessories: [
+          "Conductivity Cell",
+          "Cell Stand",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Model": "ALE - 874",
+          "Display": "3½ digit LED",
+          "Range": "0-200 μS 0-2.0, 20.0, 200 & 0-1000mS",
+          "Temperature Compensation": "Manual 0-50°C",
+          "Cell Constant Adjustment": "Adjustable",
+          "Conductivity Cell": "Platinum DIP Type",
+          "Resolution": "0.1 μS",
+          "Accuracy": "± 1% FS ±1Digit",
+          "Power Supply": "230V ±10% AC, 50 Hz",
+          "Dimension": "280x180x88 (LxBxH)",
+          "Weight": "3 kg"
+        }
+      },
+      {
+        id: "ale-875",
+        name: "Digital Conductivity Meter (Auto Temp Comp)",
+        modelNumber: "ALE-875",
+        description: "Digital Conductivity Meter equipped with Automatic Temperature Compensation (ATC 0-50°C) for maximum operational speed and accuracy.",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-2 copy.pdf",
+        features: [
+          "Highly Stable & Accurate",
+          "Cell Constant Adjustment Facility",
+          "3½ Digit Display",
+          "Easy to operate & user friendly",
+          "ATC Facility (0-50°C)"
+        ],
+        accessories: [
+          "Conductivity Cell",
+          "Cell Stand",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Model": "ALE - 875",
+          "Display": "3½ digit LED",
+          "Range": "0-200 μS 0-2.0, 20.0, 200 & 0-1000mS",
+          "Temperature Compensation": "ATC 0-50°C",
+          "Cell Constant Adjustment": "Adjustable",
+          "Conductivity Cell": "Platinum DIP Type",
+          "Resolution": "0.1 μS",
+          "Accuracy": "± 1% FS ±1Digit",
+          "Power Supply": "230V ±10% AC, 50 Hz",
+          "Dimension": "280x180x88 (LxBxH)",
+          "Weight": "3 kg"
+        }
+      }
+    ]
+  },
+  {
+    slug: "digital-photo-colorimeter",
+    name: "Digital Photo Colorimeter",
+    desc: "Convenience in operation with high precision and accuracy of Absorbance analysis",
+    icon: Pipette,
+    category: "Analytical",
+    overview: "Digital Photo Colorimeters are the finest colorimeters that combine convenience in operation with high precision & accuracy of Absorbance analysis. High standard glass filters covering 400-700 nm are mounted on a rotating disc. Highly sensitive photo sensor and use of latest IC technology makes the instruments highly rugged. A minimum sample volume of 1ml is used. In-built shutter increases the life of the photocell.\n\nIt is extremely useful for blood chemistries in chemical/clinical labs, pharmaceutical industries, medicine plants, water treatment plants, agricultural universities etc.",
+    applications: [
+      "Blood chemistry in chemical/clinical labs",
+      "Pharmaceutical industries",
+      "Medicine plants",
+      "Water treatment plants",
+      "Agricultural universities"
+    ],
+    features: [
+      "1ml sample volume",
+      "Range from 400 to 700nm",
+      "Long life photo diode detector",
+      "Highly stable & accurate",
+      "Easy to operate & user friendly",
+      "Direct readout of absorbance",
+      "Battery Backup Facility available in Model 506"
+    ],
+    accessories: [
+      "Test Tube Set of 5",
+      "Dust Cover",
+      "Instruction Manual"
+    ],
+    specs: {
+      "Model": "ALE-505 / ALE-506",
+      "Minimum Volume": "1 ml",
+      "Display": "3 Digit LED",
+      "Range": "400 - 700 nm",
+      "Output": "OD : 0 to 1.99",
+      "Resolution": "OD : 0.01",
+      "Accuracy": "± 0.5% FSI",
+      "Detector": "Photo Diode",
+      "Filters": "8 filters",
+      "Light Source": "3.5v, 100mA, White LED",
+      "Power": "230 V ± 10% AC, 50Hz",
+      "Dimensions": "195 X 230 X 95 (L x B x H)",
+      "Weight": "3 Kg. (Approx.)"
+    },
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE copy.pdf",
+    models: [
+      {
+        id: "ale-505",
+        name: "Digital Photo Colorimeter (Standard)",
+        modelNumber: "ALE-505",
+        description: "Standard model featuring 8 filters, a minimum volume of 1 ml, and a high-precision white LED light source.",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE copy.pdf",
+        features: [
+          "1ml sample volume",
+          "Range from 400 to 700nm",
+          "Long life photo diode detector",
+          "Highly stable & accurate",
+          "Easy to operate & user friendly",
+          "Direct readout of absorbance"
+        ],
+        accessories: [
+          "Test Tube Set of 5",
+          "Dust Cover",
+          "Instruction Manual"
+        ],
+        specs: {
+          "Model": "ALE - 505",
+          "Minimum Volume": "1 ml",
+          "Display": "3 Digit LED",
+          "Range": "400 - 700 nm",
+          "Output": "OD : 0 to 1.99",
+          "Resolution": "OD : 0.01",
+          "Accuracy": "± 0.5% FSI",
+          "Detector": "Photo Diode",
+          "Filters": "8 filters",
+          "Light Source": "3.5v, 100mA, White LED",
+          "Power": "230 V ± 10% AC, 50Hz",
+          "Dimensions": "195 X 230 X 95 (L x B x H)",
+          "Weight": "3 Kg. (Approx.)",
+          "Battery Backup Facility": "---"
+        }
+      },
+      {
+        id: "ale-506",
+        name: "Digital Photo Colorimeter (Battery Backup)",
+        modelNumber: "ALE-506",
+        description: "Advanced model with built-in battery backup support, allowing seamless on-field testing and operation during power failures.",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE copy.pdf",
+        features: [
+          "1ml sample volume",
+          "Range from 400 to 700nm",
+          "Long life photo diode detector",
+          "Highly stable & accurate",
+          "Easy to operate & user friendly",
+          "Direct readout of absorbance",
+          "Battery Backup Facility"
+        ],
+        accessories: [
+          "Test Tube Set of 5",
+          "Dust Cover",
+          "Instruction Manual"
+        ],
+        specs: {
+          "Model": "ALE - 506",
+          "Minimum Volume": "1 ml",
+          "Display": "3 Digit LED",
+          "Range": "400 - 700 nm",
+          "Output": "OD : 0 to 1.99",
+          "Resolution": "OD : 0.01",
+          "Accuracy": "± 0.5% FSI",
+          "Detector": "Photo Diode",
+          "Filters": "8 filters",
+          "Light Source": "3.5v, 100mA, White LED",
+          "Power": "230 V ± 10% AC, 50Hz",
+          "Dimensions": "195 X 230 X 95 (L x B x H)",
+          "Weight": "3 Kg. (Approx.)",
+          "Battery Backup Facility": "With Battery Backup"
+        }
+      }
+    ]
   }
 ];
-
 
 export const getProduct = (slug: string) => products.find((p) => p.slug === slug);
