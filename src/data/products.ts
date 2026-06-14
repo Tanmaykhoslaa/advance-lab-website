@@ -638,7 +638,7 @@ export const products: Product[] = [
     desc: "Packaging quality testing",
     icon: Waves,
     category: "Analytical",
-    mainImage: "/images/products/Digital-leak-test-apparatus.jpeg",
+    mainImage: "/images/products/digital_leak_test_apparatus.jpeg",
     overview: "The instrument is used to test the quality of the packaging process and to check that the seals enclosing the product are perfectly intact. Our Leak tester is designed to find the smallest holes and imperfections in blister packs and other semi-rigid product packaging. The leak test apparatus is widely used in the pharmaceutical industry for checking strips, blisters and bottles containing tablets, capsules and syrups. It also find application in the food industry where it can be effectively used to check the air-tightness of sweet packets, ready-to-eat pre-packed foods, confectionery packaging, packs of noodles, sauces etc.",
     applications: ["Pharmaceutical industry (strips, blisters, bottles)", "Food industry (sweet packets, ready-to-eat foods)", "Confectionery packaging", "Packaging quality control"],
     features: [
@@ -664,7 +664,7 @@ export const products: Product[] = [
         name: "Digital Leak Test Apparatus",
         modelNumber: "ALE-973",
         description: "GMP Model with In-built Test Unit for efficient leak testing.",
-        image: "/images/products/Digital-leak-test-apparatus.jpeg",
+        image: "/images/products/digital_leak_test_apparatus.jpeg",
         brochure: "/brochures/(ALE)-PRODUCT CATALOGUE.pdf",
         features: [
           "Programmable Time With Digital Display",
@@ -690,7 +690,7 @@ export const products: Product[] = [
         name: "Digital Leak Test Apparatus",
         modelNumber: "ALE-974/975",
         description: "GMP Model with separate Test Unit for versatile laboratory applications.",
-        image: "/images/products/Digital-leak-test-apparatus.jpeg",
+        image: "/images/products/digital_leak_test_apparatus.jpeg",
         brochure: "/brochures/(ALE)-PRODUCT CATALOGUE.pdf",
         features: [
           "Programmable Time With Digital Display",
@@ -1288,6 +1288,7 @@ export const products: Product[] = [
     desc: "Reliable and accurate measurement of Electrical Conductivity (EC)",
     icon: Waves,
     category: "Analytical",
+    mainImage: "/images/products/Digital_conductivity_meter.jpeg",
     overview: "Digital Conductivity Meters are reliable and accurate test instruments for measurement of Electrical Conductivity (EC) of aqueous solutions. They measure Conductivity and TDS in five ranges. The resolution is 0.1µS/cm and 0.1 ppm respectively, in the lowest range. The cell constant is flashed on a digital display and can be adjusted from the front panel. The instruments have the \"check\" facility to calibrate the instrument.\n\nConductivity Meters are ideal for monitoring salt contents in water and soluble salts in soils. They are extremely useful instruments for agriculture and soil analysis labs, swimming pools, fertilizer plants, petroleum refineries, textile plants etc.",
     applications: [
       "Agriculture and soil analysis labs",
@@ -1328,6 +1329,7 @@ export const products: Product[] = [
         name: "Digital Conductivity Meter (Manual Temp Comp)",
         modelNumber: "ALE-874",
         description: "Digital Conductivity Meter with manual temperature compensation (0-50°C). Ideal for stable laboratory setups.",
+        image: "/images/products/Digital_conductivity_meter.jpeg",
         brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-2 copy.pdf",
         features: [
           "Highly Stable & Accurate",
@@ -1360,6 +1362,7 @@ export const products: Product[] = [
         name: "Digital Conductivity Meter (Auto Temp Comp)",
         modelNumber: "ALE-875",
         description: "Digital Conductivity Meter equipped with Automatic Temperature Compensation (ATC 0-50°C) for maximum operational speed and accuracy.",
+        image: "/images/products/Digital_conductivity_meter.jpeg",
         brochure: "/brochures/(ALE)-PRODUCT CATALOGUE-2 copy.pdf",
         features: [
           "Highly Stable & Accurate",
@@ -1396,6 +1399,7 @@ export const products: Product[] = [
     desc: "Convenience in operation with high precision and accuracy of Absorbance analysis",
     icon: Pipette,
     category: "Analytical",
+    mainImage: "/images/products/Digital_PhotoColorimeter.jpeg",
     overview: "Digital Photo Colorimeters are the finest colorimeters that combine convenience in operation with high precision & accuracy of Absorbance analysis. High standard glass filters covering 400-700 nm are mounted on a rotating disc. Highly sensitive photo sensor and use of latest IC technology makes the instruments highly rugged. A minimum sample volume of 1ml is used. In-built shutter increases the life of the photocell.\n\nIt is extremely useful for blood chemistries in chemical/clinical labs, pharmaceutical industries, medicine plants, water treatment plants, agricultural universities etc.",
     applications: [
       "Blood chemistry in chemical/clinical labs",
@@ -1440,6 +1444,7 @@ export const products: Product[] = [
         name: "Digital Photo Colorimeter (Standard)",
         modelNumber: "ALE-505",
         description: "Standard model featuring 8 filters, a minimum volume of 1 ml, and a high-precision white LED light source.",
+        image: "/images/products/Digital_PhotoColorimeter.jpeg",
         brochure: "/brochures/(ALE)-PRODUCT CATALOGUE copy.pdf",
         features: [
           "1ml sample volume",
@@ -1476,6 +1481,7 @@ export const products: Product[] = [
         name: "Digital Photo Colorimeter (Battery Backup)",
         modelNumber: "ALE-506",
         description: "Advanced model with built-in battery backup support, allowing seamless on-field testing and operation during power failures.",
+        image: "/images/products/Digital_PhotoColorimeter.jpeg",
         brochure: "/brochures/(ALE)-PRODUCT CATALOGUE copy.pdf",
         features: [
           "1ml sample volume",
@@ -1506,6 +1512,201 @@ export const products: Product[] = [
           "Dimensions": "195 X 230 X 95 (L x B x H)",
           "Weight": "3 Kg. (Approx.)",
           "Battery Backup Facility": "With Battery Backup"
+        }
+      }
+    ]
+  },
+  {
+    slug: "digital-tds-meter",
+    name: "Digital TDS Meter",
+    desc: "Reliable and accurate measurement of TDS in aqueous solutions",
+    icon: Waves,
+    category: "Analytical",
+    mainImage: "/images/products/Digital_TDS_meter.jpeg",
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE 885.pdf",
+    overview: "Digital TDS Meters are reliable and accurate test instruments for measurement of TDS of aqueous solutions. They measure TDS in five ranges. The cell constant is flashed on a digital display & can be adjusted. The instruments have the \"Check\" facility to calibrate the instrument. These instruments are ideal for monitoring salt contents in water and soluble salts in soils. They are extremely useful instruments for agriculture and soil analysis labs, swimming pools, fertilizer plants, petroleum refineries, textile plants etc.",
+    applications: [
+      "Agriculture and soil analysis labs",
+      "Swimming pools",
+      "Fertilizer plants",
+      "Petroleum refineries",
+      "Textile plants",
+      "Water and soil salt monitoring"
+    ],
+    features: [
+      "Rugged, reliable & easy to operate",
+      "Highly Stable & Accurate",
+      "User friendly",
+      "Cell Constant adjustable",
+      "3 ½ Digit LED display",
+      "Platinum DIP type measuring cell",
+      "Resolution is 0.1 ppm respectively"
+    ],
+    accessories: [
+      "TDS Cell",
+      "Cell Stand",
+      "Operation Manual",
+      "Dust Cover"
+    ],
+    specs: {
+      "Model": "ALE-885",
+      "Display": "3 ½ Digit LED",
+      "Measurement": "TDS",
+      "Range": "0 to 200 ppm, 0 to 2000 ppm, 0 to 20.00 ppt (20,000 ppm), 0 to 200.0 ppt (2,00,000 ppm) & 0 to 1000 ppt (10,00,000 ppm)",
+      "Resolution": "0.1 ppm",
+      "Accuracy": "±2% FS ±1 Digit",
+      "Temperature Compensation": "Manual : 0° to 50°C",
+      "Cell Constant": "Adjustable on Digital Display",
+      "Measuring Cell": "Platinum DIP Type",
+      "Power": "230V ±10% AC, 50 Hz",
+      "Dimensions": "280x180x88 mm (L x B x H)",
+      "Weight": "3kg"
+    },
+    models: [
+      {
+        id: "ale-885",
+        name: "Digital TDS Meter",
+        modelNumber: "ALE-885",
+        description: "Digital TDS Meter designed for reliable and accurate measurement of TDS in aqueous solutions across five ranges.",
+        image: "/images/products/Digital_TDS_meter.jpeg",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE 885.pdf",
+        features: [
+          "Rugged, reliable & easy to operate",
+          "Highly Stable & Accurate",
+          "User friendly",
+          "Cell Constant adjustable",
+          "3 ½ Digit LED display",
+          "Platinum DIP type measuring cell",
+          "Resolution is 0.1 ppm respectively"
+        ],
+        accessories: [
+          "TDS Cell",
+          "Cell Stand",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Display": "3 ½ Digit LED",
+          "Measurement": "TDS",
+          "Range": "0 to 200 ppm, 0 to 2000 ppm, 0 to 20.00 ppt (20,000 ppm), 0 to 200.0 ppt (2,00,000 ppm) & 0 to 1000 ppt (10,00,000 ppm)",
+          "Resolution": "0.1 ppm",
+          "Accuracy": "±2% FS ±1 Digit",
+          "Temperature Compensation": "Manual : 0° to 50°C",
+          "Cell Constant": "Adjustable on Digital Display",
+          "Measuring Cell": "Platinum DIP Type",
+          "Power": "230V ±10% AC, 50 Hz",
+          "Dimensions": "280x180x88 mm (L x B x H)",
+          "Weight": "3kg"
+        }
+      }
+    ]
+  },
+  {
+    slug: "digital-colony-counter",
+    name: "Digital Colony Counter",
+    desc: "Designed for quick and accurate counting of bacterial and mould colonies in petri dishes",
+    icon: Microscope,
+    category: "Analytical",
+    brochure: "/brochures/(ALE)-PRODUCT CATALOGUE 552:553.pdf",
+    overview: "Digital & Microprocessor Colony Counter is designed for quick and accurate counting of bacterial and mould colonies in petri dishes. Simply place the petri dish on the illuminated pad and touch the dish with the pen provided to mark each colony in turn. This causes a count to be registered on the digital display and an audible tone confirms each count made. Marking the dish with the pen avoids missing colonies or double counting. The digital count on the display can be reset manually any time by pressing reset key provided. Optimum viewing of colonies is aided by peripheral glare free illuminations. An Integral magnifying glass provides for easier counting of small colonies.",
+    applications: [
+      "Bacterial colony counting",
+      "Mould colony counting in petri dishes",
+      "Clinical and microbiological laboratories",
+      "Quality control laboratories"
+    ],
+    features: [
+      "Rugged and reliable",
+      "Easy to operate & User friendly",
+      "Readout 0 - 9999 (Model No-552)",
+      "Readout 0 - 999999 (Model No-553)",
+      "Auto marker pen",
+      "Uniform glare free illumination",
+      "Audible confirmation of each count",
+      "Wolfhugel glass grid with focusing facility",
+      "110 mm dia magnifying glass"
+    ],
+    accessories: [
+      "Marking Pen",
+      "Magnifying Lens",
+      "Adaptor",
+      "Operation Manual",
+      "Dust Cover"
+    ],
+    specs: {
+      "Model": "ALE-552 / ALE-553",
+      "Dish Size": "110 mm",
+      "Magnification": "1.7x",
+      "Power": "230 V, ±10% AC, 50 Hz, 40W",
+      "Dimensions": "260 x 220 x 168 mm (L x B x H) (Approx.)",
+      "Weight": "3 Kg (Approx.)",
+      "Quality Standard": "Five Stages of Quality Checking Before Dispatch"
+    },
+    models: [
+      {
+        id: "ale-552",
+        name: "Digital Colony Counter (4-Digit Display)",
+        modelNumber: "ALE-552",
+        description: "Standard colony counter with 4-digit display registering up to 9999 max count.",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE 552:553.pdf",
+        features: [
+          "Rugged and reliable",
+          "Easy to operate & User friendly",
+          "Readout 0 - 9999",
+          "Auto marker pen",
+          "Uniform glare free illumination",
+          "Audible confirmation of each count",
+          "Wolfhugel glass grid with focusing facility",
+          "110 mm dia magnifying glass"
+        ],
+        accessories: [
+          "Marking Pen",
+          "Magnifying Lens",
+          "Adaptor",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Digital Display": "4 Digits",
+          "Max. Counts": "9999 max. Count",
+          "Dish Size": "110 mm",
+          "Magnification": "1.7x",
+          "Power": "230 V, ±10% AC, 50 Hz, 40W",
+          "Dimensions": "260 x 220 x 168 mm (L x B x H) (Approx.)",
+          "Weight": "3 Kg (Approx.)"
+        }
+      },
+      {
+        id: "ale-553",
+        name: "Digital Colony Counter (6-Digit Display)",
+        modelNumber: "ALE-553",
+        description: "High capacity colony counter with 6-digit display registering up to 999999 max count.",
+        brochure: "/brochures/(ALE)-PRODUCT CATALOGUE 552:553.pdf",
+        features: [
+          "Rugged and reliable",
+          "Easy to operate & User friendly",
+          "Readout 0 - 999999",
+          "Auto marker pen",
+          "Uniform glare free illumination",
+          "Audible confirmation of each count",
+          "Wolfhugel glass grid with focusing facility",
+          "110 mm dia magnifying glass"
+        ],
+        accessories: [
+          "Marking Pen",
+          "Magnifying Lens",
+          "Adaptor",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Digital Display": "6 Digits",
+          "Max. Counts": "999999 max. Count",
+          "Dish Size": "110 mm",
+          "Magnification": "1.7x",
+          "Power": "230 V, ±10% AC, 50 Hz, 40W",
+          "Dimensions": "260 x 220 x 168 mm (L x B x H) (Approx.)",
+          "Weight": "3 Kg (Approx.)"
         }
       }
     ]
