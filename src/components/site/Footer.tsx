@@ -29,7 +29,7 @@ export const Footer = () => {
             Serving labs, hospitals, pharma &amp; research centres across India since 2004.
           </p>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[hsl(43_72%_49%/0.3)] bg-[hsl(43_72%_49%/0.08)] text-[11px] font-medium text-[hsl(43_72%_65%)] uppercase tracking-wider">
-            ISO 9001 Certified
+            AN ISO 9001:2015 Certified
           </div>
         </div>
 

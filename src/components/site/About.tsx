@@ -192,11 +192,11 @@ export const About = () => {
               </p>
             </div>
             <div className="font-semibold text-xs text-[hsl(43_72%_60%)] bg-white/5 p-4 rounded-2xl border border-white/10 leading-relaxed backdrop-blur-sm">
-              Advance Lab Equipments is an ISO 9001-2015 certified company. Every single product like UV-Visible Spectrophotometer, Flame Photometer, etc. is examined at each stage.
+              Advance Lab Equipments is an AN ISO 9001:2015 certified company. Every single product like UV-Visible Spectrophotometer, Flame Photometer, etc. is examined at each stage.
             </div>
           </div>
           <div className="text-[hsl(43_72%_60%)] font-extrabold text-xs uppercase tracking-widest mt-2">
-            ISO 9001-2015 Certified
+            AN ISO 9001:2015 Certified
           </div>
         </>
       ),

@@ -29,7 +29,7 @@ export const Hero = () => {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[hsl(43_72%_55%)]" />
             </span>
             <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[hsl(43_72%_65%)]">
-              ISO Certified · Trusted Since 2004
+              AN ISO 9001:2015 Certified · Trusted Since 2004
             </span>
           </div>
 

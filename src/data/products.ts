@@ -1710,6 +1710,386 @@ export const products: Product[] = [
         }
       }
     ]
+  },
+  {
+    slug: "fully-automatic-colorimeter",
+    name: "Microprocessor Fully Automatic Colorimeter",
+    desc: "Combine convenience in operation with high precision and accuracy in analysis",
+    icon: Pipette,
+    category: "Analytical",
+    overview: "Microprocessor Fully Automatic Colorimeters combine convenience in operation with high precision & accuracy in analysis. Latest LED filter based technology makes the instruments highly accurate. A minimum sample volume of 1ml is required to carry out the analysis & it gives results in the form of Abs.\n\nIt is extremely useful for blood chemistries in chemical/clinical labs, pharmaceutical industries, medicine plants, water treatment plants, agricultural universities etc.",
+    applications: [
+      "Blood chemistries in chemical/clinical labs",
+      "Pharmaceutical industries",
+      "Medicine plants",
+      "Water treatment plants",
+      "Agricultural universities"
+    ],
+    features: [
+      "Using Latest Microcontroller",
+      "1ml sample volume",
+      "Range from 400 to 700nm",
+      "Auto Zero Facility",
+      "Highly Stable & Accurate",
+      "Direct readout of Abs",
+      "Easy to operate & user friendly",
+      "Digital Wavelength",
+      "Digital LCD Display (16x2 alphanumeric)"
+    ],
+    accessories: [
+      "Test tube Set of 3",
+      "Operation Manual",
+      "Dust Cover"
+    ],
+    specs: {
+      "Model": "ALE-511",
+      "Filters": "Built-in 8 digital filters > 50,000 hours life",
+      "Minimum Volume": "1 ml",
+      "Display Mode": "Absorbance (Abs.), %Transmission (%T), Wavelength",
+      "Range": "400 – 700 nm",
+      "Stability": "± 0.02 O.D. Per Hour",
+      "Auto Zero Facility": "Available With Digital Wavelength",
+      "Display": "Digital LED(7 Segment Display)",
+      "Accuracy": "± 0.01 O.D, ± 0.01 %T",
+      "Filter Wavelengths": "405nm, 450nm, 480nm, 520nm, 540nm, 578nm, 620nm, 700nm",
+      "Light Source": "Highly Accurate Laser Source",
+      "Power": "230 V ± 10% AC, 50Hz",
+      "Dimensions": "275 X 187 X 94 mm (L x B x H)",
+      "Weight": "1 Kg. (Approx.)",
+      "Battery Backup Facility": "Optional"
+    },
+    models: [
+      {
+        id: "ale-511",
+        name: "Microprocessor Fully Automatic Colorimeter",
+        modelNumber: "ALE-511",
+        description: "Fully automatic microprocessor colorimeter combining convenience in operation with high precision and accuracy in analysis using latest LED filter-based technology.",
+        features: [
+          "Using Latest Microcontroller",
+          "1ml sample volume",
+          "Range from 400 to 700nm",
+          "Auto Zero Facility",
+          "Highly Stable & Accurate",
+          "Direct readout of Abs",
+          "Easy to operate & user friendly",
+          "Digital Wavelength",
+          "Digital LCD Display (16x2 alphanumeric)"
+        ],
+        accessories: [
+          "Test tube Set of 3",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Filters": "Built-in 8 digital filters > 50,000 hours life",
+          "Minimum Volume": "1 ml",
+          "Display Mode": "Absorbance (Abs.), %Transmission (%T), Wavelength",
+          "Range": "400 – 700 nm",
+          "Stability": "± 0.02 O.D. Per Hour",
+          "Auto Zero Facility": "Available With Digital Wavelength",
+          "Display": "Digital LED(7 Segment Display)",
+          "Accuracy": "± 0.01 O.D, ± 0.01 %T",
+          "Filter Wavelengths": "405nm, 450nm, 480nm, 520nm, 540nm, 578nm, 620nm, 700nm",
+          "Light Source": "Highly Accurate Laser Source",
+          "Power": "230 V ± 10% AC, 50Hz",
+          "Dimensions": "275 X 187 X 94 mm (L x B x H)",
+          "Weight": "1 Kg. (Approx.)",
+          "Battery Backup Facility": "Optional"
+        }
+      }
+    ]
+  },
+  {
+    slug: "digital-potentiometer",
+    name: "Digital Potentiometer",
+    desc: "Precision instrument for potentiometric, ORP and acid base titrations",
+    icon: Activity,
+    category: "Analytical",
+    overview: "Digital Potentiometer is a precision instrument for potentiometric measurements. Results are displayed in millivolts on a direct digital readout by 3½ digit LED display. It is supplied with a set of 2 electrodes viz. Reference Glass, (Platinum & Silver electrodes are optional). It is extremely useful for potentiometric, ORP and acid base titrations. This is a useful instrument for Chemistry Labs, Pharmaceutical Industries, Colleges and University Labs etc.",
+    applications: [
+      "Chemistry Labs",
+      "Pharmaceutical Industries",
+      "Colleges and University Labs",
+      "Potentiometric, ORP and acid base titrations"
+    ],
+    features: [
+      "Easy to operate & user friendly",
+      "Highly Stable & Accurate",
+      "3½ Digit LED Display",
+      "Rugged & Economical"
+    ],
+    accessories: [
+      "Glass Electrode",
+      "Reference Electrode",
+      "Platinum Electrode (optional)",
+      "Silver Electrode (optional)",
+      "Electrode Stand",
+      "Operation manual",
+      "Dust Cover"
+    ],
+    specs: {
+      "Model": "ALE-864",
+      "Range": "0 – ± 199.9 mV, 0 – ± 1999mV",
+      "Resolution": "0.1 mV",
+      "Repeatability": "± 1 mV",
+      "Accuracy": "± 1 mV, ± 1 digit",
+      "Input Impedance": "> 10^12 ohms",
+      "Operating Temperature": "10 °C – 45 °C",
+      "Display": "3½ Digit 0.5\" 7-Segment LED Display",
+      "Power": "230 V ± 10% AC, 50 Hz",
+      "Dimensions": "280 x 180 x 88 mm (L x B x H)",
+      "Weight": "3 Kg (Approx.)"
+    },
+    models: [
+      {
+        id: "ale-864",
+        name: "Digital Potentiometer (ALE-864)",
+        modelNumber: "ALE-864",
+        description: "Digital Potentiometer for precision potentiometric measurements with direct 3½ digit LED readout.",
+        features: [
+          "Easy to operate & user friendly",
+          "Highly Stable & Accurate",
+          "3½ Digit LED Display",
+          "Rugged & Economical"
+        ],
+        accessories: [
+          "Glass Electrode",
+          "Reference Electrode",
+          "Platinum Electrode (optional)",
+          "Silver Electrode (optional)",
+          "Electrode Stand",
+          "Operation manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Range": "0 – ± 199.9 mV, 0 – ± 1999mV",
+          "Resolution": "0.1 mV",
+          "Repeatability": "± 1 mV",
+          "Accuracy": "± 1 mV, ± 1 digit",
+          "Input Impedance": "> 10^12 ohms",
+          "Operating Temperature": "10 °C – 45 °C",
+          "Display": "3½ Digit 0.5\" 7-Segment LED Display",
+          "Power": "230 V ± 10% AC, 50 Hz",
+          "Dimensions": "280 x 180 x 88 mm (L x B x H)",
+          "Weight": "3 Kg (Approx.)"
+        }
+      }
+    ]
+  },
+  {
+    slug: "auto-digital-ph-meter",
+    name: "Auto Digital pH Meter",
+    desc: "Ideal instruments for determination of pH value of any aqueous solution",
+    icon: Activity,
+    category: "Analytical",
+    overview: "Auto Digital pH Meters are ideal instruments for determination of pH value of any aqueous solution. We use the latest microcontroller technology to provide the most accurate readings on the 3½ digit display. The instrument can be calibrated by using up to 2 point calibration. These are extremely useful instruments for agriculture and soil analysis laboratories, swimming pools, fertilizer plants, chemical industries, pharmaceutical industries, petroleum refineries, textile plants etc.",
+    applications: [
+      "Agriculture and soil analysis laboratories",
+      "Swimming pools",
+      "Fertilizer plants",
+      "Chemical industries",
+      "Pharmaceutical industries",
+      "Petroleum refineries",
+      "Textile plants"
+    ],
+    features: [
+      "Measures pH & mV",
+      "Highly Stable & Accurate",
+      "Easy to operate & user friendly",
+      "Using Latest Microcontroller (Model No:- ALE-851N)",
+      "Soft touch keys (Model No:- ALE-851N)",
+      "Knob Control (Model No:-ALE-851)"
+    ],
+    accessories: [
+      "pH Electrode",
+      "pH Stand",
+      "Buffer Tablet (4 & 7)",
+      "Buffer Bottle (4 & 7)",
+      "Operation Manual",
+      "Dust Cover"
+    ],
+    specs: {
+      "Model": "ALE-851N / ALE-851",
+      "Display": "3½ Digit LED",
+      "Range": "0 to 14.00 pH",
+      "Resolution": "0.01pH, 1mV",
+      "Accuracy": "± 0.01 pH, ± 1 mV",
+      "Temperature Compensation": "Manual : 0 to 100 °C",
+      "Slope Control": "80 to 120%",
+      "Power Supply": "230V, + 10% AC, 50Hz",
+      "Dimensions": "280 x 180 x 88 mm (L x B x H)",
+      "Weight": "3 Kg (Approx.)"
+    },
+    models: [
+      {
+        id: "ale-851n",
+        name: "Auto Digital pH Meter (ALE-851N)",
+        modelNumber: "ALE-851N",
+        description: "Microprocessor-based automatic digital pH meter featuring soft-touch keys and 2-point auto-calibration.",
+        features: [
+          "Measures pH & mV",
+          "Highly Stable & Accurate",
+          "Easy to operate & user friendly",
+          "Using Latest Microcontroller (Model No:- ALE-851N)",
+          "Soft touch keys (Model No:- ALE-851N)"
+        ],
+        accessories: [
+          "pH Electrode",
+          "pH Stand",
+          "Buffer Tablet (4 & 7)",
+          "Buffer Bottle (4 & 7)",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Display": "3½ Digit LED",
+          "Range": "0 to 14.00 pH",
+          "Resolution": "0.01pH, 1mV",
+          "Accuracy": "± 0.01 pH, ± 1 mV",
+          "Temperature Compensation": "Manual : 0 to 100 °C",
+          "Calibration": "2 point with Auto Soft touch keys",
+          "Slope Control": "80 to 120%",
+          "Power Supply": "230V, + 10% AC, 50Hz",
+          "Dimensions": "280 x 180 x 88 mm (L x B x H)",
+          "Weight": "3 Kg (Approx.)"
+        }
+      },
+      {
+        id: "ale-851",
+        name: "Digital pH Meter (ALE-851)",
+        modelNumber: "ALE-851",
+        description: "Standard digital pH meter featuring manual knob control for calibration.",
+        features: [
+          "Measures pH & mV",
+          "Highly Stable & Accurate",
+          "Easy to operate & user friendly",
+          "Knob Control (Model No:-ALE-851)"
+        ],
+        accessories: [
+          "pH Electrode",
+          "pH Stand",
+          "Buffer Tablet (4 & 7)",
+          "Buffer Bottle (4 & 7)",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Display": "3½ Digit LED",
+          "Range": "0 to 14.00 pH",
+          "Resolution": "0.01pH, 1mV",
+          "Accuracy": "± 0.01 pH, ± 1 mV",
+          "Temperature Compensation": "Manual : 0 to 100 °C",
+          "Calibration": "2 point with Knobs",
+          "Slope Control": "80 to 120%",
+          "Power Supply": "230V, + 10% AC, 50Hz",
+          "Dimensions": "280 x 180 x 88 mm (L x B x H)",
+          "Weight": "3 Kg (Approx.)"
+        }
+      }
+    ]
+  },
+  {
+    slug: "digital-friability-test-apparatus",
+    name: "Digital Friability Test Apparatus",
+    desc: "Determine abrasion and impact hardness of tablets",
+    icon: Scale,
+    category: "Analytical",
+    overview: "The Friability Test Apparatus is used to determine abrasion and impact hardness of the tablets. It is commonly used in pharmaceutical industries and institutions. The unit is equipped with two transparent acrylic drums which rotate at a speed of 25 ± 1 RPM. Each of the two acrylic drums are provided with an arm which carries the tablets along with it up to a predetermined height and allows them to fall from that specified height, while the drums are rotating. It is fitted with a digital revolution counter showing the current number of revolutions for the test. Provision is made to remove the lid of the acrylic drum by unscrewing just one knob. This is available in 1 drum and 2 drum assemblies.",
+    applications: [
+      "Abrasion and impact hardness testing of tablets",
+      "Pharmaceutical industries",
+      "Quality control in pharmaceutical institutions",
+      "Research and development laboratories"
+    ],
+    features: [
+      "Programmable Time With Seven Segment LED Display",
+      "Auto Stop After Completion Of Set Time With Alarm",
+      "Sturdy motor to drive drums at constant speed",
+      "Precise Control Of RPM 25+-1"
+    ],
+    accessories: [
+      "Acrylic Drum(s)",
+      "Operation Manual",
+      "Dust Cover"
+    ],
+    specs: {
+      "Model": "ALE-950 / ALE-952",
+      "Display": "4 digit bright red LED Display",
+      "Rotation Speed": "25+-1 RPM",
+      "Accuracy": "+ 1 Revolution",
+      "Resolution": "1 Revolution",
+      "Time Range": "1 sec to 99 min 59 sec",
+      "Operating Temp. Range": "10 °C - 50 °C",
+      "Test Time": "Programmable",
+      "Electric Motor": "Low rpm A.C. Motor",
+      "Power Supply": "230 V + 10% 50Hz. AC",
+      "Dimension": "245x210x215 (LxBxH)",
+      "Weight": "10kg (Approx.)"
+    },
+    models: [
+      {
+        id: "ale-950",
+        name: "Digital Friability Test Apparatus (ALE-950)",
+        modelNumber: "ALE-950",
+        description: "Single drum friability test apparatus equipped with a 4 digit bright red LED display and low rpm A.C. motor.",
+        features: [
+          "Programmable Time With Seven Segment LED Display",
+          "Auto Stop After Completion Of Set Time With Alarm",
+          "Sturdy motor to drive drums at constant speed",
+          "Precise Control Of RPM 25+-1"
+        ],
+        accessories: [
+          "One Acrylic Drum",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Display": "4 digit bright red LED Display",
+          "Rotation Speed": "25+-1 RPM",
+          "Accuracy": "+ 1 Revolution",
+          "Resolution": "1 Revolution",
+          "Time Range": "1 sec to 99 min 59 sec",
+          "No Of Wheels": "One",
+          "Operating Temp. Range": "10 °C - 50 °C",
+          "Test Time": "Programmable",
+          "Electric Motor": "Low rpm A.C. Motor",
+          "Power Supply": "230 V + 10% 50Hz. AC",
+          "Dimension": "245x210x215 (LxBxH)",
+          "Weight": "10kg (Approx.)"
+        }
+      },
+      {
+        id: "ale-952",
+        name: "Digital Friability Test Apparatus (ALE-952)",
+        modelNumber: "ALE-952",
+        description: "Double drum friability test apparatus equipped with two transparent acrylic drums, 4 digit bright red LED display and low rpm A.C. motor.",
+        features: [
+          "Programmable Time With Seven Segment LED Display",
+          "Auto Stop After Completion Of Set Time With Alarm",
+          "Sturdy motor to drive drums at constant speed",
+          "Precise Control Of RPM 25+-1"
+        ],
+        accessories: [
+          "Two Acrylic Drums",
+          "Operation Manual",
+          "Dust Cover"
+        ],
+        specs: {
+          "Display": "4 digit bright red LED Display",
+          "Rotation Speed": "25+-1 RPM",
+          "Accuracy": "+ 1 Revolution",
+          "Resolution": "1 Revolution",
+          "Time Range": "1 sec to 99 min 59 sec",
+          "No Of Wheels": "Two",
+          "Operating Temp. Range": "10 °C - 50 °C",
+          "Test Time": "Programmable",
+          "Electric Motor": "Low rpm A.C. Motor",
+          "Power Supply": "230 V + 10% 50Hz. AC",
+          "Dimension": "245x210x215 (LxBxH)",
+          "Weight": "10kg (Approx.)"
+        }
+      }
+    ]
   }
 ];
 
