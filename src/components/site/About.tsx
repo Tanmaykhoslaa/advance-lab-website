@@ -17,6 +17,7 @@ const Interactive3DCard = ({
 }: {
   children: React.ReactNode;
   isActive: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   style: any;
   onClick?: () => void;
   className?: string;
