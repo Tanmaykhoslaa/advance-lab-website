@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Factory, ShieldCheck, Globe2, User2, MapPin, Briefcase, FlaskConical, Wrench, ArrowLeft, ArrowRight } from "lucide-react";
 import { motion, useMotionValue, useTransform, useSpring, AnimatePresence } from "framer-motion";
 
@@ -115,6 +115,14 @@ const TiltCard = ({ children, className }: { children: React.ReactNode, classNam
 
 export const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const commitmentsData = [
     {
@@ -222,8 +230,8 @@ export const About = () => {
     } else if (relativeIndex === 1) {
       return {
         zIndex: 20,
-        x: 35,
-        y: -20,
+        x: isMobile ? 12 : 35,
+        y: isMobile ? -12 : -20,
         scale: 0.92,
         opacity: 0.8,
         rotateY: -6,
@@ -232,8 +240,8 @@ export const About = () => {
     } else {
       return {
         zIndex: 10,
-        x: 70,
-        y: -40,
+        x: isMobile ? 24 : 70,
+        y: isMobile ? -24 : -40,
         scale: 0.84,
         opacity: 0.5,
         rotateY: -12,
@@ -424,7 +432,7 @@ export const About = () => {
           transition={{ duration: 0.7 }}
           className="max-w-4xl mx-auto bg-white rounded-[2rem] border border-[hsl(215_20%_90%)] shadow-2xl overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] transition-shadow duration-500"
         >
-          <div className="bg-gradient-to-r from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)] px-10 py-8 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)] px-6 sm:px-10 py-6 sm:py-8 relative overflow-hidden">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -443,7 +451,7 @@ export const About = () => {
                 whileHover={{ x: 8, backgroundColor: "hsl(215 20% 98%)" }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 key={item.label}
-                className="grid sm:grid-cols-3 items-center px-10 py-8 cursor-default"
+                className="grid sm:grid-cols-3 items-center px-6 sm:px-10 py-6 sm:py-8 cursor-default"
               >
                 <div className="flex items-center gap-4 text-[hsl(222_55%_18%)] font-bold text-lg mb-2 sm:mb-0">
                   <div className="h-10 w-10 rounded-full bg-[hsl(43_72%_49%/0.1)] flex items-center justify-center shrink-0 border border-[hsl(43_72%_49%/0.2)]">

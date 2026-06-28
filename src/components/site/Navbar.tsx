@@ -17,6 +17,7 @@ export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [activeProduct, setActiveProduct] = useState<typeof products[0]>(products[0]);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const closeTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -206,17 +207,59 @@ export const Navbar = () => {
             className="md:hidden bg-[hsl(222_55%_12%)] border-t border-white/10 overflow-hidden"
           >
             <ul className="container py-4 space-y-1">
-              {links.map((l) => (
-                <li key={l.href}>
-                  <a
-                    onClick={() => setOpen(false)}
-                    href={l.href}
-                    className="block px-3 py-2.5 text-sm font-medium text-[hsl(220_15%_78%)] hover:text-[hsl(43_72%_60%)] hover:bg-white/5 rounded-md transition-colors"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
+              {links.map((l) => {
+                if (l.label === "Products") {
+                  return (
+                    <li key={l.href} className="space-y-1">
+                      <button
+                        onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                        className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium text-[hsl(220_15%_78%)] hover:text-[hsl(43_72%_60%)] hover:bg-white/5 rounded-md transition-colors text-left"
+                      >
+                        <span>{l.label}</span>
+                        <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileProductsOpen ? "rotate-180" : ""}`} />
+                      </button>
+                      
+                      <AnimatePresence>
+                        {mobileProductsOpen && (
+                          <motion.ul
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="pl-4 pr-2 py-1 space-y-1 border-l border-white/10 ml-3"
+                          >
+                            {products.map((p) => (
+                              <li key={p.slug}>
+                                <a
+                                  href={`/products/${p.slug}`}
+                                  onClick={() => {
+                                    setOpen(false);
+                                    setMobileProductsOpen(false);
+                                  }}
+                                  className="block px-3 py-2 text-xs font-medium text-[hsl(220_15%_65%)] hover:text-[hsl(43_72%_60%)] rounded-md hover:bg-white/5 transition-colors"
+                                >
+                                  {p.name}
+                                </a>
+                              </li>
+                            ))}
+                          </motion.ul>
+                        )}
+                      </AnimatePresence>
+                    </li>
+                  );
+                }
+                return (
+                  <li key={l.href}>
+                    <a
+                      onClick={() => setOpen(false)}
+                      href={l.href}
+                      className="block px-3 py-2.5 text-sm font-medium text-[hsl(220_15%_78%)] hover:text-[hsl(43_72%_60%)] hover:bg-white/5 rounded-md transition-colors"
+                    >
+                      {l.label}
+                    </a>
+                  </li>
+                );
+              })}
               <li className="pt-2">
                 <a
                   href="/#contact"

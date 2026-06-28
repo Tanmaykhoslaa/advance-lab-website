@@ -77,7 +77,7 @@ export const Footer = () => {
       <div className="border-t border-white/8 py-5">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[hsl(220_12%_50%)]">
           <span>© {new Date().getFullYear()} Advance Lab Equipments. All rights reserved.</span>
-          <span>Made with precision in India</span>
+          <span>Developed by Tanmay Khosla</span>
         </div>
       </div>
     </footer>

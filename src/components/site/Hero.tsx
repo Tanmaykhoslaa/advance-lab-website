@@ -61,7 +61,7 @@ export const Hero = () => {
           </div>
 
           {/* Trust badges */}
-          <div className="flex items-center gap-8 pt-2 border-t border-white/10">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-4 pt-2 border-t border-white/10">
             {[
               { icon: ShieldCheck, label: "Quality Assured" },
               { icon: Award, label: "Best Pricing" },
@@ -95,7 +95,7 @@ export const Hero = () => {
               <Award className="h-5 w-5 text-[hsl(222_55%_14%)]" />
             </div>
             <div>
-              <div className="text-xl font-bold text-[hsl(222_55%_18%)]">1 Lakh+</div>
+              <div className="text-xl font-bold text-[hsl(222_55%_18%)]">5 Lakh+</div>
               <div className="text-xs text-[hsl(220_15%_50%)]">Instruments Delivered</div>
             </div>
           </div>

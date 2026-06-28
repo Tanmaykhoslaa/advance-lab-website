@@ -177,7 +177,7 @@ export const Contact = () => {
                 >
                   <Wrapper
                     href={c.href as string}
-                    className="flex items-start gap-5 p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.08] hover:border-[hsl(43_72%_49%/0.5)] hover:shadow-[0_0_40px_-10px_hsl(43_72%_49%/0.2)] hover:-translate-y-2 transition-all duration-500 group"
+                    className="flex flex-col sm:flex-row items-center sm:items-start gap-5 p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.08] hover:border-[hsl(43_72%_49%/0.5)] hover:shadow-[0_0_40px_-10px_hsl(43_72%_49%/0.2)] hover:-translate-y-2 transition-all duration-500 group text-center sm:text-left"
                   >
                     <div className="h-16 w-16 rounded-2xl bg-[hsl(43_72%_49%/0.05)] border border-[hsl(43_72%_49%/0.2)] flex items-center justify-center shrink-0 group-hover:bg-[hsl(43_72%_49%)] group-hover:border-[hsl(43_72%_49%)] group-hover:shadow-[0_0_30px_0_hsl(43_72%_49%/0.5)] group-hover:rotate-[10deg] transition-all duration-500">
                       <c.icon className="h-7 w-7 text-[hsl(43_72%_49%)] group-hover:text-[hsl(222_55%_14%)] transition-colors duration-500" />
@@ -207,7 +207,7 @@ export const Contact = () => {
             <form
               id="inquiry-form"
               onSubmit={submit}
-              className="relative scroll-mt-24 bg-[hsl(222_55%_16%)] backdrop-blur-2xl rounded-[2.5rem] border border-white/10 shadow-2xl p-10 sm:p-12 space-y-8 overflow-hidden"
+              className="relative scroll-mt-24 bg-[hsl(222_55%_16%)] backdrop-blur-2xl rounded-[2.5rem] border border-white/10 shadow-2xl p-6 sm:p-12 space-y-8 overflow-hidden"
             >
               {/* Top gold accent line */}
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-[hsl(43_72%_49%)] to-transparent opacity-80" />

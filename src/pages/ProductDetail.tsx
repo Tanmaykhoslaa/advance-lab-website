@@ -164,7 +164,7 @@ const ProductDetail = () => {
               )}
             </div>
 
-            <div className="hidden lg:flex justify-center items-center">
+            <div className="flex justify-center items-center">
               <div className="relative w-full max-w-2xl">
                 <div className="absolute -inset-10 bg-[hsl(43_72%_49%/0.08)] rounded-full blur-[100px] animate-pulse" />
                 <div className="relative aspect-video w-full rounded-2xl border border-white/10 bg-black/20 overflow-hidden shadow-2xl transition-all duration-500">
@@ -260,15 +260,15 @@ const ProductDetail = () => {
               </div>
 
               <div className="bg-white rounded-2xl border border-[hsl(215_20%_90%)] shadow-sm overflow-hidden">
-                <div className="px-8 py-6 border-b border-[hsl(215_20%_94%)] bg-[hsl(215_20%_98%)]">
+                <div className="px-4 sm:px-8 py-4 sm:py-6 border-b border-[hsl(215_20%_94%)] bg-[hsl(215_20%_98%)]">
                   <h2 className="text-xl font-bold text-[hsl(222_55%_18%)]">Technical Specifications</h2>
                 </div>
                 <table className="w-full text-sm">
                   <tbody>
                     {Object.entries(displaySpecs).map(([k, v], i) => (
                       <tr key={k} className={i % 2 === 0 ? "bg-[hsl(215_20%_99%)]" : "bg-white"}>
-                        <td className="px-8 py-4 font-bold text-[hsl(222_35%_25%)] w-[40%]">{k}</td>
-                        <td className="px-8 py-4 text-[hsl(220_12%_45%)]">{v}</td>
+                        <td className="px-4 sm:px-8 py-3 sm:py-4 font-bold text-[hsl(222_35%_25%)] w-[40%]">{k}</td>
+                        <td className="px-4 sm:px-8 py-3 sm:py-4 text-[hsl(220_12%_45%)]">{v}</td>
                       </tr>
                     ))}
                   </tbody>
