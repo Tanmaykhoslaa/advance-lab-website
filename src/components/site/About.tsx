@@ -17,7 +17,6 @@ const Interactive3DCard = ({
 }: {
   children: React.ReactNode;
   isActive: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   style: any;
   onClick?: () => void;
   className?: string;
@@ -336,7 +335,7 @@ export const About = () => {
         {/* Detailed Commitments Section */}
         <div className="max-w-6xl mx-auto mb-32 bg-white rounded-[3rem] border border-[hsl(215_20%_90%)] shadow-2xl p-8 sm:p-12 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Column: Navigation controls and Info */}
             <div className="lg:col-span-5 space-y-8 flex flex-col justify-center">
               <div>
@@ -357,19 +356,17 @@ export const About = () => {
                     <button
                       key={item.id}
                       onClick={() => setCurrentIndex(idx)}
-                      className={`relative w-full text-left p-4 rounded-2xl transition-all duration-300 flex items-center gap-4 ${
-                        isActive
+                      className={`relative w-full text-left p-4 rounded-2xl transition-all duration-300 flex items-center gap-4 ${isActive
                           ? "bg-[hsl(222_55%_14%)] text-white shadow-lg"
                           : "hover:bg-[hsl(215_20%_94%)] text-[hsl(220_15%_45%)]"
-                      }`}
+                        }`}
                     >
-                      <span className={`text-xs font-black tracking-wider transition-colors duration-300 ${
-                        isActive ? "text-[hsl(43_72%_49%)]" : "text-[hsl(220_15%_55%)]"
-                      }`}>
+                      <span className={`text-xs font-black tracking-wider transition-colors duration-300 ${isActive ? "text-[hsl(43_72%_49%)]" : "text-[hsl(220_15%_55%)]"
+                        }`}>
                         0{idx + 1}
                       </span>
                       <span className="font-bold text-sm sm:text-base">{item.title}</span>
-                      
+
                       {isActive && (
                         <motion.div
                           layoutId="activeStepSelectorGlow"

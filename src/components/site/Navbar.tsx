@@ -5,11 +5,11 @@ import { products } from "@/data/products";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { href: "/#home",     label: "Home" },
+  { href: "/#home", label: "Home" },
   { href: "/#products", label: "Products" },
   { href: "/#services", label: "Services" },
-  { href: "/#about",    label: "About Us" },
-  { href: "/#contact",  label: "Contact" },
+  { href: "/#about", label: "About Us" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
@@ -39,11 +39,10 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-500 ${
-        scrolled
+      className={`sticky top-0 z-50 w-full transition-all duration-500 ${scrolled
           ? "bg-[hsl(222_55%_14%)] shadow-[0_2px_24px_-4px_hsl(222_55%_10%/0.5)]"
           : "bg-[hsl(222_55%_14%)]"
-      }`}
+        }`}
     >
       {/* Top announcement bar */}
       <div className="hidden sm:flex items-center justify-center gap-6 bg-[hsl(222_55%_10%)] py-1.5 text-[11px] text-[hsl(43_60%_84%)] tracking-wide">
@@ -72,16 +71,15 @@ export const Navbar = () => {
           {links.map((l) => {
             if (l.label === "Products") {
               return (
-                <li 
-                  key={l.href} 
+                <li
+                  key={l.href}
                   className="relative h-full flex items-center"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    className={`relative px-4 py-2 text-[13px] font-medium transition-colors duration-200 group flex items-center gap-1 ${
-                      isProductsOpen ? "text-[hsl(43_72%_60%)]" : "text-[hsl(220_15%_75%)] hover:text-[hsl(43_72%_60%)]"
-                    }`}
+                    className={`relative px-4 py-2 text-[13px] font-medium transition-colors duration-200 group flex items-center gap-1 ${isProductsOpen ? "text-[hsl(43_72%_60%)]" : "text-[hsl(220_15%_75%)] hover:text-[hsl(43_72%_60%)]"
+                      }`}
                   >
                     {l.label}
                     <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${isProductsOpen ? "rotate-180" : ""}`} />
@@ -104,11 +102,10 @@ export const Navbar = () => {
                               <button
                                 key={p.slug}
                                 onMouseEnter={() => setActiveProduct(p)}
-                                className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg transition-all text-left group ${
-                                  activeProduct.slug === p.slug 
-                                    ? "bg-white/5 text-[hsl(43_72%_60%)] shadow-[inset_2px_0_0_hsl(43_72%_60%)]" 
+                                className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg transition-all text-left group ${activeProduct.slug === p.slug
+                                    ? "bg-white/5 text-[hsl(43_72%_60%)] shadow-[inset_2px_0_0_hsl(43_72%_60%)]"
                                     : "text-white/60 hover:text-white hover:bg-white/5"
-                                }`}
+                                  }`}
                               >
                                 <p.icon className={`h-3.5 w-3.5 ${activeProduct.slug === p.slug ? "text-[hsl(43_72%_60%)]" : "text-white/20 group-hover:text-white/40"}`} />
                                 <span className="text-[12px] font-medium truncate">{p.name}</span>
@@ -121,7 +118,7 @@ export const Navbar = () => {
                         <div className="flex-1 p-3">
                           <div className="mb-3 px-1 flex items-center justify-between">
                             <h4 className="font-serif text-[15px] text-white leading-tight">{activeProduct.name}</h4>
-                            <a 
+                            <a
                               href={`/products/${activeProduct.slug}`}
                               className="text-[10px] font-bold text-[hsl(43_72%_60%)] hover:underline"
                               onClick={() => setIsProductsOpen(false)}
@@ -129,7 +126,7 @@ export const Navbar = () => {
                               Explore →
                             </a>
                           </div>
-                          
+
                           <div className="space-y-1 overflow-y-auto max-h-[280px] custom-scrollbar pr-1">
                             {activeProduct.models && activeProduct.models.length > 0 ? (
                               activeProduct.models.map((m) => (
@@ -218,7 +215,7 @@ export const Navbar = () => {
                         <span>{l.label}</span>
                         <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileProductsOpen ? "rotate-180" : ""}`} />
                       </button>
-                      
+
                       <AnimatePresence>
                         {mobileProductsOpen && (
                           <motion.ul
