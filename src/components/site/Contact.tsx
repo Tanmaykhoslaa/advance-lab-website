@@ -18,7 +18,7 @@ const contacts = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "+91 79889 27387  •  +91 97284 95878",
+    value: "+91 79889 27387 ",
     href: "tel:+917988927387",
   },
   {
@@ -30,7 +30,7 @@ const contacts = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Chandigarh · Panchkula · Barwala, India",
+    value: "Chandigarh · Panchkula · Barwala, Derabassi, Ambala India",
     href: undefined,
   },
 ];

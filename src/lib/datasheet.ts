@@ -4,8 +4,8 @@ export const downloadDatasheet = (p: Product) => {
   const lines: string[] = [];
   lines.push("ADVANCE LAB EQUIPMENTS");
   lines.push("Scientific & Laboratory Instruments Manufacturer");
-  lines.push("Chandigarh / Panchkula / Barwala, India");
-  lines.push("Phone: +91 79889 27387, +91 97284 95878");
+  lines.push("Chandigarh / Panchkula / Barwala / Derabassi / Ambala, India");
+  lines.push("Phone: +91 79889 27387 ");
   lines.push("Email: advancelabequipments@gmail.com");
   lines.push("");
   lines.push("=".repeat(60));

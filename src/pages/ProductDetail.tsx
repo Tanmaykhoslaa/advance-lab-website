@@ -1,5 +1,5 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Download, FileText, MessageSquare, CheckCircle2, Phone, Tag, Layers, ChevronRight, ChevronLeft, Pipette } from "lucide-react";
+import { ArrowLeft, Download, FileText, MessageSquare, CheckCircle2, Phone, Tag, Layers, ChevronRight, ChevronLeft, Pipette, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
@@ -59,12 +59,24 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const product = getProduct(slug);
   const [selectedModel, setSelectedModel] = useState<ProductModel | null>(null);
+  const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
     setSelectedModel(null); // reset when product changes
     if (product) document.title = `${product.name} – Advance Lab Equipments`;
   }, [product, slug]);
+
+  useEffect(() => {
+    if (zoomedImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [zoomedImage]);
 
   if (!product) {
     return (
@@ -166,13 +178,18 @@ const ProductDetail = () => {
 
             <div className="flex justify-center items-center">
               <div className="relative w-full max-w-2xl">
-                <div className="absolute -inset-10 bg-[hsl(43_72%_49%/0.08)] rounded-full blur-[100px] animate-pulse" />
-                <div className="relative aspect-video w-full rounded-2xl border border-white/10 bg-black/20 overflow-hidden shadow-2xl transition-all duration-500">
+                <div className="absolute -inset-10 bg-[hsl(43_72%_49%/0.08)] rounded-full blur-[100px] animate-pulse pointer-events-none" />
+                <div className={`relative aspect-square sm:aspect-video w-full rounded-2xl border overflow-hidden shadow-2xl transition-all duration-500 ${
+                  (isModelSelected && selectedModel.image) || (!isModelSelected && product.mainImage)
+                    ? "bg-white border-white/20"
+                    : "bg-black/20 border-white/10"
+                }`}>
                   {isModelSelected && selectedModel.image ? (
                     <img 
                       src={selectedModel.image} 
                       alt={selectedModel.name} 
-                      className="w-full h-full object-contain p-4"
+                      className="w-full h-full object-contain p-2 sm:p-4 cursor-zoom-in hover:scale-[1.02] transition-transform duration-300"
+                      onClick={() => setZoomedImage(selectedModel.image)}
                     />
                   ) : product.videos && product.videos.length > 0 && !isModelSelected ? (
                     <ProductVideoSlider videos={product.videos} />
@@ -180,7 +197,8 @@ const ProductDetail = () => {
                     <img 
                       src={product.mainImage} 
                       alt={product.name} 
-                      className="w-full h-full object-contain p-8"
+                      className="w-full h-full object-contain p-3 sm:p-8 cursor-zoom-in hover:scale-[1.02] transition-transform duration-300"
+                      onClick={() => setZoomedImage(product.mainImage)}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
@@ -319,6 +337,34 @@ const ProductDetail = () => {
 
       <Footer />
       <WhatsAppButton />
+
+      {/* Lightbox / Zoom Modal */}
+      {zoomedImage && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md transition-all duration-300"
+          onClick={() => setZoomedImage(null)}
+        >
+          {/* Close button */}
+          <button 
+            onClick={(e) => { e.stopPropagation(); setZoomedImage(null); }}
+            className="absolute top-6 right-6 h-12 w-12 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white/25 transition-all z-[110]"
+          >
+            <X className="h-6 w-6" />
+          </button>
+
+          {/* Image Container */}
+          <div 
+            className="relative max-w-[95%] max-h-[85vh] md:max-w-[85%] md:max-h-[90vh] bg-white rounded-2xl p-4 md:p-6 overflow-hidden shadow-2xl flex items-center justify-center animate-scale-in"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img 
+              src={zoomedImage} 
+              alt="Expanded product view" 
+              className="max-w-full max-h-[75vh] md:max-h-[80vh] object-contain"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

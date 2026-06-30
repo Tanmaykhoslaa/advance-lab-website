@@ -19,11 +19,11 @@ export const Hero = () => {
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-[hsl(222_55%_40%/0.18)] blur-[100px]" />
       </div>
 
-      <div className="container relative flex-1 grid lg:grid-cols-2 gap-16 items-center py-20 lg:py-28">
+      <div className="container relative flex-grow grid lg:grid-cols-2 gap-6 lg:gap-16 items-center pt-16 pb-8 lg:py-28">
         {/* Left copy */}
-        <div className="space-y-8 animate-fade-in">
+        <div className="space-y-4 lg:space-y-8 animate-fade-in order-1 lg:order-1 flex flex-col justify-center">
           {/* Eyebrow badge */}
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-[hsl(43_72%_49%/0.3)] bg-[hsl(43_72%_49%/0.08)] px-4 py-2">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-[hsl(43_72%_49%/0.3)] bg-[hsl(43_72%_49%/0.08)] px-4 py-2 mx-auto lg:mx-0">
             <span className="relative flex h-2 w-2">
               <span className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full bg-[hsl(43_72%_55%)] opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[hsl(43_72%_55%)]" />
@@ -34,18 +34,18 @@ export const Hero = () => {
           </div>
 
           {/* Headline */}
-          <div className="space-y-3">
-            <h1 className="text-[2.6rem] sm:text-5xl lg:text-[3.5rem] font-bold leading-[1.08] text-white">
+          <div className="space-y-3 text-center lg:text-left">
+            <h1 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-bold leading-[1.08] text-white">
               Advance Lab Equipments
             </h1>
-            <p className="text-lg sm:text-xl font-light text-[hsl(220_15%_70%)] max-w-lg leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg font-light text-[hsl(220_15%_70%)] max-w-lg leading-relaxed mx-auto lg:mx-0">
               India's trusted manufacturer, importer &amp; exporter of scientific
               and laboratory instruments — built for precision, backed by service.
             </p>
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             <a
               href="/#products"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-[hsl(43_72%_49%)] text-[hsl(222_55%_14%)] text-sm font-semibold hover:bg-[hsl(43_80%_55%)] shadow-gold hover:shadow-[0_10px_32px_-8px_hsl(43_80%_45%/0.60)] transition-all duration-300"
@@ -61,26 +61,26 @@ export const Hero = () => {
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-4 pt-2 border-t border-white/10">
+          <div className="grid grid-cols-3 gap-3 pt-3 border-t border-white/10 max-w-md mx-auto lg:mx-0 w-full">
             {[
               { icon: ShieldCheck, label: "Quality Assured" },
               { icon: Award, label: "Best Pricing" },
               { icon: Headphones, label: "24/7 Support" },
             ].map((s) => (
-              <div key={s.label} className="flex items-center gap-2">
-                <s.icon className="h-5 w-5 text-[hsl(43_72%_55%)]" />
-                <span className="text-xs font-medium text-[hsl(220_12%_65%)]">{s.label}</span>
+              <div key={s.label} className="flex flex-col items-center text-center gap-1 lg:flex-row lg:text-left lg:gap-2">
+                <s.icon className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0" />
+                <span className="text-[9px] sm:text-xs font-medium text-[hsl(220_12%_65%)] leading-tight">{s.label}</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* Right — Hero image */}
-        <div className="relative hidden lg:block">
+        <div className="relative w-full max-w-[280px] sm:max-w-md lg:max-w-none px-4 lg:px-0 order-2 lg:order-2 mb-6 lg:mb-0 mx-auto">
           {/* Decorative frame */}
-          <div className="absolute -inset-3 rounded-2xl border border-[hsl(43_72%_49%/0.18)]" />
-          <div className="absolute -top-4 -right-4 h-24 w-24 rounded-md border border-[hsl(43_72%_49%/0.25)] bg-[hsl(43_72%_49%/0.05)]" />
-          <div className="absolute -bottom-4 -left-4 h-16 w-16 rounded-md border border-[hsl(43_72%_49%/0.20)] bg-[hsl(43_72%_49%/0.05)]" />
+          <div className="absolute -inset-2 sm:-inset-3 rounded-2xl border border-[hsl(43_72%_49%/0.18)]" />
+          <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 h-16 w-16 sm:h-24 sm:w-24 rounded-md border border-[hsl(43_72%_49%/0.25)] bg-[hsl(43_72%_49%/0.05)]" />
+          <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 h-12 w-12 sm:h-16 sm:w-16 rounded-md border border-[hsl(43_72%_49%/0.20)] bg-[hsl(43_72%_49%/0.05)]" />
 
           <img
             src={heroImg}
@@ -90,7 +90,7 @@ export const Hero = () => {
           />
 
           {/* Floating stat card */}
-          <div className="absolute -bottom-5 -left-8 bg-white rounded-xl p-4 shadow-card flex items-center gap-4 min-w-[200px]">
+          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 lg:-left-8 bg-white rounded-xl p-4 shadow-card flex items-center gap-4 min-w-[210px] z-10">
             <div className="h-10 w-10 rounded-lg bg-[hsl(43_72%_49%)] flex items-center justify-center shrink-0">
               <Award className="h-5 w-5 text-[hsl(222_55%_14%)]" />
             </div>

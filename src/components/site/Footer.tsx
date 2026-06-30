@@ -57,7 +57,7 @@ export const Footer = () => {
           <ul className="space-y-3">
             <li className="flex items-start gap-2.5 text-sm">
               <Phone className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
-              <span>+91 79889 27387<br />+91 97284 95878</span>
+              <span>+91 79889 27387<br /></span>
             </li>
             <li className="flex items-start gap-2.5 text-sm">
               <Mail className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
@@ -67,7 +67,7 @@ export const Footer = () => {
             </li>
             <li className="flex items-start gap-2.5 text-sm">
               <MapPin className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
-              <span>Chandigarh · Panchkula · Barwala, India</span>
+              <span>Chandigarh · Panchkula · Barwala · Derabassi · Ambala, India</span>
             </li>
           </ul>
         </div>

@@ -3,7 +3,7 @@ import { Factory, ShieldCheck, Globe2, User2, MapPin, Briefcase, FlaskConical, W
 import { motion, useMotionValue, useTransform, useSpring, AnimatePresence } from "framer-motion";
 
 const profileData = [
-  { icon: User2, label: "Name of CEOs", value: "Mr. Abhishek Suri & Mrs. Aashima Suri" },
+  { icon: User2, label: "Name of CEOs", value: "Mr. Abhishek Suri " },
   { icon: Briefcase, label: "Nature of Business", value: "Manufacturer, Exporter & Supplier of Scientific & Laboratory Instruments" },
   { icon: MapPin, label: "Market Covered", value: "India, Nepal, Sri Lanka, Sudan, Bangladesh, Zordan, England, Nigeria, Brazil & USA" },
 ];
@@ -287,7 +287,7 @@ export const About = () => {
             </h2>
             <p className="text-[hsl(220_15%_45%)] text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
               Situated at Panchkula, Haryana, our company reaches new heights under the visionary leadership of
-              <span className="font-bold text-[hsl(222_55%_14%)]"> Mr. Abhishek Suri & Mrs. Aashima Suri</span>.
+              <span className="font-bold text-[hsl(222_55%_14%)]"> Mr. Abhishek Suri </span>.
               We set benchmarks in the quality-conscious market through continuous innovation and excellence.
             </p>
           </motion.div>

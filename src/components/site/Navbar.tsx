@@ -48,7 +48,7 @@ export const Navbar = () => {
       <div className="hidden sm:flex items-center justify-center gap-6 bg-[hsl(222_55%_10%)] py-1.5 text-[11px] text-[hsl(43_60%_84%)] tracking-wide">
         <span className="flex items-center gap-1.5">
           <Phone className="h-3 w-3" />
-          +91 79889 27387 &nbsp;|&nbsp; +91 97284 95878
+          +91 79889 27387 &nbsp;|&nbsp;
         </span>
         <span className="h-3 w-px bg-[hsl(43_40%_40%)]" />
         <span>advancelabequipments@gmail.com</span>
