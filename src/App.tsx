@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound.tsx";
 import ProductDetail from "./pages/ProductDetail.tsx";
 
 const queryClient = new QueryClient();
+const isMaintenanceMode = "isMaintenance" in Index && (Index as any).isMaintenance;
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -16,10 +17,16 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/products/:slug" element={<ProductDetail />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          {isMaintenanceMode ? (
+            <Route path="*" element={<Index />} />
+          ) : (
+            <>
+              <Route path="/" element={<Index />} />
+              <Route path="/products/:slug" element={<ProductDetail />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </>
+          )}
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
