@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Gold rounded background -->
+  <rect width="32" height="32" rx="8" fill="hsl(43, 72%, 49%)" />
+  <!-- Flask Conical Icon in dark navy, centered inside the 32x32 viewbox -->
+  <g transform="translate(4, 4)" stroke="hsl(222, 55%, 14%)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 2v7.614a2 2 0 0 0-1.272 1.858l-1.728 9.544a1 1 0 0 0 1 1.2h10a1 1 0 0 0 1-1.2l-1.728-9.544a2 2 0 0 0-1.272-1.858V2h-6Z" />
+    <path d="M14.65 8.5 18 2" />
+    <path d="M10 9.5 7.35 8.5" />
+  </g>
+</svg>
