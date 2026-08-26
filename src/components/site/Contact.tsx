@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { z } from "zod";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Building2, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,9 +16,21 @@ const schema = z.object({
 
 const contacts = [
   {
+    icon: MapPin,
+    label: "Registered Address",
+    value: "Barwala, Panchkula",
+    href: undefined,
+  },
+  {
+    icon: Building2,
+    label: "Branch Offices",
+    value: "Ambala, Delhi, Jaipur",
+    href: undefined,
+  },
+  {
     icon: Phone,
-    label: "Call Us",
-    value: "+91 79889 27387 ",
+    label: "Mobile",
+    value: ["+91 79889 27387", "97384 95878", "+91-176 2327371"],
     href: "tel:+917988927387",
   },
   {
@@ -26,12 +38,6 @@ const contacts = [
     label: "Email",
     value: "advancelabequipments@gmail.com",
     href: "mailto:advancelabequipments@gmail.com",
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Chandigarh · Panchkula · Barwala, Derabassi, Ambala India",
-    href: undefined,
   },
 ];
 
@@ -184,7 +190,15 @@ export const Contact = () => {
                     </div>
                     <div className="flex flex-col justify-center py-2">
                       <div className="font-bold text-white text-lg mb-1">{c.label}</div>
-                      <div className="text-sm text-[hsl(220_15%_60%)] break-all">{c.value}</div>
+                      <div className="text-sm text-[hsl(220_15%_60%)] space-y-1">
+                        {Array.isArray(c.value) ? (
+                          c.value.map((val, i) => (
+                            <div key={i} className="break-all">{val}</div>
+                          ))
+                        ) : (
+                          <div className="break-all">{c.value}</div>
+                        )}
+                      </div>
                     </div>
                   </Wrapper>
                 </motion.div>

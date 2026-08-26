@@ -1,4 +1,4 @@
-import { FlaskConical, Phone, Mail, MapPin } from "lucide-react";
+import { FlaskConical, Phone, Mail, MapPin, Building2 } from "lucide-react";
 
 const quickLinks = [
   { href: "/#products", label: "Products" },
@@ -56,18 +56,30 @@ export const Footer = () => {
           <h4 className="text-white font-semibold text-sm mb-4 tracking-wide">Contact</h4>
           <ul className="space-y-3">
             <li className="flex items-start gap-2.5 text-sm">
+              <MapPin className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
+              <div>
+                <span className="font-medium text-white/90">Registered Address:</span> Barwala, Panchkula
+              </div>
+            </li>
+            <li className="flex items-start gap-2.5 text-sm">
+              <Building2 className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
+              <div>
+                <span className="font-medium text-white/90">Branch Offices:</span> Ambala, Delhi, Jaipur
+              </div>
+            </li>
+            <li className="flex items-start gap-2.5 text-sm">
               <Phone className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
-              <span>+91 79889 27387<br /></span>
+              <div className="space-y-0.5">
+                <div>+91 79889 27387</div>
+                <div>97384 95878</div>
+                <div>+91-176 2327371</div>
+              </div>
             </li>
             <li className="flex items-start gap-2.5 text-sm">
               <Mail className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
               <a href="mailto:advancelabequipments@gmail.com" className="break-all hover:text-[hsl(43_72%_60%)] transition-colors">
                 advancelabequipments@gmail.com
               </a>
-            </li>
-            <li className="flex items-start gap-2.5 text-sm">
-              <MapPin className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
-              <span>Chandigarh · Panchkula · Barwala · Derabassi · Ambala, India</span>
             </li>
           </ul>
         </div>

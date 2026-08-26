@@ -3,6 +3,7 @@ import { Menu, X, FlaskConical, Phone, ChevronRight, ArrowLeft, ChevronDown } fr
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const links = [
   { href: "/#home", label: "Home" },
@@ -118,21 +119,21 @@ export const Navbar = () => {
                         <div className="flex-1 p-3">
                           <div className="mb-3 px-1 flex items-center justify-between">
                             <h4 className="font-serif text-[15px] text-white leading-tight">{activeProduct.name}</h4>
-                            <a
-                              href={`/products/${activeProduct.slug}`}
+                            <Link
+                              to={`/products/${activeProduct.slug}`}
                               className="text-[10px] font-bold text-[hsl(43_72%_60%)] hover:underline"
                               onClick={() => setIsProductsOpen(false)}
                             >
                               Explore →
-                            </a>
+                            </Link>
                           </div>
 
                           <div className="space-y-1 overflow-y-auto max-h-[280px] custom-scrollbar pr-1">
                             {activeProduct.models && activeProduct.models.length > 0 ? (
                               activeProduct.models.map((m) => (
-                                <a
+                                <Link
                                   key={m.id}
-                                  href={`/products/${activeProduct.slug}#${m.id}`}
+                                  to={`/products/${activeProduct.slug}#${m.id}`}
                                   className="flex flex-col p-2.5 rounded-lg bg-white/[0.02] hover:bg-white/[0.05] border border-white/5 transition-all group"
                                   onClick={() => setIsProductsOpen(false)}
                                 >
@@ -142,7 +143,7 @@ export const Navbar = () => {
                                   <div className="text-[9px] text-white/30 mt-0.5 tracking-wider font-mono">
                                     {m.modelNumber}
                                   </div>
-                                </a>
+                                </Link>
                               ))
                             ) : (
                               <div className="h-40 flex items-center justify-center text-center opacity-20 italic text-[11px]">
@@ -227,8 +228,8 @@ export const Navbar = () => {
                           >
                             {products.map((p) => (
                               <li key={p.slug}>
-                                <a
-                                  href={`/products/${p.slug}`}
+                                <Link
+                                  to={`/products/${p.slug}`}
                                   onClick={() => {
                                     setOpen(false);
                                     setMobileProductsOpen(false);
@@ -236,7 +237,7 @@ export const Navbar = () => {
                                   className="block px-3 py-2 text-xs font-medium text-[hsl(220_15%_65%)] hover:text-[hsl(43_72%_60%)] rounded-md hover:bg-white/5 transition-colors"
                                 >
                                   {p.name}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </motion.ul>

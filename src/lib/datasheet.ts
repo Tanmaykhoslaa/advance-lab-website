@@ -4,8 +4,9 @@ export const downloadDatasheet = (p: Product) => {
   const lines: string[] = [];
   lines.push("ADVANCE LAB EQUIPMENTS");
   lines.push("Scientific & Laboratory Instruments Manufacturer");
-  lines.push("Chandigarh / Panchkula / Barwala / Derabassi / Ambala, India");
-  lines.push("Phone: +91 79889 27387 ");
+  lines.push("Registered Address: Barwala, Panchkula");
+  lines.push("Branch Offices: Ambala, Delhi, Jaipur");
+  lines.push("Phone: +91 79889 27387 / 97384 95878 / +91-176 2327371");
   lines.push("Email: advancelabequipments@gmail.com");
   lines.push("");
   lines.push("=".repeat(60));

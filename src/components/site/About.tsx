@@ -138,10 +138,7 @@ export const About = () => {
             <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">Research & Development</h3>
             <div className="space-y-4 text-white/80 text-sm sm:text-base leading-relaxed">
               <p>
-                Advance Lab Equipments has one of the finest in-house Research & Development and Product Development facilities. Our R&D department is engaged continuously in development of new products and improvement in the existing ones.
-              </p>
-              <p>
-                In order to be competitive, the R&D team continuously works for technological development of product range. We have been adding a few instruments every year to our range.
+                Advance Lab Equipments features state-of-the-art in-house R&D facilities. Our dedicated team continuously innovates and enhances our product range to maintain top manufacturing standards.
               </p>
             </div>
           </div>
@@ -167,10 +164,7 @@ export const About = () => {
             <h3 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-4 tracking-tight">After Sales Services</h3>
             <div className="space-y-4 text-[hsl(220_15%_45%)] text-sm sm:text-base leading-relaxed">
               <p>
-                We are very keen that the end users of our instruments should be fully satisfied. For this purpose, we ensure timely after sales services to all the end users of our products.
-              </p>
-              <p>
-                Many of our dealers have sent their Service Engineers to our factory for training. Our Service Engineers visit all our dealers within India at least once in a month to sort out queries.
+                We prioritize total customer satisfaction by providing timely and reliable after-sales services. Our trained Service Engineers conduct regular visits across India to promptly resolve any technical queries.
               </p>
             </div>
           </div>
@@ -196,11 +190,11 @@ export const About = () => {
             <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">Quality Control</h3>
             <div className="space-y-3 text-white/80 text-sm sm:text-base leading-relaxed mb-4">
               <p>
-                Advance Lab Equipments has a well designed control system to monitor all manufacturing stages. This ensures the desired and consistent quality of the products.
+                Our well-designed control system meticulously monitors all manufacturing stages, ensuring consistent, premium quality across our entire product range.
               </p>
             </div>
-            <div className="font-semibold text-xs text-[hsl(43_72%_60%)] bg-white/5 p-4 rounded-2xl border border-white/10 leading-relaxed backdrop-blur-sm">
-              Advance Lab Equipments is an AN ISO 9001:2015 certified company. Every single product like UV-Visible Spectrophotometer, Flame Photometer, etc. is examined at each stage.
+            <div className="font-semibold text-xs text-[hsl(43_72%_60%)] bg-white/5 p-3 rounded-xl border border-white/10 leading-relaxed backdrop-blur-sm">
+              As an ISO 9001:2015 certified company, every single instrument is rigorously examined at each stage of production.
             </div>
           </div>
           <div className="text-[hsl(43_72%_60%)] font-extrabold text-xs uppercase tracking-widest mt-2">
