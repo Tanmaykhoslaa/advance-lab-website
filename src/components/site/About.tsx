@@ -59,7 +59,7 @@ const Interactive3DCard = ({
         rotateY,
         transformStyle: "preserve-3d",
       }}
-      className={`absolute inset-0 w-full h-full rounded-[2.5rem] p-8 sm:p-10 border transition-all duration-300 ${className || ""}`}
+      className={`absolute inset-0 w-full h-full p-8 sm:p-10 border-4 transition-all duration-300 ${className || ""}`}
     >
       <div style={{ transform: "translateZ(30px)", transformStyle: "preserve-3d" }} className="h-full flex flex-col justify-between">
         {children}
@@ -104,9 +104,10 @@ const TiltCard = ({ children, className }: { children: React.ReactNode, classNam
     >
       <div
         style={{ transform: "translateZ(40px)" }}
-        className="h-full w-full bg-white rounded-[2rem] p-8 sm:p-10 border border-[hsl(215_20%_90%)] shadow-soft group hover:shadow-2xl hover:border-[hsl(43_72%_49%/0.6)] transition-all duration-500 overflow-hidden"
+        className="h-full w-full bg-card p-8 sm:p-10 border border-border shadow-dark group hover:shadow-orange hover:border-primary transition-all duration-500 overflow-hidden relative"
       >
-        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/50 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-16 h-16 bg-primary transform translate-x-8 -translate-y-8 rotate-45 group-hover:scale-110 transition-transform duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
         {children}
       </div>
     </motion.div>
@@ -132,24 +133,24 @@ export const About = () => {
       content: (
         <>
           <div>
-            <div className="h-12 w-12 rounded-xl bg-[hsl(43_72%_49%)] flex items-center justify-center mb-6 shadow-md shadow-[hsl(43_72%_49%/0.2)]">
-              <FlaskConical className="h-6 w-6 text-[hsl(222_55%_14%)]" />
+            <div className="h-12 w-12 bg-primary flex items-center justify-center mb-6 shadow-md shadow-orange">
+              <FlaskConical className="h-6 w-6 text-primary-foreground" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">Research & Development</h3>
-            <div className="space-y-4 text-white/80 text-sm sm:text-base leading-relaxed">
+            <h3 className="text-2xl font-black text-foreground mb-4 tracking-tight uppercase">Research & Development</h3>
+            <div className="space-y-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
               <p>
                 Advance Lab Equipments features state-of-the-art in-house R&D facilities. Our dedicated team continuously innovates and enhances our product range to maintain top manufacturing standards.
               </p>
             </div>
           </div>
-          <div className="text-[hsl(43_72%_60%)] font-extrabold text-xs uppercase tracking-widest mt-4">
+          <div className="text-primary font-black text-xs uppercase tracking-widest mt-4">
             Innovation & Excellence
           </div>
         </>
       ),
-      bgColor: "bg-gradient-to-br from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)]",
-      borderColor: "border-[hsl(222_55%_10%)]",
-      textColor: "text-white"
+      bgColor: "bg-background",
+      borderColor: "border-primary/30",
+      textColor: "text-foreground"
     },
     {
       id: 1,
@@ -158,24 +159,24 @@ export const About = () => {
       content: (
         <>
           <div>
-            <div className="h-12 w-12 rounded-xl bg-[hsl(222_55%_14%)] flex items-center justify-center mb-6 shadow-md shadow-[hsl(222_55%_14%/0.15)]">
-              <Wrench className="h-6 w-6 text-[hsl(43_72%_60%)]" />
+            <div className="h-12 w-12 bg-card flex items-center justify-center mb-6 border border-border shadow-md">
+              <Wrench className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-4 tracking-tight">After Sales Services</h3>
-            <div className="space-y-4 text-[hsl(220_15%_45%)] text-sm sm:text-base leading-relaxed">
+            <h3 className="text-2xl font-black text-foreground mb-4 tracking-tight uppercase">After Sales Services</h3>
+            <div className="space-y-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
               <p>
                 We prioritize total customer satisfaction by providing timely and reliable after-sales services. Our trained Service Engineers conduct regular visits across India to promptly resolve any technical queries.
               </p>
             </div>
           </div>
-          <div className="text-[hsl(43_72%_49%)] font-extrabold text-xs uppercase tracking-widest mt-4">
+          <div className="text-primary font-black text-xs uppercase tracking-widest mt-4">
             Customer First Approach
           </div>
         </>
       ),
-      bgColor: "bg-white",
-      borderColor: "border-[hsl(215_20%_90%)]",
-      textColor: "text-[hsl(222_55%_18%)]"
+      bgColor: "bg-card",
+      borderColor: "border-border",
+      textColor: "text-foreground"
     },
     {
       id: 2,
@@ -184,27 +185,27 @@ export const About = () => {
       content: (
         <>
           <div>
-            <div className="h-12 w-12 rounded-xl bg-[hsl(43_72%_49%)] flex items-center justify-center mb-6 shadow-md shadow-[hsl(43_72%_49%/0.2)]">
-              <ShieldCheck className="h-6 w-6 text-[hsl(222_55%_14%)]" />
+            <div className="h-12 w-12 bg-primary flex items-center justify-center mb-6 shadow-md shadow-orange">
+              <ShieldCheck className="h-6 w-6 text-primary-foreground" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">Quality Control</h3>
-            <div className="space-y-3 text-white/80 text-sm sm:text-base leading-relaxed mb-4">
+            <h3 className="text-2xl font-black text-foreground mb-3 tracking-tight uppercase">Quality Control</h3>
+            <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed mb-4">
               <p>
                 Our well-designed control system meticulously monitors all manufacturing stages, ensuring consistent, premium quality across our entire product range.
               </p>
             </div>
-            <div className="font-semibold text-xs text-[hsl(43_72%_60%)] bg-white/5 p-3 rounded-xl border border-white/10 leading-relaxed backdrop-blur-sm">
+            <div className="font-bold text-[10px] uppercase tracking-wider text-primary bg-background p-3 border-l-4 border-primary leading-relaxed">
               As an ISO 9001:2015 certified company, every single instrument is rigorously examined at each stage of production.
             </div>
           </div>
-          <div className="text-[hsl(43_72%_60%)] font-extrabold text-xs uppercase tracking-widest mt-2">
+          <div className="text-primary font-black text-xs uppercase tracking-widest mt-2">
             AN ISO 9001:2015 Certified
           </div>
         </>
       ),
-      bgColor: "bg-gradient-to-br from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)]",
-      borderColor: "border-[hsl(222_55%_10%)]",
-      textColor: "text-white"
+      bgColor: "bg-background",
+      borderColor: "border-primary/30",
+      textColor: "text-foreground"
     }
   ];
 
@@ -253,73 +254,68 @@ export const About = () => {
   };
 
   return (
-    <section id="about" className="py-24 bg-[hsl(215_20%_96%)] relative overflow-hidden perspective-[1000px]">
+    <section id="about" className="py-16 lg:py-24 bg-card relative overflow-hidden perspective-[1000px]">
       {/* 3D Floating background elements */}
       <motion.div
         animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-10 right-10 w-[400px] h-[400px] rounded-full bg-[hsl(43_72%_49%/0.05)] blur-[80px] pointer-events-none"
+        className="absolute top-10 right-10 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[80px] pointer-events-none"
       />
-      <motion.div
-        animate={{ y: [0, 30, 0], rotate: [0, -5, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-10 left-10 w-[300px] h-[300px] rounded-full bg-[hsl(222_55%_14%/0.04)] blur-[60px] pointer-events-none"
-      />
-
+      
       <div className="container relative z-10">
         {/* Main Introduction */}
-        <div className="max-w-4xl mx-auto text-center mb-24">
+        <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="section-eyebrow justify-center mb-6">About Our Legacy</p>
-            <h2 className="text-4xl sm:text-6xl font-black text-[hsl(222_55%_18%)] mb-8 tracking-tight">
-              Advance Lab <span className="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(43_72%_49%)] to-[hsl(43_80%_60%)]">Equipments</span>
+            <p className="section-eyebrow justify-center mb-4 lg:mb-6">About Our Legacy</p>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground mb-6 lg:mb-8 tracking-tight uppercase font-serif">
+              Advance Lab <span className="text-primary">Equipments</span>
             </h2>
-            <p className="text-[hsl(220_15%_45%)] text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
               Situated at Panchkula, Haryana, our company reaches new heights under the visionary leadership of
-              <span className="font-bold text-[hsl(222_55%_14%)]"> Mr. Abhishek Suri </span>.
+              <span className="font-bold text-foreground"> Mr. Abhishek Suri</span>.
               We set benchmarks in the quality-conscious market through continuous innovation and excellence.
             </p>
           </motion.div>
         </div>
 
         {/* Core Pillars - 3D Tilt Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-32" style={{ perspective: "1200px" }}>
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-20 lg:mb-32" style={{ perspective: "1200px" }}>
           <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-            <TiltCard>
-              <div className="h-16 w-16 rounded-2xl bg-[hsl(222_55%_14%)] flex items-center justify-center mb-8 shadow-xl group-hover:bg-[hsl(43_72%_49%)] group-hover:rotate-6 transition-all duration-500" style={{ transform: "translateZ(30px)" }}>
-                <Factory className="h-8 w-8 text-[hsl(43_72%_60%)] group-hover:text-white transition-colors" />
+            <TiltCard className="h-full">
+              <div className="h-12 w-12 sm:h-16 sm:w-16 bg-primary flex items-center justify-center mb-6 sm:mb-8 shadow-orange group-hover:scale-110 transition-transform duration-500" style={{ transform: "translateZ(30px)" }}>
+                <Factory className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-4" style={{ transform: "translateZ(20px)" }}>Infrastructure</h3>
-              <p className="text-base text-[hsl(220_15%_48%)] leading-relaxed" style={{ transform: "translateZ(10px)" }}>
+              <h3 className="text-xl sm:text-2xl font-black uppercase text-foreground mb-4" style={{ transform: "translateZ(20px)" }}>Infrastructure</h3>
+              <p className="text-sm font-medium text-muted-foreground leading-relaxed" style={{ transform: "translateZ(10px)" }}>
                 Our manufacturing unit features advanced laboratory facilities and a dedicated R&D wing, enabling groundbreaking instrument production while maintaining consistent quality.
               </p>
             </TiltCard>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-            <TiltCard>
-              <div className="h-16 w-16 rounded-2xl bg-[hsl(222_55%_14%)] flex items-center justify-center mb-8 shadow-xl group-hover:bg-[hsl(43_72%_49%)] group-hover:-rotate-6 transition-all duration-500" style={{ transform: "translateZ(30px)" }}>
-                <ShieldCheck className="h-8 w-8 text-[hsl(43_72%_60%)] group-hover:text-white transition-colors" />
+            <TiltCard className="h-full">
+              <div className="h-12 w-12 sm:h-16 sm:w-16 bg-primary flex items-center justify-center mb-6 sm:mb-8 shadow-orange group-hover:scale-110 transition-transform duration-500" style={{ transform: "translateZ(30px)" }}>
+                <ShieldCheck className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-4" style={{ transform: "translateZ(20px)" }}>Quality Control</h3>
-              <p className="text-base text-[hsl(220_15%_48%)] leading-relaxed" style={{ transform: "translateZ(10px)" }}>
+              <h3 className="text-xl sm:text-2xl font-black uppercase text-foreground mb-4" style={{ transform: "translateZ(20px)" }}>Quality Control</h3>
+              <p className="text-sm font-medium text-muted-foreground leading-relaxed" style={{ transform: "translateZ(10px)" }}>
                 From raw material selection to finished goods, every aspect is guided by strict QC policies. Instruments undergo rigorous testing for assembly and performance.
               </p>
             </TiltCard>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-            <TiltCard>
-              <div className="h-16 w-16 rounded-2xl bg-[hsl(222_55%_14%)] flex items-center justify-center mb-8 shadow-xl group-hover:bg-[hsl(43_72%_49%)] group-hover:rotate-6 transition-all duration-500" style={{ transform: "translateZ(30px)" }}>
-                <Globe2 className="h-8 w-8 text-[hsl(43_72%_60%)] group-hover:text-white transition-colors" />
+            <TiltCard className="h-full">
+              <div className="h-12 w-12 sm:h-16 sm:w-16 bg-primary flex items-center justify-center mb-6 sm:mb-8 shadow-orange group-hover:scale-110 transition-transform duration-500" style={{ transform: "translateZ(30px)" }}>
+                <Globe2 className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-[hsl(222_55%_18%)] mb-4" style={{ transform: "translateZ(20px)" }}>Global Network</h3>
-              <p className="text-base text-[hsl(220_15%_48%)] leading-relaxed" style={{ transform: "translateZ(10px)" }}>
+              <h3 className="text-xl sm:text-2xl font-black uppercase text-foreground mb-4" style={{ transform: "translateZ(20px)" }}>Global Network</h3>
+              <p className="text-sm font-medium text-muted-foreground leading-relaxed" style={{ transform: "translateZ(10px)" }}>
                 We thrive on a well-organized network spanning nations including Nepal, Sri Lanka, Bangladesh, USA, and beyond, recognized as a premier Exporter.
               </p>
             </TiltCard>
@@ -327,17 +323,20 @@ export const About = () => {
         </div>
 
         {/* Detailed Commitments Section */}
-        <div className="max-w-6xl mx-auto mb-32 bg-white rounded-[3rem] border border-[hsl(215_20%_90%)] shadow-2xl p-8 sm:p-12 overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-6xl mx-auto mb-20 lg:mb-32 bg-background border border-border shadow-dark p-6 sm:p-12 overflow-hidden relative">
+          {/* Decorative Corner */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-primary transform translate-x-16 -translate-y-16 rotate-45" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
 
             {/* Left Column: Navigation controls and Info */}
             <div className="lg:col-span-5 space-y-8 flex flex-col justify-center">
               <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-[hsl(43_72%_49%)]">Our Pillars</span>
-                <h2 className="text-3xl sm:text-4xl font-black text-[hsl(222_55%_18%)] mt-2 tracking-tight">
-                  Excellence in every detail
+                <span className="text-xs font-bold uppercase tracking-widest text-primary">Our Pillars</span>
+                <h2 className="text-4xl sm:text-5xl font-black uppercase text-foreground mt-2 tracking-tight font-serif">
+                  Excellence in <br/> every detail
                 </h2>
-                <p className="text-[hsl(220_15%_45%)] text-sm sm:text-base leading-relaxed mt-4">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mt-4 border-l-2 border-primary pl-4">
                   We strive to ensure top manufacturing standards, seamless developer services, and continuous innovation.
                 </p>
               </div>
@@ -350,21 +349,21 @@ export const About = () => {
                     <button
                       key={item.id}
                       onClick={() => setCurrentIndex(idx)}
-                      className={`relative w-full text-left p-4 rounded-2xl transition-all duration-300 flex items-center gap-4 ${isActive
-                          ? "bg-[hsl(222_55%_14%)] text-white shadow-lg"
-                          : "hover:bg-[hsl(215_20%_94%)] text-[hsl(220_15%_45%)]"
+                      className={`relative w-full text-left p-4 transition-all duration-300 flex items-center gap-4 border-2 ${isActive
+                          ? "bg-card text-foreground border-primary shadow-dark"
+                          : "hover:bg-card/50 text-muted-foreground border-transparent"
                         }`}
                     >
-                      <span className={`text-xs font-black tracking-wider transition-colors duration-300 ${isActive ? "text-[hsl(43_72%_49%)]" : "text-[hsl(220_15%_55%)]"
+                      <span className={`text-xs font-black tracking-wider transition-colors duration-300 ${isActive ? "text-primary" : "text-muted-foreground"
                         }`}>
                         0{idx + 1}
                       </span>
-                      <span className="font-bold text-sm sm:text-base">{item.title}</span>
+                      <span className="font-bold text-sm sm:text-base uppercase tracking-wider">{item.title}</span>
 
                       {isActive && (
                         <motion.div
                           layoutId="activeStepSelectorGlow"
-                          className="absolute right-4 w-2 h-2 rounded-full bg-[hsl(43_72%_49%)] shadow-[0_0_12px_2px_hsl(43_72%_49%)]"
+                          className="absolute right-4 w-2 h-2 bg-primary shadow-orange"
                           transition={{ type: "spring", stiffness: 300, damping: 25 }}
                         />
                       )}
@@ -377,14 +376,14 @@ export const About = () => {
               <div className="flex gap-4">
                 <button
                   onClick={handlePrev}
-                  className="h-12 w-12 rounded-full border border-[hsl(215_20%_85%)] bg-white text-[hsl(222_55%_18%)] flex items-center justify-center hover:bg-[hsl(222_55%_14%)] hover:text-white hover:border-[hsl(222_55%_14%)] transition-all duration-300 shadow-sm"
+                  className="h-12 w-12 border border-border bg-card text-foreground flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 shadow-sm"
                   aria-label="Previous Commitment"
                 >
                   <ArrowLeft className="h-5 w-5" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="h-12 w-12 rounded-full border border-[hsl(215_20%_85%)] bg-white text-[hsl(222_55%_18%)] flex items-center justify-center hover:bg-[hsl(222_55%_14%)] hover:text-white hover:border-[hsl(222_55%_14%)] transition-all duration-300 shadow-sm"
+                  className="h-12 w-12 border border-border bg-card text-foreground flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 shadow-sm"
                   aria-label="Next Commitment"
                 >
                   <ArrowRight className="h-5 w-5" />
@@ -422,36 +421,31 @@ export const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto bg-white rounded-[2rem] border border-[hsl(215_20%_90%)] shadow-2xl overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] transition-shadow duration-500"
+          className="max-w-4xl mx-auto bg-background border border-border shadow-dark overflow-hidden hover:shadow-orange/20 transition-shadow duration-500 relative"
         >
-          <div className="bg-gradient-to-r from-[hsl(222_55%_14%)] to-[hsl(222_50%_20%)] px-6 sm:px-10 py-6 sm:py-8 relative overflow-hidden">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-32 -right-32 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none"
-            />
-            <h3 className="text-2xl font-bold text-white flex items-center gap-4 relative z-10">
-              <div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/10 shadow-inner">
-                <Briefcase className="h-6 w-6 text-[hsl(43_72%_49%)]" />
+          <div className="bg-card border-b border-primary/30 px-6 sm:px-10 py-6 sm:py-8 relative overflow-hidden">
+            <h3 className="text-3xl font-black uppercase tracking-tight text-foreground flex items-center gap-4 relative z-10 font-serif">
+              <div className="h-12 w-12 bg-primary flex items-center justify-center border border-primary/50 shadow-inner">
+                <Briefcase className="h-6 w-6 text-primary-foreground" />
               </div>
               Company Profile
             </h3>
           </div>
-          <div className="divide-y divide-[hsl(215_20%_94%)] relative z-10 bg-white">
+          <div className="divide-y divide-border relative z-10 bg-background">
             {profileData.map((item, i) => (
               <motion.div
-                whileHover={{ x: 8, backgroundColor: "hsl(215 20% 98%)" }}
+                whileHover={{ x: 8, backgroundColor: "var(--card)" }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 key={item.label}
                 className="grid sm:grid-cols-3 items-center px-6 sm:px-10 py-6 sm:py-8 cursor-default"
               >
-                <div className="flex items-center gap-4 text-[hsl(222_55%_18%)] font-bold text-lg mb-2 sm:mb-0">
-                  <div className="h-10 w-10 rounded-full bg-[hsl(43_72%_49%/0.1)] flex items-center justify-center shrink-0 border border-[hsl(43_72%_49%/0.2)]">
-                    <item.icon className="h-4 w-4 text-[hsl(43_72%_49%)]" />
+                <div className="flex items-center gap-4 text-foreground font-bold uppercase tracking-wider text-sm mb-2 sm:mb-0">
+                  <div className="h-10 w-10 bg-card flex items-center justify-center shrink-0 border border-border">
+                    <item.icon className="h-4 w-4 text-primary" />
                   </div>
                   {item.label}
                 </div>
-                <div className="sm:col-span-2 text-[hsl(220_15%_45%)] text-base font-medium leading-relaxed">
+                <div className="sm:col-span-2 text-muted-foreground text-base font-medium leading-relaxed">
                   {item.value}
                 </div>
               </motion.div>

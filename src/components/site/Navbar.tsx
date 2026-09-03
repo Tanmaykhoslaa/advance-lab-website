@@ -3,14 +3,15 @@ import { Menu, X, FlaskConical, Phone, ChevronRight, ArrowLeft, ChevronDown } fr
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Logo } from "./Logo";
 
 const links = [
-  { href: "/#home", label: "Home" },
-  { href: "/#products", label: "Products" },
-  { href: "/#services", label: "Services" },
-  { href: "/#about", label: "About Us" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/products", label: "Products" },
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "About Us" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
@@ -20,6 +21,7 @@ export const Navbar = () => {
   const [activeProduct, setActiveProduct] = useState<typeof products[0]>(products[0]);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const closeTimeout = useRef<NodeJS.Timeout | null>(null);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -40,37 +42,30 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-500 ${scrolled
-          ? "bg-[hsl(222_55%_14%)] shadow-[0_2px_24px_-4px_hsl(222_55%_10%/0.5)]"
-          : "bg-[hsl(222_55%_14%)]"
+      className={`sticky top-0 z-50 w-full transition-all duration-500 border-b border-border/40 ${scrolled
+          ? "bg-background/95 backdrop-blur-md shadow-dark"
+          : "bg-background"
         }`}
     >
       {/* Top announcement bar */}
-      <div className="hidden sm:flex items-center justify-center gap-6 bg-[hsl(222_55%_10%)] py-1.5 text-[11px] text-[hsl(43_60%_84%)] tracking-wide">
+      <div className="hidden sm:flex items-center justify-center gap-6 bg-card py-1.5 text-[11px] text-muted-foreground tracking-wide border-b border-border">
         <span className="flex items-center gap-1.5">
-          <Phone className="h-3 w-3" />
+          <Phone className="h-3 w-3 text-primary" />
           +91 79889 27387 &nbsp;|&nbsp;
         </span>
-        <span className="h-3 w-px bg-[hsl(43_40%_40%)]" />
+        <span className="h-3 w-px bg-border" />
         <span>advancelabequipments@gmail.com</span>
       </div>
 
       <nav className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3 group">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-[hsl(43_72%_49%)] shadow-gold group-hover:bg-[hsl(43_80%_54%)] transition-all duration-300">
-            <FlaskConical className="h-5 w-5 text-[hsl(222_55%_14%)]" />
-          </span>
-          <span className="font-bold text-white text-sm sm:text-base leading-tight tracking-wide">
-            Advance Lab
-            <span className="text-[hsl(43_72%_60%)]"> Equipments</span>
-          </span>
-        </a>
+        <Logo />
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-1">
           {links.map((l) => {
             if (l.label === "Products") {
+              const isActive = pathname.startsWith("/products");
               return (
                 <li
                   key={l.href}
@@ -78,14 +73,15 @@ export const Navbar = () => {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <button
-                    className={`relative px-4 py-2 text-[13px] font-medium transition-colors duration-200 group flex items-center gap-1 ${isProductsOpen ? "text-[hsl(43_72%_60%)]" : "text-[hsl(220_15%_75%)] hover:text-[hsl(43_72%_60%)]"
+                  <Link
+                    to="/products"
+                    className={`relative px-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-200 group flex items-center gap-1 ${isProductsOpen || isActive ? "text-primary" : "text-muted-foreground hover:text-primary"
                       }`}
                   >
                     {l.label}
                     <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${isProductsOpen ? "rotate-180" : ""}`} />
-                    <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-[hsl(43_72%_49%)] transition-all duration-300 rounded-full ${isProductsOpen ? "w-4/5" : "w-0 group-hover:w-4/5"}`} />
-                  </button>
+                    <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-primary transition-all duration-300 ${isProductsOpen || isActive ? "w-4/5" : "w-0 group-hover:w-4/5"}`} />
+                  </Link>
 
                   <AnimatePresence>
                     {isProductsOpen && (
@@ -94,34 +90,34 @@ export const Navbar = () => {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.99 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-[460px] bg-[hsl(222_55%_14%)] border border-white/10 rounded-xl shadow-[0_15px_40px_rgba(0,0,0,0.5)] overflow-hidden flex flex-row-reverse"
+                        className="absolute top-full left-0 mt-2 w-[460px] bg-card border border-border shadow-dark overflow-hidden flex flex-row-reverse"
                       >
                         {/* Right: Product Categories (Navigation) */}
-                        <div className="w-[180px] border-l border-white/5 bg-black/10">
+                        <div className="w-[180px] border-l border-border bg-background/50">
                           <div className="p-2 space-y-0.5 overflow-y-auto max-h-[350px] custom-scrollbar">
                             {products.map((p) => (
                               <button
                                 key={p.slug}
                                 onMouseEnter={() => setActiveProduct(p)}
-                                className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg transition-all text-left group ${activeProduct.slug === p.slug
-                                    ? "bg-white/5 text-[hsl(43_72%_60%)] shadow-[inset_2px_0_0_hsl(43_72%_60%)]"
-                                    : "text-white/60 hover:text-white hover:bg-white/5"
+                                className={`w-full flex items-center gap-2.5 px-3 py-2 transition-all text-left group ${activeProduct.slug === p.slug
+                                    ? "bg-primary/10 text-primary border-l-2 border-primary"
+                                    : "text-muted-foreground hover:text-foreground hover:bg-white/5 border-l-2 border-transparent"
                                   }`}
                               >
-                                <p.icon className={`h-3.5 w-3.5 ${activeProduct.slug === p.slug ? "text-[hsl(43_72%_60%)]" : "text-white/20 group-hover:text-white/40"}`} />
+                                <p.icon className={`h-3.5 w-3.5 ${activeProduct.slug === p.slug ? "text-primary" : "text-muted-foreground group-hover:text-foreground"}`} />
                                 <span className="text-[12px] font-medium truncate">{p.name}</span>
                               </button>
                             ))}
                           </div>
                         </div>
 
-                        {/* Left: Models (Display) - As requested "shows a model at the left side" */}
+                        {/* Left: Models (Display) */}
                         <div className="flex-1 p-3">
-                          <div className="mb-3 px-1 flex items-center justify-between">
-                            <h4 className="font-serif text-[15px] text-white leading-tight">{activeProduct.name}</h4>
+                          <div className="mb-3 px-1 flex items-center justify-between border-b border-border pb-2">
+                            <h4 className="text-[15px] text-foreground leading-tight">{activeProduct.name}</h4>
                             <Link
                               to={`/products/${activeProduct.slug}`}
-                              className="text-[10px] font-bold text-[hsl(43_72%_60%)] hover:underline"
+                              className="text-[10px] font-bold text-primary hover:underline uppercase tracking-wider"
                               onClick={() => setIsProductsOpen(false)}
                             >
                               Explore →
@@ -134,19 +130,19 @@ export const Navbar = () => {
                                 <Link
                                   key={m.id}
                                   to={`/products/${activeProduct.slug}#${m.id}`}
-                                  className="flex flex-col p-2.5 rounded-lg bg-white/[0.02] hover:bg-white/[0.05] border border-white/5 transition-all group"
+                                  className="flex flex-col p-2.5 bg-background hover:bg-accent/10 border border-border hover:border-primary/50 transition-all group"
                                   onClick={() => setIsProductsOpen(false)}
                                 >
-                                  <div className="text-[12px] font-medium text-white/90 group-hover:text-[hsl(43_72%_60%)] transition-colors">
+                                  <div className="text-[12px] font-medium text-foreground group-hover:text-primary transition-colors">
                                     {m.name}
                                   </div>
-                                  <div className="text-[9px] text-white/30 mt-0.5 tracking-wider font-mono">
+                                  <div className="text-[9px] text-muted-foreground mt-0.5 tracking-wider font-mono">
                                     {m.modelNumber}
                                   </div>
                                 </Link>
                               ))
                             ) : (
-                              <div className="h-40 flex items-center justify-center text-center opacity-20 italic text-[11px]">
+                              <div className="h-40 flex items-center justify-center text-center text-muted-foreground italic text-[11px]">
                                 Engineering data updating
                               </div>
                             )}
@@ -158,15 +154,16 @@ export const Navbar = () => {
                 </li>
               );
             }
+            const isActive = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
             return (
               <li key={l.href}>
-                <a
-                  href={l.href}
-                  className="relative px-4 py-2 text-[13px] font-medium text-[hsl(220_15%_75%)] hover:text-[hsl(43_72%_60%)] transition-colors duration-200 group"
+                <Link
+                  to={l.href}
+                  className={`relative px-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-200 group ${isActive ? "text-primary" : "text-muted-foreground hover:text-primary"}`}
                 >
                   {l.label}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] w-0 group-hover:w-4/5 bg-[hsl(43_72%_49%)] transition-all duration-300 rounded-full" />
-                </a>
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-primary transition-all duration-300 ${isActive ? "w-4/5" : "w-0 group-hover:w-4/5"}`} />
+                </Link>
               </li>
             );
           })}
@@ -174,17 +171,17 @@ export const Navbar = () => {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <a
-            href="/#contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 text-[13px] font-semibold rounded-md bg-[hsl(43_72%_49%)] text-[hsl(222_55%_14%)] hover:bg-[hsl(43_80%_55%)] shadow-gold hover:shadow-[0_8px_24px_-6px_hsl(43_80%_45%/0.55)] transition-all duration-300"
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 px-6 py-2.5 text-[13px] font-bold uppercase tracking-widest bg-primary text-primary-foreground hover:bg-primary/90 shadow-orange hover:shadow-dark transition-all duration-300"
           >
             Get a Quote
-          </a>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 rounded-md text-white hover:bg-white/10 transition-colors"
+          className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
           onClick={() => {
             setOpen(!open);
           }}
@@ -202,19 +199,21 @@ export const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden bg-[hsl(222_55%_12%)] border-t border-white/10 overflow-hidden"
+            className="md:hidden bg-card border-t border-border overflow-hidden"
           >
             <ul className="container py-4 space-y-1">
               {links.map((l) => {
                 if (l.label === "Products") {
+                  const isActive = pathname.startsWith("/products");
                   return (
                     <li key={l.href} className="space-y-1">
                       <button
-                        onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                        className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium text-[hsl(220_15%_78%)] hover:text-[hsl(43_72%_60%)] hover:bg-white/5 rounded-md transition-colors text-left"
+                        className={`w-full flex items-center justify-between px-3 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-white/5 transition-colors text-left ${isActive || mobileProductsOpen ? "text-primary" : "text-foreground hover:text-primary"}`}
                       >
-                        <span>{l.label}</span>
-                        <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileProductsOpen ? "rotate-180" : ""}`} />
+                        <Link to="/products" onClick={() => setOpen(false)} className="flex-1">{l.label}</Link>
+                        <div onClick={(e) => { e.preventDefault(); e.stopPropagation(); setMobileProductsOpen(!mobileProductsOpen); }} className="p-2 -mr-2 cursor-pointer">
+                          <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileProductsOpen ? "rotate-180" : ""}`} />
+                        </div>
                       </button>
 
                       <AnimatePresence>
@@ -224,48 +223,52 @@ export const Navbar = () => {
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="pl-4 pr-2 py-1 space-y-1 border-l border-white/10 ml-3"
+                            className="pl-4 pr-2 py-1 space-y-1 border-l-2 border-primary/30 ml-3"
                           >
-                            {products.map((p) => (
-                              <li key={p.slug}>
-                                <Link
-                                  to={`/products/${p.slug}`}
-                                  onClick={() => {
-                                    setOpen(false);
-                                    setMobileProductsOpen(false);
-                                  }}
-                                  className="block px-3 py-2 text-xs font-medium text-[hsl(220_15%_65%)] hover:text-[hsl(43_72%_60%)] rounded-md hover:bg-white/5 transition-colors"
-                                >
-                                  {p.name}
-                                </Link>
-                              </li>
-                            ))}
+                            {products.map((p) => {
+                              const isProductActive = pathname.startsWith(`/products/${p.slug}`);
+                              return (
+                                <li key={p.slug}>
+                                  <Link
+                                    to={`/products/${p.slug}`}
+                                    onClick={() => {
+                                      setOpen(false);
+                                      setMobileProductsOpen(false);
+                                    }}
+                                    className={`block px-3 py-2 text-xs font-bold hover:bg-white/5 transition-colors ${isProductActive ? "text-primary" : "text-muted-foreground hover:text-primary"}`}
+                                  >
+                                    {p.name}
+                                  </Link>
+                                </li>
+                              )
+                            })}
                           </motion.ul>
                         )}
                       </AnimatePresence>
                     </li>
                   );
                 }
+                const isActive = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
                 return (
                   <li key={l.href}>
-                    <a
+                    <Link
                       onClick={() => setOpen(false)}
-                      href={l.href}
-                      className="block px-3 py-2.5 text-sm font-medium text-[hsl(220_15%_78%)] hover:text-[hsl(43_72%_60%)] hover:bg-white/5 rounded-md transition-colors"
+                      to={l.href}
+                      className={`block px-3 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-white/5 transition-colors ${isActive ? "text-primary" : "text-foreground hover:text-primary"}`}
                     >
                       {l.label}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
               <li className="pt-2">
-                <a
-                  href="/#contact"
+                <Link
+                  to="/contact"
                   onClick={() => setOpen(false)}
-                  className="flex w-full items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-md bg-[hsl(43_72%_49%)] text-[hsl(222_55%_14%)] hover:bg-[hsl(43_80%_55%)] transition-all"
+                  className="flex w-full items-center justify-center gap-2 px-4 py-3 text-sm font-bold uppercase tracking-widest bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
                 >
                   Get a Quote
-                </a>
+                </Link>
               </li>
             </ul>
           </motion.div>
@@ -274,3 +277,4 @@ export const Navbar = () => {
     </header>
   );
 };
+

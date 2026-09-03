@@ -1,51 +1,48 @@
 import { FlaskConical, Phone, Mail, MapPin, Building2 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Logo } from "./Logo";
 
 const quickLinks = [
-  { href: "/#products", label: "Products" },
-  { href: "/#services", label: "Services" },
-  { href: "/#about",    label: "About Us" },
-  { href: "/#contact",  label: "Contact" },
+  { href: "/products", label: "Products" },
+  { href: "/services", label: "Services" },
+  { href: "/about",    label: "About Us" },
+  { href: "/contact",  label: "Contact" },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="bg-[hsl(222_55%_12%)] text-[hsl(220_15%_72%)]">
+    <footer className="bg-card text-muted-foreground border-t-2 border-border">
       {/* Gold top rule */}
-      <div className="h-[3px] bg-gradient-to-r from-transparent via-[hsl(43_72%_49%)] to-transparent" />
+      <div className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-80" />
 
-      <div className="container py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="container py-10 lg:py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand column */}
         <div className="lg:col-span-2">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-[hsl(43_72%_49%)]">
-              <FlaskConical className="h-5 w-5 text-[hsl(222_55%_14%)]" />
-            </span>
-            <span className="font-bold text-white text-base leading-tight">
-              Advance Lab Equipments
-            </span>
+          <div className="mb-6 w-max">
+            <Logo />
           </div>
-          <p className="text-sm leading-relaxed max-w-sm mb-5">
+          <p className="text-sm leading-relaxed max-w-sm mb-6 font-bold">
             Manufacturer, importer &amp; exporter of scientific and laboratory instruments.
             Serving labs, hospitals, pharma &amp; research centres across India since 2004.
           </p>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[hsl(43_72%_49%/0.3)] bg-[hsl(43_72%_49%/0.08)] text-[11px] font-medium text-[hsl(43_72%_65%)] uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-6 py-2 border-2 border-primary/30 bg-primary/10 text-xs font-black text-primary uppercase tracking-widest shadow-orange">
             AN ISO 9001:2015 Certified
           </div>
         </div>
 
         {/* Quick links */}
         <div>
-          <h4 className="text-white font-semibold text-sm mb-4 tracking-wide">Quick Links</h4>
-          <ul className="space-y-2.5">
+          <h4 className="text-foreground font-black text-sm mb-6 uppercase tracking-widest border-b-2 border-primary/20 pb-2 inline-block">Quick Links</h4>
+          <ul className="space-y-4 font-bold">
             {quickLinks.map((l) => (
               <li key={l.href}>
-                <a
-                  href={l.href}
-                  className="text-sm hover:text-[hsl(43_72%_60%)] transition-colors duration-200 flex items-center gap-2 group"
+                <Link
+                  to={l.href}
+                  className="text-sm hover:text-primary transition-colors duration-200 flex items-center gap-3 group uppercase tracking-wider"
                 >
-                  <span className="h-[1px] w-3 bg-[hsl(43_72%_49%/0.5)] group-hover:w-5 group-hover:bg-[hsl(43_72%_49%)] transition-all duration-200" />
+                  <span className="h-[2px] w-4 bg-primary/50 group-hover:w-8 group-hover:bg-primary transition-all duration-200" />
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -53,31 +50,31 @@ export const Footer = () => {
 
         {/* Contact info */}
         <div>
-          <h4 className="text-white font-semibold text-sm mb-4 tracking-wide">Contact</h4>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2.5 text-sm">
-              <MapPin className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
+          <h4 className="text-foreground font-black text-sm mb-6 uppercase tracking-widest border-b-2 border-primary/20 pb-2 inline-block">Contact</h4>
+          <ul className="space-y-4 font-bold">
+            <li className="flex items-start gap-3 text-sm">
+              <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
               <div>
-                <span className="font-medium text-white/90">Registered Address:</span> Barwala, Panchkula
+                <span className="font-black text-foreground uppercase tracking-widest block mb-1">Registered Address:</span> Barwala, Panchkula
               </div>
             </li>
-            <li className="flex items-start gap-2.5 text-sm">
-              <Building2 className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
+            <li className="flex items-start gap-3 text-sm">
+              <Building2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
               <div>
-                <span className="font-medium text-white/90">Branch Offices:</span> Ambala, Delhi, Jaipur
+                <span className="font-black text-foreground uppercase tracking-widest block mb-1">Branch Offices:</span> Ambala, Delhi, Jaipur
               </div>
             </li>
-            <li className="flex items-start gap-2.5 text-sm">
-              <Phone className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
+            <li className="flex items-start gap-3 text-sm">
+              <Phone className="h-4 w-4 text-primary shrink-0 mt-0.5" />
               <div className="space-y-0.5">
                 <div>+91 79889 27387</div>
                 <div>97384 95878</div>
                 <div>+91-176 2327371</div>
               </div>
             </li>
-            <li className="flex items-start gap-2.5 text-sm">
-              <Mail className="h-4 w-4 text-[hsl(43_72%_55%)] shrink-0 mt-0.5" />
-              <a href="mailto:advancelabequipments@gmail.com" className="break-all hover:text-[hsl(43_72%_60%)] transition-colors">
+            <li className="flex items-start gap-3 text-sm">
+              <Mail className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+              <a href="mailto:advancelabequipments@gmail.com" className="break-all hover:text-primary transition-colors">
                 advancelabequipments@gmail.com
               </a>
             </li>
@@ -86,8 +83,8 @@ export const Footer = () => {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/8 py-5">
-        <div className="container flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[hsl(220_12%_50%)]">
+      <div className="border-t-2 border-border py-6 bg-background">
+        <div className="container flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-bold text-muted-foreground/70 uppercase tracking-widest">
           <span>© {new Date().getFullYear()} Advance Lab Equipments. All rights reserved.</span>
           <span>Developed by Tanmay Khosla</span>
         </div>
